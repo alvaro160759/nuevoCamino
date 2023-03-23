@@ -1,0 +1,9 @@
+body{
+  padding: 1rem;
+  overflow-y:hidden!important;
+}
+
+.MuiTabs-indicator{
+  color: #20a;
+}
+

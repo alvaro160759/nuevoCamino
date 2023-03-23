@@ -1,0 +1,9 @@
+#root {
+  padding-top: 2.5rem; 
+  justify-content: center;
+  text-align: center;
+}
+
+.MuiTabs-indicator{
+  color: #20b2aa;
+}

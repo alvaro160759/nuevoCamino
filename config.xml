@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.cayalti.appMaquinaria" version="4.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <hook type="before_prepare" src="scripts/prebuild.js"/>
+    <name>Maquinaria</name>
+    <description>Modulo de maquinaria</description>
+    <author email="alvaro.torres.is@outlook.com">
+        Alvaro Torres
+    </author>
+    <content src="index.html" />
+
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="GradlePluginKotlinEnabled" value="true" />
+    <preference name="LottieRemoteEnabled" value="true" />
+    <preference name="LottieAnimationLocationLight" value="https://assets1.lottiefiles.com/packages/lf20_CcwNgLQ4tO.json" />
+    <preference name="LottieAutoHideSplashScreen" value="false" />
+    <preference name="LottieScaleType" value="CENTER_CROP" />
+    <preference name="LottieHideTimeout" value="3000" />
+    <preference name="LottieFullScreen" value="true" />
+    <preference name="LottieFadeOutDuration" value="1500" />
+
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#005005" />
+    <icon src="/src/assets/img/icon_maq.png" />
+    <platform name="android">
+        <!-- <access origin="*" />
+        <allow-intent href="*" />
+        <allow-navigation href="*" /> -->
+    </platform>
+
+    
+</widget>

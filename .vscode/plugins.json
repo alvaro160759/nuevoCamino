@@ -1,0 +1,1 @@
+{"plugins":["cordova-plugin-appversion","cordova-plugin-android-permissions","cordova-plugin-file","cordova-plugin-appminimize","cordova-plugin-lottie-splashscreen","cordova-plugin-androidx","cordova-plugin-androidx-adapter","cordova-plugin-statusbar","cordova-plugin-app-update","cordova-plugin-background-mode","cordova-plugin-device"]}

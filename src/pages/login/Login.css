@@ -1,0 +1,11 @@
+.body {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .imagen{
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+  }

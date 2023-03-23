@@ -1,0 +1,18 @@
+#root {
+  padding-top: 2.5rem; 
+  justify-content: center;
+  text-align: center;
+}
+
+.MuiTabs-indicator{
+  color: #20b2aa;
+}
+body{
+  padding: 1rem;
+  overflow-y:hidden!important;
+}
+
+.MuiTabs-indicator{
+  color: #20a;
+}
+
