@@ -2,8 +2,8 @@ var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb2, mod2) => function __require() {
   return mod2 || (0, cb2[__getOwnPropNames(cb2)[0]])((mod2 = { exports: {} }).exports, mod2), mod2.exports;
 };
-var require_index_81daafcd = __commonJS({
-  "assets/index.81daafcd.js"(exports, module) {
+var require_index_be62407a = __commonJS({
+  "assets/index.be62407a.js"(exports, module) {
     function _mergeNamespaces(n2, m2) {
       for (var i = 0; i < m2.length; i++) {
         const e2 = m2[i];
@@ -11488,7 +11488,7 @@ var require_index_81daafcd = __commonJS({
     const styleFunctionSx = unstable_createStyleFunctionSx();
     styleFunctionSx.filterProps = ["sx"];
     const defaultStyleFunctionSx = styleFunctionSx;
-    const _excluded$1x = ["sx"];
+    const _excluded$1y = ["sx"];
     const splitProps = (props2) => {
       const result = {
         systemProps: {},
@@ -11506,7 +11506,7 @@ var require_index_81daafcd = __commonJS({
     function extendSxProp(props2) {
       const {
         sx: inSx
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1x);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1y);
       const {
         systemProps,
         otherProps
@@ -11547,7 +11547,7 @@ var require_index_81daafcd = __commonJS({
         (e2 = arguments[f2++]) && (t2 = r(e2)) && (n2 && (n2 += " "), n2 += t2);
       return n2;
     }
-    const _excluded$1w = ["values", "unit", "step"];
+    const _excluded$1x = ["values", "unit", "step"];
     const sortBreakpointsValues = (values2) => {
       const breakpointsAsArray = Object.keys(values2).map((key) => ({
         key,
@@ -11571,7 +11571,7 @@ var require_index_81daafcd = __commonJS({
         },
         unit = "px",
         step = 5
-      } = breakpoints, other = _objectWithoutPropertiesLoose(breakpoints, _excluded$1w);
+      } = breakpoints, other = _objectWithoutPropertiesLoose(breakpoints, _excluded$1x);
       const sortedValues = sortBreakpointsValues(values2);
       const keys2 = Object.keys(sortedValues);
       function up(key) {
@@ -11634,14 +11634,14 @@ var require_index_81daafcd = __commonJS({
       spacing2.mui = true;
       return spacing2;
     }
-    const _excluded$1v = ["breakpoints", "palette", "spacing", "shape"];
+    const _excluded$1w = ["breakpoints", "palette", "spacing", "shape"];
     function createTheme$1(options = {}, ...args) {
       const {
         breakpoints: breakpointsInput = {},
         palette: paletteInput = {},
         spacing: spacingInput,
         shape: shapeInput = {}
-      } = options, other = _objectWithoutPropertiesLoose(options, _excluded$1v);
+      } = options, other = _objectWithoutPropertiesLoose(options, _excluded$1w);
       const breakpoints = createBreakpoints(breakpointsInput);
       const spacing2 = createSpacing(spacingInput);
       let muiTheme = deepmerge({
@@ -11674,7 +11674,7 @@ var require_index_81daafcd = __commonJS({
     function useTheme$1(defaultTheme2 = systemDefaultTheme$1) {
       return useTheme$2(defaultTheme2);
     }
-    const _excluded$1u = ["className", "component"];
+    const _excluded$1v = ["className", "component"];
     function createBox(options = {}) {
       const {
         defaultTheme: defaultTheme2,
@@ -11690,7 +11690,7 @@ var require_index_81daafcd = __commonJS({
         const _extendSxProp = extendSxProp(inProps), {
           className,
           component = "div"
-        } = _extendSxProp, other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$1u);
+        } = _extendSxProp, other = _objectWithoutPropertiesLoose(_extendSxProp, _excluded$1v);
         return /* @__PURE__ */ jsx(BoxRoot, _extends({
           as: component,
           ref,
@@ -11702,14 +11702,14 @@ var require_index_81daafcd = __commonJS({
     }
     const Box$2 = createBox();
     const Box$3 = Box$2;
-    const _excluded$1t = ["variant"];
+    const _excluded$1u = ["variant"];
     function isEmpty$3(string) {
       return string.length === 0;
     }
     function propsToClassKey(props2) {
       const {
         variant
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1t);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1u);
       let classKey = variant || "";
       Object.keys(other).sort().forEach((key) => {
         if (key === "color") {
@@ -11720,7 +11720,7 @@ var require_index_81daafcd = __commonJS({
       });
       return classKey;
     }
-    const _excluded$1s = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"], _excluded2$5 = ["theme"], _excluded3 = ["theme"];
+    const _excluded$1t = ["name", "slot", "skipVariantsResolver", "skipSx", "overridesResolver"], _excluded2$5 = ["theme"], _excluded3 = ["theme"];
     function isEmpty$2(obj) {
       return Object.keys(obj).length === 0;
     }
@@ -11793,7 +11793,7 @@ var require_index_81daafcd = __commonJS({
           skipVariantsResolver: inputSkipVariantsResolver,
           skipSx: inputSkipSx,
           overridesResolver: overridesResolver2
-        } = inputOptions, options = _objectWithoutPropertiesLoose(inputOptions, _excluded$1s);
+        } = inputOptions, options = _objectWithoutPropertiesLoose(inputOptions, _excluded$1t);
         const skipVariantsResolver = inputSkipVariantsResolver !== void 0 ? inputSkipVariantsResolver : componentSlot && componentSlot !== "Root" || false;
         const skipSx = inputSkipSx || false;
         let label;
@@ -12042,7 +12042,7 @@ var require_index_81daafcd = __commonJS({
       }
       return recomposeColor(color2);
     }
-    const _excluded$1r = ["className", "component", "disableGutters", "fixed", "maxWidth", "classes"];
+    const _excluded$1s = ["className", "component", "disableGutters", "fixed", "maxWidth", "classes"];
     const defaultTheme$3 = createTheme$1();
     const defaultCreateStyledComponent = systemStyled("div", {
       name: "MuiContainer",
@@ -12059,7 +12059,7 @@ var require_index_81daafcd = __commonJS({
       name: "MuiContainer",
       defaultTheme: defaultTheme$3
     });
-    const useUtilityClasses$1c = (ownerState, componentName) => {
+    const useUtilityClasses$1d = (ownerState, componentName) => {
       const getContainerUtilityClass = (slot) => {
         return generateUtilityClass(componentName, slot);
       };
@@ -12128,14 +12128,14 @@ var require_index_81daafcd = __commonJS({
           disableGutters = false,
           fixed = false,
           maxWidth: maxWidth2 = "lg"
-        } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1r);
+        } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1s);
         const ownerState = _extends({}, props2, {
           component,
           disableGutters,
           fixed,
           maxWidth: maxWidth2
         });
-        const classes = useUtilityClasses$1c(ownerState, componentName);
+        const classes = useUtilityClasses$1d(ownerState, componentName);
         return /* @__PURE__ */ jsx(ContainerRoot, _extends({
           as: component,
           ownerState,
@@ -12160,7 +12160,7 @@ var require_index_81daafcd = __commonJS({
         }
       }, mixins);
     }
-    const _excluded$1q = ["mode", "contrastThreshold", "tonalOffset"];
+    const _excluded$1r = ["mode", "contrastThreshold", "tonalOffset"];
     const light = {
       text: {
         primary: "rgba(0, 0, 0, 0.87)",
@@ -12314,7 +12314,7 @@ var require_index_81daafcd = __commonJS({
         mode = "light",
         contrastThreshold = 3,
         tonalOffset = 0.2
-      } = palette2, other = _objectWithoutPropertiesLoose(palette2, _excluded$1q);
+      } = palette2, other = _objectWithoutPropertiesLoose(palette2, _excluded$1r);
       const primary = palette2.primary || getDefaultPrimary(mode);
       const secondary = palette2.secondary || getDefaultSecondary(mode);
       const error = palette2.error || getDefaultError(mode);
@@ -12391,8 +12391,8 @@ var require_index_81daafcd = __commonJS({
       }, modes[mode]), other);
       return paletteOutput;
     }
-    const _excluded$1p = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
-    function round$2(value) {
+    const _excluded$1q = ["fontFamily", "fontSize", "fontWeightLight", "fontWeightRegular", "fontWeightMedium", "fontWeightBold", "htmlFontSize", "allVariants", "pxToRem"];
+    function round$3(value) {
       return Math.round(value * 1e5) / 1e5;
     }
     const caseAllCaps = {
@@ -12410,7 +12410,7 @@ var require_index_81daafcd = __commonJS({
         htmlFontSize = 16,
         allVariants,
         pxToRem: pxToRem2
-      } = _ref, other = _objectWithoutPropertiesLoose(_ref, _excluded$1p);
+      } = _ref, other = _objectWithoutPropertiesLoose(_ref, _excluded$1q);
       const coef = fontSize2 / 14;
       const pxToRem = pxToRem2 || ((size) => `${size / htmlFontSize * coef}rem`);
       const buildVariant = (fontWeight2, size, lineHeight2, letterSpacing2, casing) => _extends({
@@ -12419,7 +12419,7 @@ var require_index_81daafcd = __commonJS({
         fontSize: pxToRem(size),
         lineHeight: lineHeight2
       }, fontFamily2 === defaultFontFamily ? {
-        letterSpacing: `${round$2(letterSpacing2 / size)}em`
+        letterSpacing: `${round$3(letterSpacing2 / size)}em`
       } : {}, casing, allVariants);
       const variants = {
         h1: buildVariant(fontWeightLight, 96, 1.167, -1.5),
@@ -12457,7 +12457,7 @@ var require_index_81daafcd = __commonJS({
     }
     const shadows = ["none", createShadow(0, 2, 1, -1, 0, 1, 1, 0, 0, 1, 3, 0), createShadow(0, 3, 1, -2, 0, 2, 2, 0, 0, 1, 5, 0), createShadow(0, 3, 3, -2, 0, 3, 4, 0, 0, 1, 8, 0), createShadow(0, 2, 4, -1, 0, 4, 5, 0, 0, 1, 10, 0), createShadow(0, 3, 5, -1, 0, 5, 8, 0, 0, 1, 14, 0), createShadow(0, 3, 5, -1, 0, 6, 10, 0, 0, 1, 18, 0), createShadow(0, 4, 5, -2, 0, 7, 10, 1, 0, 2, 16, 1), createShadow(0, 5, 5, -3, 0, 8, 10, 1, 0, 3, 14, 2), createShadow(0, 5, 6, -3, 0, 9, 12, 1, 0, 3, 16, 2), createShadow(0, 6, 6, -3, 0, 10, 14, 1, 0, 4, 18, 3), createShadow(0, 6, 7, -4, 0, 11, 15, 1, 0, 4, 20, 3), createShadow(0, 7, 8, -4, 0, 12, 17, 2, 0, 5, 22, 4), createShadow(0, 7, 8, -4, 0, 13, 19, 2, 0, 5, 24, 4), createShadow(0, 7, 9, -4, 0, 14, 21, 2, 0, 5, 26, 4), createShadow(0, 8, 9, -5, 0, 15, 22, 2, 0, 6, 28, 5), createShadow(0, 8, 10, -5, 0, 16, 24, 2, 0, 6, 30, 5), createShadow(0, 8, 11, -5, 0, 17, 26, 2, 0, 6, 32, 5), createShadow(0, 9, 11, -5, 0, 18, 28, 2, 0, 7, 34, 6), createShadow(0, 9, 12, -6, 0, 19, 29, 2, 0, 7, 36, 6), createShadow(0, 10, 13, -6, 0, 20, 31, 3, 0, 8, 38, 7), createShadow(0, 10, 13, -6, 0, 21, 33, 3, 0, 8, 40, 7), createShadow(0, 10, 14, -6, 0, 22, 35, 3, 0, 8, 42, 7), createShadow(0, 11, 14, -7, 0, 23, 36, 3, 0, 9, 44, 8), createShadow(0, 11, 15, -7, 0, 24, 38, 3, 0, 9, 46, 8)];
     const shadows$1 = shadows;
-    const _excluded$1o = ["duration", "easing", "delay"];
+    const _excluded$1p = ["duration", "easing", "delay"];
     const easing = {
       easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
       easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -12492,7 +12492,7 @@ var require_index_81daafcd = __commonJS({
           easing: easingOption = mergedEasing.easeInOut,
           delay = 0
         } = options;
-        _objectWithoutPropertiesLoose(options, _excluded$1o);
+        _objectWithoutPropertiesLoose(options, _excluded$1p);
         return (Array.isArray(props2) ? props2 : [props2]).map((animatedProp) => `${animatedProp} ${typeof durationOption === "string" ? durationOption : formatMs(durationOption)} ${easingOption} ${typeof delay === "string" ? delay : formatMs(delay)}`).join(",");
       };
       return _extends({
@@ -12514,14 +12514,14 @@ var require_index_81daafcd = __commonJS({
       tooltip: 1500
     };
     const zIndex$1 = zIndex;
-    const _excluded$1n = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
+    const _excluded$1o = ["breakpoints", "mixins", "spacing", "palette", "transitions", "typography", "shape"];
     function createTheme(options = {}, ...args) {
       const {
         mixins: mixinsInput = {},
         palette: paletteInput = {},
         transitions: transitionsInput = {},
         typography: typographyInput = {}
-      } = options, other = _objectWithoutPropertiesLoose(options, _excluded$1n);
+      } = options, other = _objectWithoutPropertiesLoose(options, _excluded$1o);
       if (options.vars) {
         throw new Error(formatMuiErrorMessage(18));
       }
@@ -12650,14 +12650,14 @@ var require_index_81daafcd = __commonJS({
         internalRef: internalSlotProps.ref
       };
     }
-    const _excluded$1m = ["elementType", "externalSlotProps", "ownerState"];
+    const _excluded$1n = ["elementType", "externalSlotProps", "ownerState"];
     function useSlotProps(parameters) {
       var _parameters$additiona;
       const {
         elementType,
         externalSlotProps,
         ownerState
-      } = parameters, rest = _objectWithoutPropertiesLoose(parameters, _excluded$1m);
+      } = parameters, rest = _objectWithoutPropertiesLoose(parameters, _excluded$1n);
       const resolvedComponentsProps = resolveComponentProps(externalSlotProps, ownerState);
       const {
         props: mergedProps,
@@ -13815,7 +13815,7 @@ var require_index_81daafcd = __commonJS({
     }
     var max$1 = Math.max;
     var min$1 = Math.min;
-    var round$1 = Math.round;
+    var round$2 = Math.round;
     function getUAString() {
       var uaData = navigator.userAgentData;
       if (uaData != null && uaData.brands) {
@@ -13839,8 +13839,8 @@ var require_index_81daafcd = __commonJS({
       var scaleX = 1;
       var scaleY = 1;
       if (includeScale && isHTMLElement(element)) {
-        scaleX = element.offsetWidth > 0 ? round$1(clientRect.width) / element.offsetWidth || 1 : 1;
-        scaleY = element.offsetHeight > 0 ? round$1(clientRect.height) / element.offsetHeight || 1 : 1;
+        scaleX = element.offsetWidth > 0 ? round$2(clientRect.width) / element.offsetWidth || 1 : 1;
+        scaleY = element.offsetHeight > 0 ? round$2(clientRect.height) / element.offsetHeight || 1 : 1;
       }
       var _ref = isElement(element) ? getWindow(element) : window, visualViewport = _ref.visualViewport;
       var addVisualOffsets = !isLayoutViewport() && isFixedStrategy;
@@ -14047,8 +14047,8 @@ var require_index_81daafcd = __commonJS({
       var win = window;
       var dpr = win.devicePixelRatio || 1;
       return {
-        x: round$1(x2 * dpr) / dpr || 0,
-        y: round$1(y2 * dpr) / dpr || 0
+        x: round$2(x2 * dpr) / dpr || 0,
+        y: round$2(y2 * dpr) / dpr || 0
       };
     }
     function mapToStyles(_ref2) {
@@ -14772,8 +14772,8 @@ var require_index_81daafcd = __commonJS({
     }
     function isElementScaled(element) {
       var rect = element.getBoundingClientRect();
-      var scaleX = round$1(rect.width) / element.offsetWidth || 1;
-      var scaleY = round$1(rect.height) / element.offsetHeight || 1;
+      var scaleX = round$2(rect.width) / element.offsetWidth || 1;
+      var scaleY = round$2(rect.height) / element.offsetHeight || 1;
       return scaleX !== 1 || scaleY !== 1;
     }
     function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
@@ -15050,7 +15050,7 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiPopperUnstyled", slot);
     }
     generateUtilityClasses("MuiPopperUnstyled", ["root"]);
-    const _excluded$1l = ["anchorEl", "children", "component", "direction", "disablePortal", "modifiers", "open", "ownerState", "placement", "popperOptions", "popperRef", "slotProps", "slots", "TransitionProps"], _excluded2$4 = ["anchorEl", "children", "container", "direction", "disablePortal", "keepMounted", "modifiers", "open", "placement", "popperOptions", "popperRef", "style", "transition"];
+    const _excluded$1m = ["anchorEl", "children", "component", "direction", "disablePortal", "modifiers", "open", "ownerState", "placement", "popperOptions", "popperRef", "slotProps", "slots", "TransitionProps"], _excluded2$4 = ["anchorEl", "children", "container", "direction", "disablePortal", "keepMounted", "modifiers", "open", "placement", "popperOptions", "popperRef", "style", "transition"];
     function flipPlacement(placement, direction) {
       if (direction === "ltr") {
         return placement;
@@ -15071,7 +15071,7 @@ var require_index_81daafcd = __commonJS({
     function resolveAnchorEl$1(anchorEl) {
       return typeof anchorEl === "function" ? anchorEl() : anchorEl;
     }
-    const useUtilityClasses$1b = () => {
+    const useUtilityClasses$1c = () => {
       const slots = {
         root: ["root"]
       };
@@ -15095,7 +15095,7 @@ var require_index_81daafcd = __commonJS({
         slotProps = {},
         slots = {},
         TransitionProps
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1l);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1m);
       const tooltipRef = react.exports.useRef(null);
       const ownRef = useForkRef(tooltipRef, ref);
       const popperRef = react.exports.useRef(null);
@@ -15163,7 +15163,7 @@ var require_index_81daafcd = __commonJS({
       if (TransitionProps !== null) {
         childProps.TransitionProps = TransitionProps;
       }
-      const classes = useUtilityClasses$1b();
+      const classes = useUtilityClasses$1c();
       const Root = (_ref = component != null ? component : slots.root) != null ? _ref : "div";
       const rootProps = useSlotProps({
         elementType: Root,
@@ -15423,8 +15423,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiModal", slot);
     }
     generateUtilityClasses("MuiModal", ["root", "hidden"]);
-    const _excluded$1k = ["children", "classes", "closeAfterTransition", "component", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited", "slotProps", "slots"];
-    const useUtilityClasses$1a = (ownerState) => {
+    const _excluded$1l = ["children", "classes", "closeAfterTransition", "component", "container", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "manager", "onBackdropClick", "onClose", "onKeyDown", "open", "onTransitionEnter", "onTransitionExited", "slotProps", "slots"];
+    const useUtilityClasses$1b = (ownerState) => {
       const {
         open,
         exited,
@@ -15467,7 +15467,7 @@ var require_index_81daafcd = __commonJS({
         onTransitionExited,
         slotProps = {},
         slots = {}
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1k);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1l);
       const [exited, setExited] = react.exports.useState(true);
       const modal = react.exports.useRef({});
       const mountNodeRef = react.exports.useRef(null);
@@ -15534,7 +15534,7 @@ var require_index_81daafcd = __commonJS({
         hideBackdrop,
         keepMounted
       });
-      const classes = useUtilityClasses$1a(ownerState);
+      const classes = useUtilityClasses$1b(ownerState);
       const handleEnter = () => {
         setExited(false);
         if (onTransitionEnter) {
@@ -15628,7 +15628,7 @@ var require_index_81daafcd = __commonJS({
       });
     });
     const ModalUnstyled$1 = ModalUnstyled;
-    const _excluded$1j = ["onChange", "maxRows", "minRows", "style", "value"];
+    const _excluded$1k = ["onChange", "maxRows", "minRows", "style", "value"];
     function getStyleValue(computedStyle, property) {
       return parseInt(computedStyle[property], 10) || 0;
     }
@@ -15653,7 +15653,7 @@ var require_index_81daafcd = __commonJS({
         minRows = 1,
         style: style2,
         value
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1j);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1k);
       const {
         current: isControlled
       } = react.exports.useRef(value != null);
@@ -15794,8 +15794,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiSvgIcon", slot);
     }
     generateUtilityClasses("MuiSvgIcon", ["root", "colorPrimary", "colorSecondary", "colorAction", "colorError", "colorDisabled", "fontSizeInherit", "fontSizeSmall", "fontSizeMedium", "fontSizeLarge"]);
-    const _excluded$1i = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
-    const useUtilityClasses$19 = (ownerState) => {
+    const _excluded$1j = ["children", "className", "color", "component", "fontSize", "htmlColor", "inheritViewBox", "titleAccess", "viewBox"];
+    const useUtilityClasses$1a = (ownerState) => {
       const {
         color: color2,
         fontSize: fontSize2,
@@ -15858,7 +15858,7 @@ var require_index_81daafcd = __commonJS({
         inheritViewBox = false,
         titleAccess,
         viewBox = "0 0 24 24"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1i);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1j);
       const ownerState = _extends({}, props2, {
         color: color2,
         component,
@@ -15871,7 +15871,7 @@ var require_index_81daafcd = __commonJS({
       if (!inheritViewBox) {
         more.viewBox = viewBox;
       }
-      const classes = useUtilityClasses$19(ownerState);
+      const classes = useUtilityClasses$1a(ownerState);
       return /* @__PURE__ */ jsxs(SvgIconRoot, _extends({
         as: component,
         className: clsx(classes.root, className),
@@ -16572,8 +16572,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiPaper", slot);
     }
     generateUtilityClasses("MuiPaper", ["root", "rounded", "outlined", "elevation", "elevation0", "elevation1", "elevation2", "elevation3", "elevation4", "elevation5", "elevation6", "elevation7", "elevation8", "elevation9", "elevation10", "elevation11", "elevation12", "elevation13", "elevation14", "elevation15", "elevation16", "elevation17", "elevation18", "elevation19", "elevation20", "elevation21", "elevation22", "elevation23", "elevation24"]);
-    const _excluded$1h = ["className", "component", "elevation", "square", "variant"];
-    const useUtilityClasses$18 = (ownerState) => {
+    const _excluded$1i = ["className", "component", "elevation", "square", "variant"];
+    const useUtilityClasses$19 = (ownerState) => {
       const {
         square,
         elevation,
@@ -16626,14 +16626,14 @@ var require_index_81daafcd = __commonJS({
         elevation = 1,
         square = false,
         variant = "elevation"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1h);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1i);
       const ownerState = _extends({}, props2, {
         component,
         elevation,
         square,
         variant
       });
-      const classes = useUtilityClasses$18(ownerState);
+      const classes = useUtilityClasses$19(ownerState);
       return /* @__PURE__ */ jsx(PaperRoot, _extends({
         as: component,
         ownerState,
@@ -16685,7 +16685,7 @@ var require_index_81daafcd = __commonJS({
     }
     const touchRippleClasses = generateUtilityClasses("MuiTouchRipple", ["root", "ripple", "rippleVisible", "ripplePulsate", "child", "childLeaving", "childPulsate"]);
     const touchRippleClasses$1 = touchRippleClasses;
-    const _excluded$1g = ["center", "classes", "className"];
+    const _excluded$1h = ["center", "classes", "className"];
     let _$2 = (t2) => t2, _t$2, _t2$2, _t3$2, _t4$2;
     const DURATION = 550;
     const DELAY_RIPPLE = 80;
@@ -16800,7 +16800,7 @@ var require_index_81daafcd = __commonJS({
         center: centerProp = false,
         classes = {},
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1g);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1h);
       const [ripples, setRipples] = react.exports.useState([]);
       const nextKey = react.exports.useRef(0);
       const rippleCallback = react.exports.useRef(null);
@@ -16964,8 +16964,8 @@ var require_index_81daafcd = __commonJS({
     }
     const buttonBaseClasses = generateUtilityClasses("MuiButtonBase", ["root", "disabled", "focusVisible"]);
     const buttonBaseClasses$1 = buttonBaseClasses;
-    const _excluded$1f = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
-    const useUtilityClasses$17 = (ownerState) => {
+    const _excluded$1g = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
+    const useUtilityClasses$18 = (ownerState) => {
       const {
         disabled,
         focusVisible,
@@ -17050,7 +17050,7 @@ var require_index_81daafcd = __commonJS({
         TouchRippleProps,
         touchRippleRef,
         type: type2
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1f);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1g);
       const buttonRef = react.exports.useRef(null);
       const rippleRef = react.exports.useRef(null);
       const handleRippleRef = useForkRef(rippleRef, touchRippleRef);
@@ -17197,7 +17197,7 @@ var require_index_81daafcd = __commonJS({
         tabIndex,
         focusVisible
       });
-      const classes = useUtilityClasses$17(ownerState);
+      const classes = useUtilityClasses$18(ownerState);
       return /* @__PURE__ */ jsxs(ButtonBaseRoot, _extends({
         as: ComponentProp,
         className: clsx(classes.root, className),
@@ -17236,8 +17236,8 @@ var require_index_81daafcd = __commonJS({
     }
     const iconButtonClasses = generateUtilityClasses("MuiIconButton", ["root", "disabled", "colorInherit", "colorPrimary", "colorSecondary", "colorError", "colorInfo", "colorSuccess", "colorWarning", "edgeStart", "edgeEnd", "sizeSmall", "sizeMedium", "sizeLarge"]);
     const iconButtonClasses$1 = iconButtonClasses;
-    const _excluded$1e = ["edge", "children", "className", "color", "disabled", "disableFocusRipple", "size"];
-    const useUtilityClasses$16 = (ownerState) => {
+    const _excluded$1f = ["edge", "children", "className", "color", "disabled", "disableFocusRipple", "size"];
+    const useUtilityClasses$17 = (ownerState) => {
       const {
         classes,
         disabled,
@@ -17328,7 +17328,7 @@ var require_index_81daafcd = __commonJS({
         disabled = false,
         disableFocusRipple = false,
         size = "medium"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1e);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1f);
       const ownerState = _extends({}, props2, {
         edge,
         color: color2,
@@ -17336,7 +17336,7 @@ var require_index_81daafcd = __commonJS({
         disableFocusRipple,
         size
       });
-      const classes = useUtilityClasses$16(ownerState);
+      const classes = useUtilityClasses$17(ownerState);
       return /* @__PURE__ */ jsx(IconButtonRoot, _extends({
         className: clsx(classes.root, className),
         centerRipple: true,
@@ -17364,8 +17364,8 @@ var require_index_81daafcd = __commonJS({
     const ClearIcon = createSvgIcon$1(/* @__PURE__ */ jsx("path", {
       d: "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
     }), "Close");
-    const _excluded$1d = ["action", "children", "className", "closeText", "color", "components", "componentsProps", "icon", "iconMapping", "onClose", "role", "severity", "slotProps", "slots", "variant"];
-    const useUtilityClasses$15 = (ownerState) => {
+    const _excluded$1e = ["action", "children", "className", "closeText", "color", "components", "componentsProps", "icon", "iconMapping", "onClose", "role", "severity", "slotProps", "slots", "variant"];
+    const useUtilityClasses$16 = (ownerState) => {
       const {
         variant,
         color: color2,
@@ -17493,13 +17493,13 @@ var require_index_81daafcd = __commonJS({
         slotProps = {},
         slots = {},
         variant = "standard"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1d);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1e);
       const ownerState = _extends({}, props2, {
         color: color2,
         severity,
         variant
       });
-      const classes = useUtilityClasses$15(ownerState);
+      const classes = useUtilityClasses$16(ownerState);
       const AlertCloseButton = (_ref = (_slots$closeButton = slots.closeButton) != null ? _slots$closeButton : components.CloseButton) != null ? _ref : IconButton$1;
       const AlertCloseIcon = (_ref2 = (_slots$closeIcon = slots.closeIcon) != null ? _slots$closeIcon : components.CloseIcon) != null ? _ref2 : ClearIcon;
       const closeButtonProps = (_slotProps$closeButto = slotProps.closeButton) != null ? _slotProps$closeButto : componentsProps.closeButton;
@@ -17545,8 +17545,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiTypography", slot);
     }
     generateUtilityClasses("MuiTypography", ["root", "h1", "h2", "h3", "h4", "h5", "h6", "subtitle1", "subtitle2", "body1", "body2", "inherit", "button", "caption", "overline", "alignLeft", "alignRight", "alignCenter", "alignJustify", "noWrap", "gutterBottom", "paragraph"]);
-    const _excluded$1c = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
-    const useUtilityClasses$14 = (ownerState) => {
+    const _excluded$1d = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
+    const useUtilityClasses$15 = (ownerState) => {
       const {
         align,
         gutterBottom,
@@ -17626,7 +17626,7 @@ var require_index_81daafcd = __commonJS({
         paragraph = false,
         variant = "body1",
         variantMapping = defaultVariantMapping
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1c);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1d);
       const ownerState = _extends({}, props2, {
         align,
         color: color2,
@@ -17639,7 +17639,7 @@ var require_index_81daafcd = __commonJS({
         variantMapping
       });
       const Component = component || (paragraph ? "p" : variantMapping[variant] || defaultVariantMapping[variant]) || "span";
-      const classes = useUtilityClasses$14(ownerState);
+      const classes = useUtilityClasses$15(ownerState);
       return /* @__PURE__ */ jsx(TypographyRoot, _extends({
         as: Component,
         ref,
@@ -17652,8 +17652,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiAppBar", slot);
     }
     generateUtilityClasses("MuiAppBar", ["root", "positionFixed", "positionAbsolute", "positionSticky", "positionStatic", "positionRelative", "colorDefault", "colorPrimary", "colorSecondary", "colorInherit", "colorTransparent"]);
-    const _excluded$1b = ["className", "color", "enableColorOnDark", "position"];
-    const useUtilityClasses$13 = (ownerState) => {
+    const _excluded$1c = ["className", "color", "enableColorOnDark", "position"];
+    const useUtilityClasses$14 = (ownerState) => {
       const {
         color: color2,
         position: position2,
@@ -17751,13 +17751,13 @@ var require_index_81daafcd = __commonJS({
         color: color2 = "primary",
         enableColorOnDark = false,
         position: position2 = "fixed"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1b);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1c);
       const ownerState = _extends({}, props2, {
         color: color2,
         position: position2,
         enableColorOnDark
       });
-      const classes = useUtilityClasses$13(ownerState);
+      const classes = useUtilityClasses$14(ownerState);
       return /* @__PURE__ */ jsx(AppBarRoot, _extends({
         square: true,
         component: "header",
@@ -17768,7 +17768,7 @@ var require_index_81daafcd = __commonJS({
       }, other));
     });
     const AppBar$1 = AppBar;
-    const _excluded$1a = ["components", "componentsProps", "slots", "slotProps"];
+    const _excluded$1b = ["components", "componentsProps", "slots", "slotProps"];
     const PopperRoot = styled$1(PopperUnstyled$1, {
       name: "MuiPopper",
       slot: "Root",
@@ -17785,7 +17785,7 @@ var require_index_81daafcd = __commonJS({
         componentsProps,
         slots,
         slotProps
-      } = _useThemeProps, other = _objectWithoutPropertiesLoose(_useThemeProps, _excluded$1a);
+      } = _useThemeProps, other = _objectWithoutPropertiesLoose(_useThemeProps, _excluded$1b);
       const RootComponent = (_slots$root = slots == null ? void 0 : slots.root) != null ? _slots$root : components == null ? void 0 : components.Root;
       return /* @__PURE__ */ jsx(PopperRoot, _extends({
         direction: theme == null ? void 0 : theme.direction,
@@ -17802,8 +17802,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiListSubheader", slot);
     }
     generateUtilityClasses("MuiListSubheader", ["root", "colorPrimary", "colorInherit", "gutters", "inset", "sticky"]);
-    const _excluded$19 = ["className", "color", "component", "disableGutters", "disableSticky", "inset"];
-    const useUtilityClasses$12 = (ownerState) => {
+    const _excluded$1a = ["className", "color", "component", "disableGutters", "disableSticky", "inset"];
+    const useUtilityClasses$13 = (ownerState) => {
       const {
         classes,
         color: color2,
@@ -17863,7 +17863,7 @@ var require_index_81daafcd = __commonJS({
         disableGutters = false,
         disableSticky = false,
         inset = false
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$19);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$1a);
       const ownerState = _extends({}, props2, {
         color: color2,
         component,
@@ -17871,7 +17871,7 @@ var require_index_81daafcd = __commonJS({
         disableSticky,
         inset
       });
-      const classes = useUtilityClasses$12(ownerState);
+      const classes = useUtilityClasses$13(ownerState);
       return /* @__PURE__ */ jsx(ListSubheaderRoot, _extends({
         as: component,
         className: clsx(classes.root, className),
@@ -17888,8 +17888,8 @@ var require_index_81daafcd = __commonJS({
     }
     const chipClasses = generateUtilityClasses("MuiChip", ["root", "sizeSmall", "sizeMedium", "colorError", "colorInfo", "colorPrimary", "colorSecondary", "colorSuccess", "colorWarning", "disabled", "clickable", "clickableColorPrimary", "clickableColorSecondary", "deletable", "deletableColorPrimary", "deletableColorSecondary", "outlined", "filled", "outlinedPrimary", "outlinedSecondary", "filledPrimary", "filledSecondary", "avatar", "avatarSmall", "avatarMedium", "avatarColorPrimary", "avatarColorSecondary", "icon", "iconSmall", "iconMedium", "iconColorPrimary", "iconColorSecondary", "label", "labelSmall", "labelMedium", "deleteIcon", "deleteIconSmall", "deleteIconMedium", "deleteIconColorPrimary", "deleteIconColorSecondary", "deleteIconOutlinedColorPrimary", "deleteIconOutlinedColorSecondary", "deleteIconFilledColorPrimary", "deleteIconFilledColorSecondary", "focusVisible"]);
     const chipClasses$1 = chipClasses;
-    const _excluded$18 = ["avatar", "className", "clickable", "color", "component", "deleteIcon", "disabled", "icon", "label", "onClick", "onDelete", "onKeyDown", "onKeyUp", "size", "variant", "tabIndex", "skipFocusWhenDisabled"];
-    const useUtilityClasses$11 = (ownerState) => {
+    const _excluded$19 = ["avatar", "className", "clickable", "color", "component", "deleteIcon", "disabled", "icon", "label", "onClick", "onDelete", "onKeyDown", "onKeyUp", "size", "variant", "tabIndex", "skipFocusWhenDisabled"];
+    const useUtilityClasses$12 = (ownerState) => {
       const {
         classes,
         disabled,
@@ -18160,7 +18160,7 @@ var require_index_81daafcd = __commonJS({
         variant = "filled",
         tabIndex,
         skipFocusWhenDisabled = false
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$18);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$19);
       const chipRef = react.exports.useRef(null);
       const handleRef = useForkRef(chipRef, ref);
       const handleDeleteIconClick = (event) => {
@@ -18201,7 +18201,7 @@ var require_index_81daafcd = __commonJS({
         clickable,
         variant
       });
-      const classes = useUtilityClasses$11(ownerState);
+      const classes = useUtilityClasses$12(ownerState);
       const moreProps = component === ButtonBase$1 ? _extends({
         component: ComponentProp || "div",
         focusVisibleClassName: classes.focusVisible
@@ -18288,7 +18288,7 @@ var require_index_81daafcd = __commonJS({
     }
     const inputBaseClasses = generateUtilityClasses("MuiInputBase", ["root", "formControl", "focused", "disabled", "adornedStart", "adornedEnd", "error", "sizeSmall", "multiline", "colorSecondary", "fullWidth", "hiddenLabel", "readOnly", "input", "inputSizeSmall", "inputMultiline", "inputTypeSearch", "inputAdornedStart", "inputAdornedEnd", "inputHiddenLabel"]);
     const inputBaseClasses$1 = inputBaseClasses;
-    const _excluded$17 = ["aria-describedby", "autoComplete", "autoFocus", "className", "color", "components", "componentsProps", "defaultValue", "disabled", "disableInjectingGlobalStyles", "endAdornment", "error", "fullWidth", "id", "inputComponent", "inputProps", "inputRef", "margin", "maxRows", "minRows", "multiline", "name", "onBlur", "onChange", "onClick", "onFocus", "onKeyDown", "onKeyUp", "placeholder", "readOnly", "renderSuffix", "rows", "size", "slotProps", "slots", "startAdornment", "type", "value"];
+    const _excluded$18 = ["aria-describedby", "autoComplete", "autoFocus", "className", "color", "components", "componentsProps", "defaultValue", "disabled", "disableInjectingGlobalStyles", "endAdornment", "error", "fullWidth", "id", "inputComponent", "inputProps", "inputRef", "margin", "maxRows", "minRows", "multiline", "name", "onBlur", "onChange", "onClick", "onFocus", "onKeyDown", "onKeyUp", "placeholder", "readOnly", "renderSuffix", "rows", "size", "slotProps", "slots", "startAdornment", "type", "value"];
     const rootOverridesResolver = (props2, styles2) => {
       const {
         ownerState
@@ -18301,7 +18301,7 @@ var require_index_81daafcd = __commonJS({
       } = props2;
       return [styles2.input, ownerState.size === "small" && styles2.inputSizeSmall, ownerState.multiline && styles2.inputMultiline, ownerState.type === "search" && styles2.inputTypeSearch, ownerState.startAdornment && styles2.inputAdornedStart, ownerState.endAdornment && styles2.inputAdornedEnd, ownerState.hiddenLabel && styles2.inputHiddenLabel];
     };
-    const useUtilityClasses$10 = (ownerState) => {
+    const useUtilityClasses$11 = (ownerState) => {
       const {
         classes,
         color: color2,
@@ -18491,7 +18491,7 @@ var require_index_81daafcd = __commonJS({
         startAdornment,
         type: type2 = "text",
         value: valueProp
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$17);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$18);
       const value = inputPropsProp.value != null ? inputPropsProp.value : valueProp;
       const {
         current: isControlled
@@ -18634,7 +18634,7 @@ var require_index_81daafcd = __commonJS({
         startAdornment,
         type: type2
       });
-      const classes = useUtilityClasses$10(ownerState);
+      const classes = useUtilityClasses$11(ownerState);
       const Root = slots.root || components.Root || InputBaseRoot;
       const rootProps = slotProps.root || componentsProps.root || {};
       const Input2 = slots.input || components.Input || InputBaseComponent;
@@ -18709,8 +18709,8 @@ var require_index_81daafcd = __commonJS({
     const autocompleteClasses = generateUtilityClasses("MuiAutocomplete", ["root", "fullWidth", "focused", "focusVisible", "tag", "tagSizeSmall", "tagSizeMedium", "hasPopupIcon", "hasClearIcon", "inputRoot", "input", "inputFocused", "endAdornment", "clearIndicator", "popupIndicator", "popupIndicatorOpen", "popper", "popperDisablePortal", "paper", "listbox", "loading", "noOptions", "option", "groupLabel", "groupUl"]);
     const autocompleteClasses$1 = autocompleteClasses;
     var _ClearIcon, _ArrowDropDownIcon;
-    const _excluded$16 = ["autoComplete", "autoHighlight", "autoSelect", "blurOnSelect", "ChipProps", "className", "clearIcon", "clearOnBlur", "clearOnEscape", "clearText", "closeText", "componentsProps", "defaultValue", "disableClearable", "disableCloseOnSelect", "disabled", "disabledItemsFocusable", "disableListWrap", "disablePortal", "filterOptions", "filterSelectedOptions", "forcePopupIcon", "freeSolo", "fullWidth", "getLimitTagsText", "getOptionDisabled", "getOptionLabel", "isOptionEqualToValue", "groupBy", "handleHomeEndKeys", "id", "includeInputInList", "inputValue", "limitTags", "ListboxComponent", "ListboxProps", "loading", "loadingText", "multiple", "noOptionsText", "onChange", "onClose", "onHighlightChange", "onInputChange", "onOpen", "open", "openOnFocus", "openText", "options", "PaperComponent", "PopperComponent", "popupIcon", "readOnly", "renderGroup", "renderInput", "renderOption", "renderTags", "selectOnFocus", "size", "slotProps", "value"];
-    const useUtilityClasses$$ = (ownerState) => {
+    const _excluded$17 = ["autoComplete", "autoHighlight", "autoSelect", "blurOnSelect", "ChipProps", "className", "clearIcon", "clearOnBlur", "clearOnEscape", "clearText", "closeText", "componentsProps", "defaultValue", "disableClearable", "disableCloseOnSelect", "disabled", "disabledItemsFocusable", "disableListWrap", "disablePortal", "filterOptions", "filterSelectedOptions", "forcePopupIcon", "freeSolo", "fullWidth", "getLimitTagsText", "getOptionDisabled", "getOptionLabel", "isOptionEqualToValue", "groupBy", "handleHomeEndKeys", "id", "includeInputInList", "inputValue", "limitTags", "ListboxComponent", "ListboxProps", "loading", "loadingText", "multiple", "noOptionsText", "onChange", "onClose", "onHighlightChange", "onInputChange", "onOpen", "open", "openOnFocus", "openText", "options", "PaperComponent", "PopperComponent", "popupIcon", "readOnly", "renderGroup", "renderInput", "renderOption", "renderTags", "selectOnFocus", "size", "slotProps", "value"];
+    const useUtilityClasses$10 = (ownerState) => {
       const {
         classes,
         disablePortal,
@@ -19085,7 +19085,7 @@ var require_index_81daafcd = __commonJS({
         selectOnFocus = !props2.freeSolo,
         size = "medium",
         slotProps = {}
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$16);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$17);
       const {
         getRootProps,
         getInputProps,
@@ -19120,7 +19120,7 @@ var require_index_81daafcd = __commonJS({
         popupOpen,
         size
       });
-      const classes = useUtilityClasses$$(ownerState);
+      const classes = useUtilityClasses$10(ownerState);
       let startAdornment;
       if (multiple && value.length > 0) {
         const getCustomizedTagProps = (params) => _extends({
@@ -19282,8 +19282,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiAvatar", slot);
     }
     generateUtilityClasses("MuiAvatar", ["root", "colorDefault", "circular", "rounded", "square", "img", "fallback"]);
-    const _excluded$15 = ["alt", "children", "className", "component", "imgProps", "sizes", "src", "srcSet", "variant"];
-    const useUtilityClasses$_ = (ownerState) => {
+    const _excluded$16 = ["alt", "children", "className", "component", "imgProps", "sizes", "src", "srcSet", "variant"];
+    const useUtilityClasses$$ = (ownerState) => {
       const {
         classes,
         variant,
@@ -19406,7 +19406,7 @@ var require_index_81daafcd = __commonJS({
         src,
         srcSet,
         variant = "circular"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$15);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$16);
       let children = null;
       const loaded = useLoaded(_extends({}, imgProps, {
         src,
@@ -19419,7 +19419,7 @@ var require_index_81daafcd = __commonJS({
         component,
         variant
       });
-      const classes = useUtilityClasses$_(ownerState);
+      const classes = useUtilityClasses$$(ownerState);
       if (hasImgNotFailing) {
         children = /* @__PURE__ */ jsx(AvatarImg, _extends({
           alt,
@@ -19448,7 +19448,7 @@ var require_index_81daafcd = __commonJS({
       }));
     });
     const Avatar$1 = Avatar;
-    const _excluded$14 = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
+    const _excluded$15 = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
     const styles$3 = {
       entering: {
         opacity: 1
@@ -19478,7 +19478,7 @@ var require_index_81daafcd = __commonJS({
         style: style2,
         timeout = defaultTimeout,
         TransitionComponent = Transition$1
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$14);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$15);
       const nodeRef = react.exports.useRef(null);
       const handleRef = useForkRef(nodeRef, children.ref, ref);
       const normalizedTransitionCallback = (callback) => (maybeIsAppearing) => {
@@ -19558,8 +19558,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiBackdrop", slot);
     }
     generateUtilityClasses("MuiBackdrop", ["root", "invisible"]);
-    const _excluded$13 = ["children", "component", "components", "componentsProps", "className", "invisible", "open", "slotProps", "slots", "transitionDuration", "TransitionComponent"];
-    const useUtilityClasses$Z = (ownerState) => {
+    const _excluded$14 = ["children", "component", "components", "componentsProps", "className", "invisible", "open", "slotProps", "slots", "transitionDuration", "TransitionComponent"];
+    const useUtilityClasses$_ = (ownerState) => {
       const {
         classes,
         invisible
@@ -19612,12 +19612,12 @@ var require_index_81daafcd = __commonJS({
         slots = {},
         transitionDuration,
         TransitionComponent = Fade$1
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$13);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$14);
       const ownerState = _extends({}, props2, {
         component,
         invisible
       });
-      const classes = useUtilityClasses$Z(ownerState);
+      const classes = useUtilityClasses$_(ownerState);
       const rootSlotProps = (_slotProps$root = slotProps.root) != null ? _slotProps$root : componentsProps.root;
       return /* @__PURE__ */ jsx(TransitionComponent, _extends({
         in: open,
@@ -19650,8 +19650,8 @@ var require_index_81daafcd = __commonJS({
     const buttonClasses$1 = buttonClasses;
     const ButtonGroupContext = /* @__PURE__ */ react.exports.createContext({});
     const ButtonGroupContext$1 = ButtonGroupContext;
-    const _excluded$12 = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
-    const useUtilityClasses$Y = (ownerState) => {
+    const _excluded$13 = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
+    const useUtilityClasses$Z = (ownerState) => {
       const {
         color: color2,
         disableElevation,
@@ -19867,7 +19867,7 @@ var require_index_81daafcd = __commonJS({
         startIcon: startIconProp,
         type: type2,
         variant = "text"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$12);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$13);
       const ownerState = _extends({}, props2, {
         color: color2,
         component,
@@ -19879,7 +19879,7 @@ var require_index_81daafcd = __commonJS({
         type: type2,
         variant
       });
-      const classes = useUtilityClasses$Y(ownerState);
+      const classes = useUtilityClasses$Z(ownerState);
       const startIcon = startIconProp && /* @__PURE__ */ jsx(ButtonStartIcon, {
         className: classes.startIcon,
         ownerState,
@@ -19909,8 +19909,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiCard", slot);
     }
     generateUtilityClasses("MuiCard", ["root"]);
-    const _excluded$11 = ["className", "raised"];
-    const useUtilityClasses$X = (ownerState) => {
+    const _excluded$12 = ["className", "raised"];
+    const useUtilityClasses$Y = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -19936,11 +19936,11 @@ var require_index_81daafcd = __commonJS({
       const {
         className,
         raised = false
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$11);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$12);
       const ownerState = _extends({}, props2, {
         raised
       });
-      const classes = useUtilityClasses$X(ownerState);
+      const classes = useUtilityClasses$Y(ownerState);
       return /* @__PURE__ */ jsx(CardRoot, _extends({
         className: clsx(classes.root, className),
         elevation: raised ? 8 : void 0,
@@ -19953,8 +19953,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiCardContent", slot);
     }
     generateUtilityClasses("MuiCardContent", ["root"]);
-    const _excluded$10 = ["className", "component"];
-    const useUtilityClasses$W = (ownerState) => {
+    const _excluded$11 = ["className", "component"];
+    const useUtilityClasses$X = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -19983,11 +19983,11 @@ var require_index_81daafcd = __commonJS({
       const {
         className,
         component = "div"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$10);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$11);
       const ownerState = _extends({}, props2, {
         component
       });
-      const classes = useUtilityClasses$W(ownerState);
+      const classes = useUtilityClasses$X(ownerState);
       return /* @__PURE__ */ jsx(CardContentRoot, _extends({
         as: component,
         className: clsx(classes.root, className),
@@ -20000,8 +20000,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("PrivateSwitchBase", slot);
     }
     generateUtilityClasses("PrivateSwitchBase", ["root", "checked", "disabled", "input", "edgeStart", "edgeEnd"]);
-    const _excluded$$ = ["autoFocus", "checked", "checkedIcon", "className", "defaultChecked", "disabled", "disableFocusRipple", "edge", "icon", "id", "inputProps", "inputRef", "name", "onBlur", "onChange", "onFocus", "readOnly", "required", "tabIndex", "type", "value"];
-    const useUtilityClasses$V = (ownerState) => {
+    const _excluded$10 = ["autoFocus", "checked", "checkedIcon", "className", "defaultChecked", "disabled", "disableFocusRipple", "edge", "icon", "id", "inputProps", "inputRef", "name", "onBlur", "onChange", "onFocus", "readOnly", "required", "tabIndex", "type", "value"];
+    const useUtilityClasses$W = (ownerState) => {
       const {
         classes,
         checked,
@@ -20059,7 +20059,7 @@ var require_index_81daafcd = __commonJS({
         tabIndex,
         type: type2,
         value
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$$);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$10);
       const [checked, setCheckedState] = useControlled({
         controlled: checkedProp,
         default: Boolean(defaultChecked),
@@ -20106,7 +20106,7 @@ var require_index_81daafcd = __commonJS({
         disableFocusRipple,
         edge
       });
-      const classes = useUtilityClasses$V(ownerState);
+      const classes = useUtilityClasses$W(ownerState);
       return /* @__PURE__ */ jsxs(SwitchBaseRoot, _extends({
         component: "span",
         className: clsx(classes.root, className),
@@ -20145,7 +20145,7 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiCircularProgress", slot);
     }
     generateUtilityClasses("MuiCircularProgress", ["root", "determinate", "indeterminate", "colorPrimary", "colorSecondary", "svg", "circle", "circleDeterminate", "circleIndeterminate", "circleDisableShrink"]);
-    const _excluded$_ = ["className", "color", "disableShrink", "size", "style", "thickness", "value", "variant"];
+    const _excluded$$ = ["className", "color", "disableShrink", "size", "style", "thickness", "value", "variant"];
     let _$1 = (t2) => t2, _t$1, _t2$1, _t3$1, _t4$1;
     const SIZE = 44;
     const circularRotateKeyframe = keyframes(_t$1 || (_t$1 = _$1`
@@ -20173,7 +20173,7 @@ var require_index_81daafcd = __commonJS({
     stroke-dashoffset: -125px;
   }
 `));
-    const useUtilityClasses$U = (ownerState) => {
+    const useUtilityClasses$V = (ownerState) => {
       const {
         classes,
         variant,
@@ -20255,7 +20255,7 @@ var require_index_81daafcd = __commonJS({
         thickness = 3.6,
         value = 0,
         variant = "indeterminate"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$_);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$$);
       const ownerState = _extends({}, props2, {
         color: color2,
         disableShrink,
@@ -20264,7 +20264,7 @@ var require_index_81daafcd = __commonJS({
         value,
         variant
       });
-      const classes = useUtilityClasses$U(ownerState);
+      const classes = useUtilityClasses$V(ownerState);
       const circleStyle = {};
       const rootStyle = {};
       const rootProps = {};
@@ -20384,7 +20384,7 @@ var require_index_81daafcd = __commonJS({
         }), children]
       });
     }
-    const _excluded$Z = ["BackdropComponent", "BackdropProps", "closeAfterTransition", "children", "component", "components", "componentsProps", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "slotProps", "slots", "theme"];
+    const _excluded$_ = ["BackdropComponent", "BackdropProps", "closeAfterTransition", "children", "component", "components", "componentsProps", "disableAutoFocus", "disableEnforceFocus", "disableEscapeKeyDown", "disablePortal", "disableRestoreFocus", "disableScrollLock", "hideBackdrop", "keepMounted", "slotProps", "slots", "theme"];
     const extendUtilityClasses = (ownerState) => {
       return ownerState.classes;
     };
@@ -20444,7 +20444,7 @@ var require_index_81daafcd = __commonJS({
         slotProps,
         slots,
         theme
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$Z);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$_);
       const [exited, setExited] = react.exports.useState(true);
       const commonProps = {
         closeAfterTransition,
@@ -20494,7 +20494,7 @@ var require_index_81daafcd = __commonJS({
     const dialogClasses$1 = dialogClasses;
     const DialogContext = /* @__PURE__ */ react.exports.createContext({});
     const DialogContext$1 = DialogContext;
-    const _excluded$Y = ["aria-describedby", "aria-labelledby", "BackdropComponent", "BackdropProps", "children", "className", "disableEscapeKeyDown", "fullScreen", "fullWidth", "maxWidth", "onBackdropClick", "onClose", "open", "PaperComponent", "PaperProps", "scroll", "TransitionComponent", "transitionDuration", "TransitionProps"];
+    const _excluded$Z = ["aria-describedby", "aria-labelledby", "BackdropComponent", "BackdropProps", "children", "className", "disableEscapeKeyDown", "fullScreen", "fullWidth", "maxWidth", "onBackdropClick", "onClose", "open", "PaperComponent", "PaperProps", "scroll", "TransitionComponent", "transitionDuration", "TransitionProps"];
     const DialogBackdrop = styled$1(Backdrop$1, {
       name: "MuiDialog",
       slot: "Backdrop",
@@ -20502,7 +20502,7 @@ var require_index_81daafcd = __commonJS({
     })({
       zIndex: -1
     });
-    const useUtilityClasses$T = (ownerState) => {
+    const useUtilityClasses$U = (ownerState) => {
       const {
         classes,
         scroll,
@@ -20647,7 +20647,7 @@ var require_index_81daafcd = __commonJS({
         TransitionComponent = Fade$1,
         transitionDuration = defaultTransitionDuration,
         TransitionProps
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$Y);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$Z);
       const ownerState = _extends({}, props2, {
         disableEscapeKeyDown,
         fullScreen,
@@ -20655,7 +20655,7 @@ var require_index_81daafcd = __commonJS({
         maxWidth: maxWidth2,
         scroll
       });
-      const classes = useUtilityClasses$T(ownerState);
+      const classes = useUtilityClasses$U(ownerState);
       const backdropClick = react.exports.useRef();
       const handleMouseDown = (event) => {
         backdropClick.current = event.target === event.currentTarget;
@@ -20730,8 +20730,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiDialogActions", slot);
     }
     generateUtilityClasses("MuiDialogActions", ["root", "spacing"]);
-    const _excluded$X = ["className", "disableSpacing"];
-    const useUtilityClasses$S = (ownerState) => {
+    const _excluded$Y = ["className", "disableSpacing"];
+    const useUtilityClasses$T = (ownerState) => {
       const {
         classes,
         disableSpacing
@@ -20771,11 +20771,11 @@ var require_index_81daafcd = __commonJS({
       const {
         className,
         disableSpacing = false
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$X);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$Y);
       const ownerState = _extends({}, props2, {
         disableSpacing
       });
-      const classes = useUtilityClasses$S(ownerState);
+      const classes = useUtilityClasses$T(ownerState);
       return /* @__PURE__ */ jsx(DialogActionsRoot, _extends({
         className: clsx(classes.root, className),
         ownerState,
@@ -20792,8 +20792,8 @@ var require_index_81daafcd = __commonJS({
     }
     const dialogTitleClasses = generateUtilityClasses("MuiDialogTitle", ["root"]);
     const dialogTitleClasses$1 = dialogTitleClasses;
-    const _excluded$W = ["className", "dividers"];
-    const useUtilityClasses$R = (ownerState) => {
+    const _excluded$X = ["className", "dividers"];
+    const useUtilityClasses$S = (ownerState) => {
       const {
         classes,
         dividers
@@ -20837,11 +20837,11 @@ var require_index_81daafcd = __commonJS({
       const {
         className,
         dividers = false
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$W);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$X);
       const ownerState = _extends({}, props2, {
         dividers
       });
-      const classes = useUtilityClasses$R(ownerState);
+      const classes = useUtilityClasses$S(ownerState);
       return /* @__PURE__ */ jsx(DialogContentRoot, _extends({
         className: clsx(classes.root, className),
         ownerState,
@@ -20849,8 +20849,8 @@ var require_index_81daafcd = __commonJS({
       }, other));
     });
     const DialogContent$1 = DialogContent;
-    const _excluded$V = ["className", "id"];
-    const useUtilityClasses$Q = (ownerState) => {
+    const _excluded$W = ["className", "id"];
+    const useUtilityClasses$R = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -20875,9 +20875,9 @@ var require_index_81daafcd = __commonJS({
       const {
         className,
         id: idProp
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$V);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$W);
       const ownerState = props2;
-      const classes = useUtilityClasses$Q(ownerState);
+      const classes = useUtilityClasses$R(ownerState);
       const {
         titleId: id2 = idProp
       } = react.exports.useContext(DialogContext$1);
@@ -20896,8 +20896,8 @@ var require_index_81daafcd = __commonJS({
     }
     const dividerClasses = generateUtilityClasses("MuiDivider", ["root", "absolute", "fullWidth", "inset", "middle", "flexItem", "light", "vertical", "withChildren", "withChildrenVertical", "textAlignRight", "textAlignLeft", "wrapper", "wrapperVertical"]);
     const dividerClasses$1 = dividerClasses;
-    const _excluded$U = ["absolute", "children", "className", "component", "flexItem", "light", "orientation", "role", "textAlign", "variant"];
-    const useUtilityClasses$P = (ownerState) => {
+    const _excluded$V = ["absolute", "children", "className", "component", "flexItem", "light", "orientation", "role", "textAlign", "variant"];
+    const useUtilityClasses$Q = (ownerState) => {
       const {
         absolute,
         children,
@@ -21037,7 +21037,7 @@ var require_index_81daafcd = __commonJS({
         role = component !== "hr" ? "separator" : void 0,
         textAlign: textAlign2 = "center",
         variant = "fullWidth"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$U);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$V);
       const ownerState = _extends({}, props2, {
         absolute,
         component,
@@ -21048,7 +21048,7 @@ var require_index_81daafcd = __commonJS({
         textAlign: textAlign2,
         variant
       });
-      const classes = useUtilityClasses$P(ownerState);
+      const classes = useUtilityClasses$Q(ownerState);
       return /* @__PURE__ */ jsx(DividerRoot, _extends({
         as: component,
         className: clsx(classes.root, className),
@@ -21064,7 +21064,7 @@ var require_index_81daafcd = __commonJS({
       }));
     });
     const Divider$1 = Divider;
-    const _excluded$T = ["addEndListener", "appear", "children", "container", "direction", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
+    const _excluded$U = ["addEndListener", "appear", "children", "container", "direction", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
     function getTranslateValue(direction, node2, resolvedContainer) {
       const rect = node2.getBoundingClientRect();
       const containerRect = resolvedContainer && resolvedContainer.getBoundingClientRect();
@@ -21144,7 +21144,7 @@ var require_index_81daafcd = __commonJS({
         style: style2,
         timeout = defaultTimeout,
         TransitionComponent = Transition$1
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$T);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$U);
       const childrenRef = react.exports.useRef(null);
       const handleRef = useForkRef(children.ref, childrenRef, ref);
       const normalizedTransitionCallback = (callback) => (isAppearing) => {
@@ -21262,14 +21262,14 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiDrawer", slot);
     }
     generateUtilityClasses("MuiDrawer", ["root", "docked", "paper", "paperAnchorLeft", "paperAnchorRight", "paperAnchorTop", "paperAnchorBottom", "paperAnchorDockedLeft", "paperAnchorDockedRight", "paperAnchorDockedTop", "paperAnchorDockedBottom", "modal"]);
-    const _excluded$S = ["BackdropProps"], _excluded2$3 = ["anchor", "BackdropProps", "children", "className", "elevation", "hideBackdrop", "ModalProps", "onClose", "open", "PaperProps", "SlideProps", "TransitionComponent", "transitionDuration", "variant"];
+    const _excluded$T = ["BackdropProps"], _excluded2$3 = ["anchor", "BackdropProps", "children", "className", "elevation", "hideBackdrop", "ModalProps", "onClose", "open", "PaperProps", "SlideProps", "TransitionComponent", "transitionDuration", "variant"];
     const overridesResolver$5 = (props2, styles2) => {
       const {
         ownerState
       } = props2;
       return [styles2.root, (ownerState.variant === "permanent" || ownerState.variant === "persistent") && styles2.docked, styles2.modal];
     };
-    const useUtilityClasses$O = (ownerState) => {
+    const useUtilityClasses$P = (ownerState) => {
       const {
         classes,
         anchor,
@@ -21389,7 +21389,7 @@ var require_index_81daafcd = __commonJS({
         TransitionComponent = Slide$1,
         transitionDuration = defaultTransitionDuration,
         variant = "temporary"
-      } = props2, ModalProps = _objectWithoutPropertiesLoose(props2.ModalProps, _excluded$S), other = _objectWithoutPropertiesLoose(props2, _excluded2$3);
+      } = props2, ModalProps = _objectWithoutPropertiesLoose(props2.ModalProps, _excluded$T), other = _objectWithoutPropertiesLoose(props2, _excluded2$3);
       const mounted = react.exports.useRef(false);
       react.exports.useEffect(() => {
         mounted.current = true;
@@ -21402,7 +21402,7 @@ var require_index_81daafcd = __commonJS({
         open,
         variant
       }, other);
-      const classes = useUtilityClasses$O(ownerState);
+      const classes = useUtilityClasses$P(ownerState);
       const drawer = /* @__PURE__ */ jsx(DrawerPaper, _extends({
         elevation: variant === "temporary" ? elevation : 0,
         square: true
@@ -21457,8 +21457,8 @@ var require_index_81daafcd = __commonJS({
     }
     const fabClasses = generateUtilityClasses("MuiFab", ["root", "primary", "secondary", "extended", "circular", "focusVisible", "disabled", "colorInherit", "sizeSmall", "sizeMedium", "sizeLarge", "info", "error", "warning", "success"]);
     const fabClasses$1 = fabClasses;
-    const _excluded$R = ["children", "className", "color", "component", "disabled", "disableFocusRipple", "focusVisibleClassName", "size", "variant"];
-    const useUtilityClasses$N = (ownerState) => {
+    const _excluded$S = ["children", "className", "color", "component", "disabled", "disableFocusRipple", "focusVisibleClassName", "size", "variant"];
+    const useUtilityClasses$O = (ownerState) => {
       const {
         color: color2,
         variant,
@@ -21574,7 +21574,7 @@ var require_index_81daafcd = __commonJS({
         focusVisibleClassName,
         size = "large",
         variant = "circular"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$R);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$S);
       const ownerState = _extends({}, props2, {
         color: color2,
         component,
@@ -21583,7 +21583,7 @@ var require_index_81daafcd = __commonJS({
         size,
         variant
       });
-      const classes = useUtilityClasses$N(ownerState);
+      const classes = useUtilityClasses$O(ownerState);
       return /* @__PURE__ */ jsx(FabRoot, _extends({
         className: clsx(classes.root, className),
         component,
@@ -21598,8 +21598,8 @@ var require_index_81daafcd = __commonJS({
       }));
     });
     const Fab$1 = Fab;
-    const _excluded$Q = ["disableUnderline", "components", "componentsProps", "fullWidth", "hiddenLabel", "inputComponent", "multiline", "slotProps", "slots", "type"];
-    const useUtilityClasses$M = (ownerState) => {
+    const _excluded$R = ["disableUnderline", "components", "componentsProps", "fullWidth", "hiddenLabel", "inputComponent", "multiline", "slotProps", "slots", "type"];
+    const useUtilityClasses$N = (ownerState) => {
       const {
         classes,
         disableUnderline
@@ -21772,14 +21772,14 @@ var require_index_81daafcd = __commonJS({
         slotProps,
         slots = {},
         type: type2 = "text"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$Q);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$R);
       const ownerState = _extends({}, props2, {
         fullWidth,
         inputComponent,
         multiline,
         type: type2
       });
-      const classes = useUtilityClasses$M(props2);
+      const classes = useUtilityClasses$N(props2);
       const filledInputComponentsProps = {
         root: {
           ownerState
@@ -21812,8 +21812,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiFormControl", slot);
     }
     generateUtilityClasses("MuiFormControl", ["root", "marginNone", "marginNormal", "marginDense", "fullWidth", "disabled"]);
-    const _excluded$P = ["children", "className", "color", "component", "disabled", "error", "focused", "fullWidth", "hiddenLabel", "margin", "required", "size", "variant"];
-    const useUtilityClasses$L = (ownerState) => {
+    const _excluded$Q = ["children", "className", "color", "component", "disabled", "error", "focused", "fullWidth", "hiddenLabel", "margin", "required", "size", "variant"];
+    const useUtilityClasses$M = (ownerState) => {
       const {
         classes,
         margin,
@@ -21871,7 +21871,7 @@ var require_index_81daafcd = __commonJS({
         required = false,
         size = "medium",
         variant = "outlined"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$P);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$Q);
       const ownerState = _extends({}, props2, {
         color: color2,
         component,
@@ -21884,7 +21884,7 @@ var require_index_81daafcd = __commonJS({
         size,
         variant
       });
-      const classes = useUtilityClasses$L(ownerState);
+      const classes = useUtilityClasses$M(ownerState);
       const [adornedStart, setAdornedStart] = react.exports.useState(() => {
         let initialAdornedStart = false;
         if (children) {
@@ -21968,8 +21968,8 @@ var require_index_81daafcd = __commonJS({
     const formHelperTextClasses = generateUtilityClasses("MuiFormHelperText", ["root", "error", "disabled", "sizeSmall", "sizeMedium", "contained", "focused", "filled", "required"]);
     const formHelperTextClasses$1 = formHelperTextClasses;
     var _span$3;
-    const _excluded$O = ["children", "className", "component", "disabled", "error", "filled", "focused", "margin", "required", "variant"];
-    const useUtilityClasses$K = (ownerState) => {
+    const _excluded$P = ["children", "className", "component", "disabled", "error", "filled", "focused", "margin", "required", "variant"];
+    const useUtilityClasses$L = (ownerState) => {
       const {
         classes,
         contained,
@@ -22026,7 +22026,7 @@ var require_index_81daafcd = __commonJS({
         children,
         className,
         component = "p"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$O);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$P);
       const muiFormControl = useFormControl();
       const fcs = formControlState({
         props: props2,
@@ -22044,7 +22044,7 @@ var require_index_81daafcd = __commonJS({
         focused: fcs.focused,
         required: fcs.required
       });
-      const classes = useUtilityClasses$K(ownerState);
+      const classes = useUtilityClasses$L(ownerState);
       return /* @__PURE__ */ jsx(FormHelperTextRoot, _extends({
         as: component,
         ownerState,
@@ -22063,8 +22063,8 @@ var require_index_81daafcd = __commonJS({
     }
     const formLabelClasses = generateUtilityClasses("MuiFormLabel", ["root", "colorSecondary", "focused", "disabled", "error", "filled", "required", "asterisk"]);
     const formLabelClasses$1 = formLabelClasses;
-    const _excluded$N = ["children", "className", "color", "component", "disabled", "error", "filled", "focused", "required"];
-    const useUtilityClasses$J = (ownerState) => {
+    const _excluded$O = ["children", "className", "color", "component", "disabled", "error", "filled", "focused", "required"];
+    const useUtilityClasses$K = (ownerState) => {
       const {
         classes,
         color: color2,
@@ -22127,7 +22127,7 @@ var require_index_81daafcd = __commonJS({
         children,
         className,
         component = "label"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$N);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$O);
       const muiFormControl = useFormControl();
       const fcs = formControlState({
         props: props2,
@@ -22143,7 +22143,7 @@ var require_index_81daafcd = __commonJS({
         focused: fcs.focused,
         required: fcs.required
       });
-      const classes = useUtilityClasses$J(ownerState);
+      const classes = useUtilityClasses$K(ownerState);
       return /* @__PURE__ */ jsxs(FormLabelRoot, _extends({
         as: component,
         ownerState,
@@ -22182,7 +22182,7 @@ var require_index_81daafcd = __commonJS({
       ...GRID_SIZES.map((size) => `grid-lg-${size}`),
       ...GRID_SIZES.map((size) => `grid-xl-${size}`)
     ]);
-    const _excluded$M = ["className", "columns", "columnSpacing", "component", "container", "direction", "item", "rowSpacing", "spacing", "wrap", "zeroMinWidth"];
+    const _excluded$N = ["className", "columns", "columnSpacing", "component", "container", "direction", "item", "rowSpacing", "spacing", "wrap", "zeroMinWidth"];
     function getOffset(val) {
       const parse2 = parseFloat(val);
       return `${parse2}${String(val).replace(String(parse2), "") || "px"}`;
@@ -22462,7 +22462,7 @@ var require_index_81daafcd = __commonJS({
       });
       return classes;
     }
-    const useUtilityClasses$I = (ownerState) => {
+    const useUtilityClasses$J = (ownerState) => {
       const {
         classes,
         container,
@@ -22510,7 +22510,7 @@ var require_index_81daafcd = __commonJS({
         spacing: spacing2 = 0,
         wrap: wrap2 = "wrap",
         zeroMinWidth = false
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$M);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$N);
       const rowSpacing = rowSpacingProp || spacing2;
       const columnSpacing = columnSpacingProp || spacing2;
       const columnsContext = react.exports.useContext(GridContext$1);
@@ -22536,7 +22536,7 @@ var require_index_81daafcd = __commonJS({
       }, breakpointsValues, {
         breakpoints: breakpoints.keys
       });
-      const classes = useUtilityClasses$I(ownerState);
+      const classes = useUtilityClasses$J(ownerState);
       return /* @__PURE__ */ jsx(GridContext$1.Provider, {
         value: columns,
         children: /* @__PURE__ */ jsx(GridRoot, _extends({
@@ -22548,7 +22548,7 @@ var require_index_81daafcd = __commonJS({
       });
     });
     const Grid$1 = Grid;
-    const _excluded$L = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
+    const _excluded$M = ["addEndListener", "appear", "children", "easing", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "timeout", "TransitionComponent"];
     function getScale(value) {
       return `scale(${value}, ${value ** 2})`;
     }
@@ -22579,7 +22579,7 @@ var require_index_81daafcd = __commonJS({
         style: style2,
         timeout = "auto",
         TransitionComponent = Transition$1
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$L);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$M);
       const timer = react.exports.useRef();
       const autoTimeout = react.exports.useRef();
       const theme = useTheme();
@@ -22704,8 +22704,8 @@ var require_index_81daafcd = __commonJS({
     });
     Grow.muiSupportAuto = true;
     const Grow$1 = Grow;
-    const _excluded$K = ["disableUnderline", "components", "componentsProps", "fullWidth", "inputComponent", "multiline", "slotProps", "slots", "type"];
-    const useUtilityClasses$H = (ownerState) => {
+    const _excluded$L = ["disableUnderline", "components", "componentsProps", "fullWidth", "inputComponent", "multiline", "slotProps", "slots", "type"];
+    const useUtilityClasses$I = (ownerState) => {
       const {
         classes,
         disableUnderline
@@ -22808,8 +22808,8 @@ var require_index_81daafcd = __commonJS({
         slotProps,
         slots = {},
         type: type2 = "text"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$K);
-      const classes = useUtilityClasses$H(props2);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$L);
+      const classes = useUtilityClasses$I(props2);
       const ownerState = {
         disableUnderline
       };
@@ -22844,14 +22844,14 @@ var require_index_81daafcd = __commonJS({
     const inputAdornmentClasses = generateUtilityClasses("MuiInputAdornment", ["root", "filled", "standard", "outlined", "positionStart", "positionEnd", "disablePointerEvents", "hiddenLabel", "sizeSmall"]);
     const inputAdornmentClasses$1 = inputAdornmentClasses;
     var _span$2;
-    const _excluded$J = ["children", "className", "component", "disablePointerEvents", "disableTypography", "position", "variant"];
+    const _excluded$K = ["children", "className", "component", "disablePointerEvents", "disableTypography", "position", "variant"];
     const overridesResolver$4 = (props2, styles2) => {
       const {
         ownerState
       } = props2;
       return [styles2.root, styles2[`position${capitalize(ownerState.position)}`], ownerState.disablePointerEvents === true && styles2.disablePointerEvents, styles2[ownerState.variant]];
     };
-    const useUtilityClasses$G = (ownerState) => {
+    const useUtilityClasses$H = (ownerState) => {
       const {
         classes,
         disablePointerEvents,
@@ -22903,7 +22903,7 @@ var require_index_81daafcd = __commonJS({
         disableTypography = false,
         position: position2,
         variant: variantProp
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$J);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$K);
       const muiFormControl = useFormControl() || {};
       let variant = variantProp;
       if (variantProp && muiFormControl.variant)
@@ -22918,7 +22918,7 @@ var require_index_81daafcd = __commonJS({
         position: position2,
         variant
       });
-      const classes = useUtilityClasses$G(ownerState);
+      const classes = useUtilityClasses$H(ownerState);
       return /* @__PURE__ */ jsx(FormControlContext$1.Provider, {
         value: null,
         children: /* @__PURE__ */ jsx(InputAdornmentRoot, _extends({
@@ -22944,8 +22944,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiInputLabel", slot);
     }
     generateUtilityClasses("MuiInputLabel", ["root", "focused", "disabled", "error", "required", "asterisk", "formControl", "sizeSmall", "shrink", "animated", "standard", "filled", "outlined"]);
-    const _excluded$I = ["disableAnimation", "margin", "shrink", "variant", "className"];
-    const useUtilityClasses$F = (ownerState) => {
+    const _excluded$J = ["disableAnimation", "margin", "shrink", "variant", "className"];
+    const useUtilityClasses$G = (ownerState) => {
       const {
         classes,
         formControl,
@@ -23036,7 +23036,7 @@ var require_index_81daafcd = __commonJS({
         disableAnimation = false,
         shrink: shrinkProp,
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$I);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$J);
       const muiFormControl = useFormControl();
       let shrink = shrinkProp;
       if (typeof shrink === "undefined" && muiFormControl) {
@@ -23055,7 +23055,7 @@ var require_index_81daafcd = __commonJS({
         variant: fcs.variant,
         required: fcs.required
       });
-      const classes = useUtilityClasses$F(ownerState);
+      const classes = useUtilityClasses$G(ownerState);
       return /* @__PURE__ */ jsx(InputLabelRoot, _extends({
         "data-shrink": shrink,
         ownerState,
@@ -23070,7 +23070,7 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiLinearProgress", slot);
     }
     generateUtilityClasses("MuiLinearProgress", ["root", "colorPrimary", "colorSecondary", "determinate", "indeterminate", "buffer", "query", "dashed", "dashedColorPrimary", "dashedColorSecondary", "bar", "barColorPrimary", "barColorSecondary", "bar1Indeterminate", "bar1Determinate", "bar1Buffer", "bar2Indeterminate", "bar2Buffer"]);
-    const _excluded$H = ["className", "color", "value", "valueBuffer", "variant"];
+    const _excluded$I = ["className", "color", "value", "valueBuffer", "variant"];
     let _ = (t2) => t2, _t, _t2, _t3, _t4, _t5, _t6;
     const TRANSITION_DURATION = 4;
     const indeterminate1Keyframe = keyframes(_t || (_t = _`
@@ -23121,7 +23121,7 @@ var require_index_81daafcd = __commonJS({
     background-position: -200px -23px;
   }
 `));
-    const useUtilityClasses$E = (ownerState) => {
+    const useUtilityClasses$F = (ownerState) => {
       const {
         classes,
         variant,
@@ -23288,12 +23288,12 @@ var require_index_81daafcd = __commonJS({
         value,
         valueBuffer,
         variant = "indeterminate"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$H);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$I);
       const ownerState = _extends({}, props2, {
         color: color2,
         variant
       });
-      const classes = useUtilityClasses$E(ownerState);
+      const classes = useUtilityClasses$F(ownerState);
       const theme = useTheme();
       const rootProps = {};
       const inlineStyles = {
@@ -23349,8 +23349,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiList", slot);
     }
     generateUtilityClasses("MuiList", ["root", "padding", "dense", "subheader"]);
-    const _excluded$G = ["children", "className", "component", "dense", "disablePadding", "subheader"];
-    const useUtilityClasses$D = (ownerState) => {
+    const _excluded$H = ["children", "className", "component", "dense", "disablePadding", "subheader"];
+    const useUtilityClasses$E = (ownerState) => {
       const {
         classes,
         disablePadding,
@@ -23396,7 +23396,7 @@ var require_index_81daafcd = __commonJS({
         dense = false,
         disablePadding = false,
         subheader
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$G);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$H);
       const context = react.exports.useMemo(() => ({
         dense
       }), [dense]);
@@ -23405,7 +23405,7 @@ var require_index_81daafcd = __commonJS({
         dense,
         disablePadding
       });
-      const classes = useUtilityClasses$D(ownerState);
+      const classes = useUtilityClasses$E(ownerState);
       return /* @__PURE__ */ jsx(ListContext$1.Provider, {
         value: context,
         children: /* @__PURE__ */ jsxs(ListRoot, _extends({
@@ -23429,14 +23429,14 @@ var require_index_81daafcd = __commonJS({
     }
     const listItemButtonClasses = generateUtilityClasses("MuiListItemButton", ["root", "focusVisible", "dense", "alignItemsFlexStart", "disabled", "divider", "gutters", "selected"]);
     const listItemButtonClasses$1 = listItemButtonClasses;
-    const _excluded$F = ["alignItems", "autoFocus", "component", "children", "dense", "disableGutters", "divider", "focusVisibleClassName", "selected", "className"];
+    const _excluded$G = ["alignItems", "autoFocus", "component", "children", "dense", "disableGutters", "divider", "focusVisibleClassName", "selected", "className"];
     const overridesResolver$3 = (props2, styles2) => {
       const {
         ownerState
       } = props2;
       return [styles2.root, ownerState.dense && styles2.dense, ownerState.alignItems === "flex-start" && styles2.alignItemsFlexStart, ownerState.divider && styles2.divider, !ownerState.disableGutters && styles2.gutters];
     };
-    const useUtilityClasses$C = (ownerState) => {
+    const useUtilityClasses$D = (ownerState) => {
       const {
         alignItems: alignItems2,
         classes,
@@ -23528,7 +23528,7 @@ var require_index_81daafcd = __commonJS({
         focusVisibleClassName,
         selected = false,
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$F);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$G);
       const context = react.exports.useContext(ListContext$1);
       const childContext = react.exports.useMemo(() => ({
         dense: dense || context.dense || false,
@@ -23550,7 +23550,7 @@ var require_index_81daafcd = __commonJS({
         divider,
         selected
       });
-      const classes = useUtilityClasses$C(ownerState);
+      const classes = useUtilityClasses$D(ownerState);
       const handleRef = useForkRef(listItemRef, ref);
       return /* @__PURE__ */ jsx(ListContext$1.Provider, {
         value: childContext,
@@ -23572,8 +23572,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiListItemSecondaryAction", slot);
     }
     generateUtilityClasses("MuiListItemSecondaryAction", ["root", "disableGutters"]);
-    const _excluded$E = ["className"];
-    const useUtilityClasses$B = (ownerState) => {
+    const _excluded$F = ["className"];
+    const useUtilityClasses$C = (ownerState) => {
       const {
         disableGutters,
         classes
@@ -23609,12 +23609,12 @@ var require_index_81daafcd = __commonJS({
       });
       const {
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$E);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$F);
       const context = react.exports.useContext(ListContext$1);
       const ownerState = _extends({}, props2, {
         disableGutters: context.disableGutters
       });
-      const classes = useUtilityClasses$B(ownerState);
+      const classes = useUtilityClasses$C(ownerState);
       return /* @__PURE__ */ jsx(ListItemSecondaryActionRoot, _extends({
         className: clsx(classes.root, className),
         ownerState,
@@ -23623,14 +23623,14 @@ var require_index_81daafcd = __commonJS({
     });
     ListItemSecondaryAction.muiName = "ListItemSecondaryAction";
     const ListItemSecondaryAction$1 = ListItemSecondaryAction;
-    const _excluded$D = ["className"], _excluded2$2 = ["alignItems", "autoFocus", "button", "children", "className", "component", "components", "componentsProps", "ContainerComponent", "ContainerProps", "dense", "disabled", "disableGutters", "disablePadding", "divider", "focusVisibleClassName", "secondaryAction", "selected", "slotProps", "slots"];
+    const _excluded$E = ["className"], _excluded2$2 = ["alignItems", "autoFocus", "button", "children", "className", "component", "components", "componentsProps", "ContainerComponent", "ContainerProps", "dense", "disabled", "disableGutters", "disablePadding", "divider", "focusVisibleClassName", "secondaryAction", "selected", "slotProps", "slots"];
     const overridesResolver$2 = (props2, styles2) => {
       const {
         ownerState
       } = props2;
       return [styles2.root, ownerState.dense && styles2.dense, ownerState.alignItems === "flex-start" && styles2.alignItemsFlexStart, ownerState.divider && styles2.divider, !ownerState.disableGutters && styles2.gutters, !ownerState.disablePadding && styles2.padding, ownerState.button && styles2.button, ownerState.hasSecondaryAction && styles2.secondaryAction];
     };
-    const useUtilityClasses$A = (ownerState) => {
+    const useUtilityClasses$B = (ownerState) => {
       const {
         alignItems: alignItems2,
         button,
@@ -23753,7 +23753,7 @@ var require_index_81daafcd = __commonJS({
         selected = false,
         slotProps = {},
         slots = {}
-      } = props2, ContainerProps = _objectWithoutPropertiesLoose(props2.ContainerProps, _excluded$D), other = _objectWithoutPropertiesLoose(props2, _excluded2$2);
+      } = props2, ContainerProps = _objectWithoutPropertiesLoose(props2.ContainerProps, _excluded$E), other = _objectWithoutPropertiesLoose(props2, _excluded2$2);
       const context = react.exports.useContext(ListContext$1);
       const childContext = react.exports.useMemo(() => ({
         dense: dense || context.dense || false,
@@ -23782,7 +23782,7 @@ var require_index_81daafcd = __commonJS({
         hasSecondaryAction,
         selected
       });
-      const classes = useUtilityClasses$A(ownerState);
+      const classes = useUtilityClasses$B(ownerState);
       const handleRef = useForkRef(listItemRef, ref);
       const Root = slots.root || components.Root || ListItemRoot;
       const rootProps = slotProps.root || componentsProps.root || {};
@@ -23841,8 +23841,8 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiListItemAvatar", slot);
     }
     generateUtilityClasses("MuiListItemAvatar", ["root", "alignItemsFlexStart"]);
-    const _excluded$C = ["className"];
-    const useUtilityClasses$z = (ownerState) => {
+    const _excluded$D = ["className"];
+    const useUtilityClasses$A = (ownerState) => {
       const {
         alignItems: alignItems2,
         classes
@@ -23876,12 +23876,12 @@ var require_index_81daafcd = __commonJS({
       });
       const {
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$C);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$D);
       const context = react.exports.useContext(ListContext$1);
       const ownerState = _extends({}, props2, {
         alignItems: context.alignItems
       });
-      const classes = useUtilityClasses$z(ownerState);
+      const classes = useUtilityClasses$A(ownerState);
       return /* @__PURE__ */ jsx(ListItemAvatarRoot, _extends({
         className: clsx(classes.root, className),
         ownerState,
@@ -23894,8 +23894,8 @@ var require_index_81daafcd = __commonJS({
     }
     const listItemIconClasses = generateUtilityClasses("MuiListItemIcon", ["root", "alignItemsFlexStart"]);
     const listItemIconClasses$1 = listItemIconClasses;
-    const _excluded$B = ["className"];
-    const useUtilityClasses$y = (ownerState) => {
+    const _excluded$C = ["className"];
+    const useUtilityClasses$z = (ownerState) => {
       const {
         alignItems: alignItems2,
         classes
@@ -23932,12 +23932,12 @@ var require_index_81daafcd = __commonJS({
       });
       const {
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$B);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$C);
       const context = react.exports.useContext(ListContext$1);
       const ownerState = _extends({}, props2, {
         alignItems: context.alignItems
       });
-      const classes = useUtilityClasses$y(ownerState);
+      const classes = useUtilityClasses$z(ownerState);
       return /* @__PURE__ */ jsx(ListItemIconRoot, _extends({
         className: clsx(classes.root, className),
         ownerState,
@@ -23950,8 +23950,8 @@ var require_index_81daafcd = __commonJS({
     }
     const listItemTextClasses = generateUtilityClasses("MuiListItemText", ["root", "multiline", "dense", "inset", "primary", "secondary"]);
     const listItemTextClasses$1 = listItemTextClasses;
-    const _excluded$A = ["children", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps"];
-    const useUtilityClasses$x = (ownerState) => {
+    const _excluded$B = ["children", "className", "disableTypography", "inset", "primary", "primaryTypographyProps", "secondary", "secondaryTypographyProps"];
+    const useUtilityClasses$y = (ownerState) => {
       const {
         classes,
         inset,
@@ -24006,7 +24006,7 @@ var require_index_81daafcd = __commonJS({
         primaryTypographyProps,
         secondary: secondaryProp,
         secondaryTypographyProps
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$A);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$B);
       const {
         dense
       } = react.exports.useContext(ListContext$1);
@@ -24019,7 +24019,7 @@ var require_index_81daafcd = __commonJS({
         secondary: !!secondary,
         dense
       });
-      const classes = useUtilityClasses$x(ownerState);
+      const classes = useUtilityClasses$y(ownerState);
       if (primary != null && primary.type !== Typography$1 && !disableTypography) {
         primary = /* @__PURE__ */ jsx(Typography$1, _extends({
           variant: dense ? "body2" : "body1",
@@ -24049,7 +24049,7 @@ var require_index_81daafcd = __commonJS({
       }));
     });
     const ListItemText$1 = ListItemText;
-    const _excluded$z = ["actions", "autoFocus", "autoFocusItem", "children", "className", "disabledItemsFocusable", "disableListWrap", "onKeyDown", "variant"];
+    const _excluded$A = ["actions", "autoFocus", "autoFocusItem", "children", "className", "disabledItemsFocusable", "disableListWrap", "onKeyDown", "variant"];
     function nextItem$1(list, item, disableListWrap) {
       if (list === item) {
         return list.firstChild;
@@ -24116,7 +24116,7 @@ var require_index_81daafcd = __commonJS({
         disableListWrap = false,
         onKeyDown,
         variant = "selectedMenu"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$z);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$A);
       const listRef = react.exports.useRef(null);
       const textCriteriaRef = react.exports.useRef({
         keys: [],
@@ -24224,7 +24224,7 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiPopover", slot);
     }
     generateUtilityClasses("MuiPopover", ["root", "paper"]);
-    const _excluded$y = ["onEntering"], _excluded2$1 = ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "className", "container", "elevation", "marginThreshold", "open", "PaperProps", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps"];
+    const _excluded$z = ["onEntering"], _excluded2$1 = ["action", "anchorEl", "anchorOrigin", "anchorPosition", "anchorReference", "children", "className", "container", "elevation", "marginThreshold", "open", "PaperProps", "transformOrigin", "TransitionComponent", "transitionDuration", "TransitionProps"];
     function getOffsetTop(rect, vertical) {
       let offset2 = 0;
       if (typeof vertical === "number") {
@@ -24253,7 +24253,7 @@ var require_index_81daafcd = __commonJS({
     function resolveAnchorEl(anchorEl) {
       return typeof anchorEl === "function" ? anchorEl() : anchorEl;
     }
-    const useUtilityClasses$w = (ownerState) => {
+    const useUtilityClasses$x = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -24312,7 +24312,7 @@ var require_index_81daafcd = __commonJS({
         TransitionProps: {
           onEntering
         } = {}
-      } = props2, TransitionProps = _objectWithoutPropertiesLoose(props2.TransitionProps, _excluded$y), other = _objectWithoutPropertiesLoose(props2, _excluded2$1);
+      } = props2, TransitionProps = _objectWithoutPropertiesLoose(props2.TransitionProps, _excluded$z), other = _objectWithoutPropertiesLoose(props2, _excluded2$1);
       const paperRef = react.exports.useRef();
       const handlePaperRef = useForkRef(paperRef, PaperProps.ref);
       const ownerState = _extends({}, props2, {
@@ -24326,7 +24326,7 @@ var require_index_81daafcd = __commonJS({
         transitionDuration: transitionDurationProp,
         TransitionProps
       });
-      const classes = useUtilityClasses$w(ownerState);
+      const classes = useUtilityClasses$x(ownerState);
       const getAnchorOffset = react.exports.useCallback(() => {
         if (anchorReference === "anchorPosition") {
           return anchorPosition;
@@ -24482,7 +24482,7 @@ var require_index_81daafcd = __commonJS({
       return generateUtilityClass("MuiMenu", slot);
     }
     generateUtilityClasses("MuiMenu", ["root", "paper", "list"]);
-    const _excluded$x = ["onEntering"], _excluded2 = ["autoFocus", "children", "disableAutoFocusItem", "MenuListProps", "onClose", "open", "PaperProps", "PopoverClasses", "transitionDuration", "TransitionProps", "variant"];
+    const _excluded$y = ["onEntering"], _excluded2 = ["autoFocus", "children", "disableAutoFocusItem", "MenuListProps", "onClose", "open", "PaperProps", "PopoverClasses", "transitionDuration", "TransitionProps", "variant"];
     const RTL_ORIGIN = {
       vertical: "top",
       horizontal: "right"
@@ -24491,7 +24491,7 @@ var require_index_81daafcd = __commonJS({
       vertical: "top",
       horizontal: "left"
     };
-    const useUtilityClasses$v = (ownerState) => {
+    const useUtilityClasses$w = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -24542,7 +24542,7 @@ var require_index_81daafcd = __commonJS({
           onEntering
         } = {},
         variant = "selectedMenu"
-      } = props2, TransitionProps = _objectWithoutPropertiesLoose(props2.TransitionProps, _excluded$x), other = _objectWithoutPropertiesLoose(props2, _excluded2);
+      } = props2, TransitionProps = _objectWithoutPropertiesLoose(props2.TransitionProps, _excluded$y), other = _objectWithoutPropertiesLoose(props2, _excluded2);
       const theme = useTheme();
       const isRtl = theme.direction === "rtl";
       const ownerState = _extends({}, props2, {
@@ -24555,7 +24555,7 @@ var require_index_81daafcd = __commonJS({
         TransitionProps,
         variant
       });
-      const classes = useUtilityClasses$v(ownerState);
+      const classes = useUtilityClasses$w(ownerState);
       const autoFocusItem = autoFocus && !disableAutoFocusItem && open;
       const menuListActionsRef = react.exports.useRef(null);
       const handleEntering = (element, isAppearing) => {
@@ -24629,14 +24629,14 @@ var require_index_81daafcd = __commonJS({
     }
     const menuItemClasses = generateUtilityClasses("MuiMenuItem", ["root", "focusVisible", "dense", "disabled", "divider", "gutters", "selected"]);
     const menuItemClasses$1 = menuItemClasses;
-    const _excluded$w = ["autoFocus", "component", "dense", "divider", "disableGutters", "focusVisibleClassName", "role", "tabIndex", "className"];
+    const _excluded$x = ["autoFocus", "component", "dense", "divider", "disableGutters", "focusVisibleClassName", "role", "tabIndex", "className"];
     const overridesResolver$1 = (props2, styles2) => {
       const {
         ownerState
       } = props2;
       return [styles2.root, ownerState.dense && styles2.dense, ownerState.divider && styles2.divider, !ownerState.disableGutters && styles2.gutters];
     };
-    const useUtilityClasses$u = (ownerState) => {
+    const useUtilityClasses$v = (ownerState) => {
       const {
         disabled,
         dense,
@@ -24747,7 +24747,7 @@ var require_index_81daafcd = __commonJS({
         role = "menuitem",
         tabIndex: tabIndexProp,
         className
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$w);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$x);
       const context = react.exports.useContext(ListContext$1);
       const childContext = react.exports.useMemo(() => ({
         dense: dense || context.dense || false,
@@ -24766,7 +24766,7 @@ var require_index_81daafcd = __commonJS({
         divider,
         disableGutters
       });
-      const classes = useUtilityClasses$u(props2);
+      const classes = useUtilityClasses$v(props2);
       const handleRef = useForkRef(menuItemRef, ref);
       let tabIndex;
       if (!props2.disabled) {
@@ -24793,8 +24793,8 @@ var require_index_81daafcd = __commonJS({
     }
     const nativeSelectClasses = generateUtilityClasses("MuiNativeSelect", ["root", "select", "multiple", "filled", "outlined", "standard", "disabled", "icon", "iconOpen", "iconFilled", "iconOutlined", "iconStandard", "nativeInput"]);
     const nativeSelectClasses$1 = nativeSelectClasses;
-    const _excluded$v = ["className", "disabled", "IconComponent", "inputRef", "variant"];
-    const useUtilityClasses$t = (ownerState) => {
+    const _excluded$w = ["className", "disabled", "IconComponent", "inputRef", "variant"];
+    const useUtilityClasses$u = (ownerState) => {
       const {
         classes,
         variant,
@@ -24902,12 +24902,12 @@ var require_index_81daafcd = __commonJS({
         IconComponent,
         inputRef,
         variant = "standard"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$v);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$w);
       const ownerState = _extends({}, props2, {
         disabled,
         variant
       });
-      const classes = useUtilityClasses$t(ownerState);
+      const classes = useUtilityClasses$u(ownerState);
       return /* @__PURE__ */ jsxs(react.exports.Fragment, {
         children: [/* @__PURE__ */ jsx(NativeSelectSelect, _extends({
           ownerState,
@@ -24923,7 +24923,7 @@ var require_index_81daafcd = __commonJS({
     });
     const NativeSelectInput$1 = NativeSelectInput;
     var _span$1;
-    const _excluded$u = ["children", "classes", "className", "label", "notched"];
+    const _excluded$v = ["children", "classes", "className", "label", "notched"];
     const NotchedOutlineRoot$1 = styled$1("fieldset")({
       textAlign: "left",
       position: "absolute",
@@ -24986,7 +24986,7 @@ var require_index_81daafcd = __commonJS({
         className,
         label,
         notched
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$u);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$v);
       const withLabel = label != null && label !== "";
       const ownerState = _extends({}, props2, {
         notched,
@@ -25008,8 +25008,8 @@ var require_index_81daafcd = __commonJS({
         })
       }));
     }
-    const _excluded$t = ["components", "fullWidth", "inputComponent", "label", "multiline", "notched", "slots", "type"];
-    const useUtilityClasses$s = (ownerState) => {
+    const _excluded$u = ["components", "fullWidth", "inputComponent", "label", "multiline", "notched", "slots", "type"];
+    const useUtilityClasses$t = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -25125,8 +25125,8 @@ var require_index_81daafcd = __commonJS({
         notched,
         slots = {},
         type: type2 = "text"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$t);
-      const classes = useUtilityClasses$s(props2);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$u);
+      const classes = useUtilityClasses$t(props2);
       const muiFormControl = useFormControl();
       const fcs = formControlState({
         props: props2,
@@ -25179,7 +25179,7 @@ var require_index_81daafcd = __commonJS({
     const selectClasses = generateUtilityClasses("MuiSelect", ["select", "multiple", "filled", "outlined", "standard", "disabled", "focused", "icon", "iconOpen", "iconFilled", "iconOutlined", "iconStandard", "nativeInput"]);
     const selectClasses$1 = selectClasses;
     var _span;
-    const _excluded$s = ["aria-describedby", "aria-label", "autoFocus", "autoWidth", "children", "className", "defaultOpen", "defaultValue", "disabled", "displayEmpty", "IconComponent", "inputRef", "labelId", "MenuProps", "multiple", "name", "onBlur", "onChange", "onClose", "onFocus", "onOpen", "open", "readOnly", "renderValue", "SelectDisplayProps", "tabIndex", "type", "value", "variant"];
+    const _excluded$t = ["aria-describedby", "aria-label", "autoFocus", "autoWidth", "children", "className", "defaultOpen", "defaultValue", "disabled", "displayEmpty", "IconComponent", "inputRef", "labelId", "MenuProps", "multiple", "name", "onBlur", "onChange", "onClose", "onFocus", "onOpen", "open", "readOnly", "renderValue", "SelectDisplayProps", "tabIndex", "type", "value", "variant"];
     const SelectSelect = styled$1("div", {
       name: "MuiSelect",
       slot: "Select",
@@ -25241,7 +25241,7 @@ var require_index_81daafcd = __commonJS({
     function isEmpty(display2) {
       return display2 == null || typeof display2 === "string" && !display2.trim();
     }
-    const useUtilityClasses$r = (ownerState) => {
+    const useUtilityClasses$s = (ownerState) => {
       const {
         classes,
         variant,
@@ -25286,7 +25286,7 @@ var require_index_81daafcd = __commonJS({
         tabIndex: tabIndexProp,
         value: valueProp,
         variant = "standard"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$s);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$t);
       const [value, setValueState] = useControlled({
         controlled: valueProp,
         default: defaultValue,
@@ -25547,7 +25547,7 @@ var require_index_81daafcd = __commonJS({
         value,
         open
       });
-      const classes = useUtilityClasses$r(ownerState);
+      const classes = useUtilityClasses$s(ownerState);
       return /* @__PURE__ */ jsxs(react.exports.Fragment, {
         children: [/* @__PURE__ */ jsx(SelectSelect, _extends({
           ref: handleDisplayRef,
@@ -25616,8 +25616,8 @@ var require_index_81daafcd = __commonJS({
     });
     const SelectInput$1 = SelectInput;
     var _StyledInput, _StyledFilledInput;
-    const _excluded$r = ["autoWidth", "children", "classes", "className", "defaultOpen", "displayEmpty", "IconComponent", "id", "input", "inputProps", "label", "labelId", "MenuProps", "multiple", "native", "onClose", "onOpen", "open", "renderValue", "SelectDisplayProps", "variant"];
-    const useUtilityClasses$q = (ownerState) => {
+    const _excluded$s = ["autoWidth", "children", "classes", "className", "defaultOpen", "displayEmpty", "IconComponent", "id", "input", "inputProps", "label", "labelId", "MenuProps", "multiple", "native", "onClose", "onOpen", "open", "renderValue", "SelectDisplayProps", "variant"];
+    const useUtilityClasses$r = (ownerState) => {
       const {
         classes
       } = ownerState;
@@ -25659,7 +25659,7 @@ var require_index_81daafcd = __commonJS({
         renderValue,
         SelectDisplayProps,
         variant: variantProp = "outlined"
-      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$r);
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$s);
       const inputComponent = native ? NativeSelectInput$1 : SelectInput$1;
       const muiFormControl = useFormControl();
       const fcs = formControlState({
@@ -25679,7 +25679,7 @@ var require_index_81daafcd = __commonJS({
         variant,
         classes: classesProp
       });
-      const classes = useUtilityClasses$q(ownerState);
+      const classes = useUtilityClasses$r(ownerState);
       const inputComponentRef = useForkRef(ref, InputComponent.ref);
       return /* @__PURE__ */ jsx(react.exports.Fragment, {
         children: /* @__PURE__ */ react.exports.cloneElement(InputComponent, _extends({
@@ -25720,6 +25720,513 @@ var require_index_81daafcd = __commonJS({
     });
     Select.muiName = "Select";
     const Select$1 = Select;
+    function getTooltipUtilityClass(slot) {
+      return generateUtilityClass("MuiTooltip", slot);
+    }
+    const tooltipClasses = generateUtilityClasses("MuiTooltip", ["popper", "popperInteractive", "popperArrow", "popperClose", "tooltip", "tooltipArrow", "touch", "tooltipPlacementLeft", "tooltipPlacementRight", "tooltipPlacementTop", "tooltipPlacementBottom", "arrow"]);
+    const tooltipClasses$1 = tooltipClasses;
+    const _excluded$r = ["arrow", "children", "classes", "components", "componentsProps", "describeChild", "disableFocusListener", "disableHoverListener", "disableInteractive", "disableTouchListener", "enterDelay", "enterNextDelay", "enterTouchDelay", "followCursor", "id", "leaveDelay", "leaveTouchDelay", "onClose", "onOpen", "open", "placement", "PopperComponent", "PopperProps", "slotProps", "slots", "title", "TransitionComponent", "TransitionProps"];
+    function round$1(value) {
+      return Math.round(value * 1e5) / 1e5;
+    }
+    const useUtilityClasses$q = (ownerState) => {
+      const {
+        classes,
+        disableInteractive,
+        arrow: arrow2,
+        touch,
+        placement
+      } = ownerState;
+      const slots = {
+        popper: ["popper", !disableInteractive && "popperInteractive", arrow2 && "popperArrow"],
+        tooltip: ["tooltip", arrow2 && "tooltipArrow", touch && "touch", `tooltipPlacement${capitalize(placement.split("-")[0])}`],
+        arrow: ["arrow"]
+      };
+      return composeClasses(slots, getTooltipUtilityClass, classes);
+    };
+    const TooltipPopper = styled$1(Popper$1, {
+      name: "MuiTooltip",
+      slot: "Popper",
+      overridesResolver: (props2, styles2) => {
+        const {
+          ownerState
+        } = props2;
+        return [styles2.popper, !ownerState.disableInteractive && styles2.popperInteractive, ownerState.arrow && styles2.popperArrow, !ownerState.open && styles2.popperClose];
+      }
+    })(({
+      theme,
+      ownerState,
+      open
+    }) => _extends({
+      zIndex: (theme.vars || theme).zIndex.tooltip,
+      pointerEvents: "none"
+    }, !ownerState.disableInteractive && {
+      pointerEvents: "auto"
+    }, !open && {
+      pointerEvents: "none"
+    }, ownerState.arrow && {
+      [`&[data-popper-placement*="bottom"] .${tooltipClasses$1.arrow}`]: {
+        top: 0,
+        marginTop: "-0.71em",
+        "&::before": {
+          transformOrigin: "0 100%"
+        }
+      },
+      [`&[data-popper-placement*="top"] .${tooltipClasses$1.arrow}`]: {
+        bottom: 0,
+        marginBottom: "-0.71em",
+        "&::before": {
+          transformOrigin: "100% 0"
+        }
+      },
+      [`&[data-popper-placement*="right"] .${tooltipClasses$1.arrow}`]: _extends({}, !ownerState.isRtl ? {
+        left: 0,
+        marginLeft: "-0.71em"
+      } : {
+        right: 0,
+        marginRight: "-0.71em"
+      }, {
+        height: "1em",
+        width: "0.71em",
+        "&::before": {
+          transformOrigin: "100% 100%"
+        }
+      }),
+      [`&[data-popper-placement*="left"] .${tooltipClasses$1.arrow}`]: _extends({}, !ownerState.isRtl ? {
+        right: 0,
+        marginRight: "-0.71em"
+      } : {
+        left: 0,
+        marginLeft: "-0.71em"
+      }, {
+        height: "1em",
+        width: "0.71em",
+        "&::before": {
+          transformOrigin: "0 0"
+        }
+      })
+    }));
+    const TooltipTooltip = styled$1("div", {
+      name: "MuiTooltip",
+      slot: "Tooltip",
+      overridesResolver: (props2, styles2) => {
+        const {
+          ownerState
+        } = props2;
+        return [styles2.tooltip, ownerState.touch && styles2.touch, ownerState.arrow && styles2.tooltipArrow, styles2[`tooltipPlacement${capitalize(ownerState.placement.split("-")[0])}`]];
+      }
+    })(({
+      theme,
+      ownerState
+    }) => _extends({
+      backgroundColor: theme.vars ? theme.vars.palette.Tooltip.bg : alpha(theme.palette.grey[700], 0.92),
+      borderRadius: (theme.vars || theme).shape.borderRadius,
+      color: (theme.vars || theme).palette.common.white,
+      fontFamily: theme.typography.fontFamily,
+      padding: "4px 8px",
+      fontSize: theme.typography.pxToRem(11),
+      maxWidth: 300,
+      margin: 2,
+      wordWrap: "break-word",
+      fontWeight: theme.typography.fontWeightMedium
+    }, ownerState.arrow && {
+      position: "relative",
+      margin: 0
+    }, ownerState.touch && {
+      padding: "8px 16px",
+      fontSize: theme.typography.pxToRem(14),
+      lineHeight: `${round$1(16 / 14)}em`,
+      fontWeight: theme.typography.fontWeightRegular
+    }, {
+      [`.${tooltipClasses$1.popper}[data-popper-placement*="left"] &`]: _extends({
+        transformOrigin: "right center"
+      }, !ownerState.isRtl ? _extends({
+        marginRight: "14px"
+      }, ownerState.touch && {
+        marginRight: "24px"
+      }) : _extends({
+        marginLeft: "14px"
+      }, ownerState.touch && {
+        marginLeft: "24px"
+      })),
+      [`.${tooltipClasses$1.popper}[data-popper-placement*="right"] &`]: _extends({
+        transformOrigin: "left center"
+      }, !ownerState.isRtl ? _extends({
+        marginLeft: "14px"
+      }, ownerState.touch && {
+        marginLeft: "24px"
+      }) : _extends({
+        marginRight: "14px"
+      }, ownerState.touch && {
+        marginRight: "24px"
+      })),
+      [`.${tooltipClasses$1.popper}[data-popper-placement*="top"] &`]: _extends({
+        transformOrigin: "center bottom",
+        marginBottom: "14px"
+      }, ownerState.touch && {
+        marginBottom: "24px"
+      }),
+      [`.${tooltipClasses$1.popper}[data-popper-placement*="bottom"] &`]: _extends({
+        transformOrigin: "center top",
+        marginTop: "14px"
+      }, ownerState.touch && {
+        marginTop: "24px"
+      })
+    }));
+    const TooltipArrow = styled$1("span", {
+      name: "MuiTooltip",
+      slot: "Arrow",
+      overridesResolver: (props2, styles2) => styles2.arrow
+    })(({
+      theme
+    }) => ({
+      overflow: "hidden",
+      position: "absolute",
+      width: "1em",
+      height: "0.71em",
+      boxSizing: "border-box",
+      color: theme.vars ? theme.vars.palette.Tooltip.bg : alpha(theme.palette.grey[700], 0.9),
+      "&::before": {
+        content: '""',
+        margin: "auto",
+        display: "block",
+        width: "100%",
+        height: "100%",
+        backgroundColor: "currentColor",
+        transform: "rotate(45deg)"
+      }
+    }));
+    let hystersisOpen = false;
+    let hystersisTimer = null;
+    function composeEventHandler(handler, eventHandler) {
+      return (event) => {
+        if (eventHandler) {
+          eventHandler(event);
+        }
+        handler(event);
+      };
+    }
+    const Tooltip = /* @__PURE__ */ react.exports.forwardRef(function Tooltip2(inProps, ref) {
+      var _ref, _slots$popper, _ref2, _ref3, _slots$transition, _ref4, _slots$tooltip, _ref5, _slots$arrow, _slotProps$popper, _ref6, _slotProps$popper2, _slotProps$transition, _slotProps$tooltip, _ref7, _slotProps$tooltip2, _slotProps$arrow, _ref8, _slotProps$arrow2;
+      const props2 = useThemeProps({
+        props: inProps,
+        name: "MuiTooltip"
+      });
+      const {
+        arrow: arrow2 = false,
+        children,
+        components = {},
+        componentsProps = {},
+        describeChild = false,
+        disableFocusListener = false,
+        disableHoverListener = false,
+        disableInteractive: disableInteractiveProp = false,
+        disableTouchListener = false,
+        enterDelay = 100,
+        enterNextDelay = 0,
+        enterTouchDelay = 700,
+        followCursor = false,
+        id: idProp,
+        leaveDelay = 0,
+        leaveTouchDelay = 1500,
+        onClose,
+        onOpen,
+        open: openProp,
+        placement = "bottom",
+        PopperComponent: PopperComponentProp,
+        PopperProps = {},
+        slotProps = {},
+        slots = {},
+        title,
+        TransitionComponent: TransitionComponentProp = Grow$1,
+        TransitionProps
+      } = props2, other = _objectWithoutPropertiesLoose(props2, _excluded$r);
+      const theme = useTheme();
+      const isRtl = theme.direction === "rtl";
+      const [childNode, setChildNode] = react.exports.useState();
+      const [arrowRef, setArrowRef] = react.exports.useState(null);
+      const ignoreNonTouchEvents = react.exports.useRef(false);
+      const disableInteractive = disableInteractiveProp || followCursor;
+      const closeTimer = react.exports.useRef();
+      const enterTimer = react.exports.useRef();
+      const leaveTimer = react.exports.useRef();
+      const touchTimer = react.exports.useRef();
+      const [openState, setOpenState] = useControlled({
+        controlled: openProp,
+        default: false,
+        name: "Tooltip",
+        state: "open"
+      });
+      let open = openState;
+      const id2 = useId(idProp);
+      const prevUserSelect = react.exports.useRef();
+      const stopTouchInteraction = react.exports.useCallback(() => {
+        if (prevUserSelect.current !== void 0) {
+          document.body.style.WebkitUserSelect = prevUserSelect.current;
+          prevUserSelect.current = void 0;
+        }
+        clearTimeout(touchTimer.current);
+      }, []);
+      react.exports.useEffect(() => {
+        return () => {
+          clearTimeout(closeTimer.current);
+          clearTimeout(enterTimer.current);
+          clearTimeout(leaveTimer.current);
+          stopTouchInteraction();
+        };
+      }, [stopTouchInteraction]);
+      const handleOpen = (event) => {
+        clearTimeout(hystersisTimer);
+        hystersisOpen = true;
+        setOpenState(true);
+        if (onOpen && !open) {
+          onOpen(event);
+        }
+      };
+      const handleClose = useEventCallback(
+        (event) => {
+          clearTimeout(hystersisTimer);
+          hystersisTimer = setTimeout(() => {
+            hystersisOpen = false;
+          }, 800 + leaveDelay);
+          setOpenState(false);
+          if (onClose && open) {
+            onClose(event);
+          }
+          clearTimeout(closeTimer.current);
+          closeTimer.current = setTimeout(() => {
+            ignoreNonTouchEvents.current = false;
+          }, theme.transitions.duration.shortest);
+        }
+      );
+      const handleEnter = (event) => {
+        if (ignoreNonTouchEvents.current && event.type !== "touchstart") {
+          return;
+        }
+        if (childNode) {
+          childNode.removeAttribute("title");
+        }
+        clearTimeout(enterTimer.current);
+        clearTimeout(leaveTimer.current);
+        if (enterDelay || hystersisOpen && enterNextDelay) {
+          enterTimer.current = setTimeout(() => {
+            handleOpen(event);
+          }, hystersisOpen ? enterNextDelay : enterDelay);
+        } else {
+          handleOpen(event);
+        }
+      };
+      const handleLeave = (event) => {
+        clearTimeout(enterTimer.current);
+        clearTimeout(leaveTimer.current);
+        leaveTimer.current = setTimeout(() => {
+          handleClose(event);
+        }, leaveDelay);
+      };
+      const {
+        isFocusVisibleRef,
+        onBlur: handleBlurVisible,
+        onFocus: handleFocusVisible,
+        ref: focusVisibleRef
+      } = useIsFocusVisible();
+      const [, setChildIsFocusVisible] = react.exports.useState(false);
+      const handleBlur = (event) => {
+        handleBlurVisible(event);
+        if (isFocusVisibleRef.current === false) {
+          setChildIsFocusVisible(false);
+          handleLeave(event);
+        }
+      };
+      const handleFocus = (event) => {
+        if (!childNode) {
+          setChildNode(event.currentTarget);
+        }
+        handleFocusVisible(event);
+        if (isFocusVisibleRef.current === true) {
+          setChildIsFocusVisible(true);
+          handleEnter(event);
+        }
+      };
+      const detectTouchStart = (event) => {
+        ignoreNonTouchEvents.current = true;
+        const childrenProps2 = children.props;
+        if (childrenProps2.onTouchStart) {
+          childrenProps2.onTouchStart(event);
+        }
+      };
+      const handleMouseOver = handleEnter;
+      const handleMouseLeave = handleLeave;
+      const handleTouchStart = (event) => {
+        detectTouchStart(event);
+        clearTimeout(leaveTimer.current);
+        clearTimeout(closeTimer.current);
+        stopTouchInteraction();
+        prevUserSelect.current = document.body.style.WebkitUserSelect;
+        document.body.style.WebkitUserSelect = "none";
+        touchTimer.current = setTimeout(() => {
+          document.body.style.WebkitUserSelect = prevUserSelect.current;
+          handleEnter(event);
+        }, enterTouchDelay);
+      };
+      const handleTouchEnd = (event) => {
+        if (children.props.onTouchEnd) {
+          children.props.onTouchEnd(event);
+        }
+        stopTouchInteraction();
+        clearTimeout(leaveTimer.current);
+        leaveTimer.current = setTimeout(() => {
+          handleClose(event);
+        }, leaveTouchDelay);
+      };
+      react.exports.useEffect(() => {
+        if (!open) {
+          return void 0;
+        }
+        function handleKeyDown2(nativeEvent) {
+          if (nativeEvent.key === "Escape" || nativeEvent.key === "Esc") {
+            handleClose(nativeEvent);
+          }
+        }
+        document.addEventListener("keydown", handleKeyDown2);
+        return () => {
+          document.removeEventListener("keydown", handleKeyDown2);
+        };
+      }, [handleClose, open]);
+      const handleRef = useForkRef(children.ref, focusVisibleRef, setChildNode, ref);
+      if (!title && title !== 0) {
+        open = false;
+      }
+      const positionRef = react.exports.useRef({
+        x: 0,
+        y: 0
+      });
+      const popperRef = react.exports.useRef();
+      const handleMouseMove = (event) => {
+        const childrenProps2 = children.props;
+        if (childrenProps2.onMouseMove) {
+          childrenProps2.onMouseMove(event);
+        }
+        positionRef.current = {
+          x: event.clientX,
+          y: event.clientY
+        };
+        if (popperRef.current) {
+          popperRef.current.update();
+        }
+      };
+      const nameOrDescProps = {};
+      const titleIsString = typeof title === "string";
+      if (describeChild) {
+        nameOrDescProps.title = !open && titleIsString && !disableHoverListener ? title : null;
+        nameOrDescProps["aria-describedby"] = open ? id2 : null;
+      } else {
+        nameOrDescProps["aria-label"] = titleIsString ? title : null;
+        nameOrDescProps["aria-labelledby"] = open && !titleIsString ? id2 : null;
+      }
+      const childrenProps = _extends({}, nameOrDescProps, other, children.props, {
+        className: clsx(other.className, children.props.className),
+        onTouchStart: detectTouchStart,
+        ref: handleRef
+      }, followCursor ? {
+        onMouseMove: handleMouseMove
+      } : {});
+      const interactiveWrapperListeners = {};
+      if (!disableTouchListener) {
+        childrenProps.onTouchStart = handleTouchStart;
+        childrenProps.onTouchEnd = handleTouchEnd;
+      }
+      if (!disableHoverListener) {
+        childrenProps.onMouseOver = composeEventHandler(handleMouseOver, childrenProps.onMouseOver);
+        childrenProps.onMouseLeave = composeEventHandler(handleMouseLeave, childrenProps.onMouseLeave);
+        if (!disableInteractive) {
+          interactiveWrapperListeners.onMouseOver = handleMouseOver;
+          interactiveWrapperListeners.onMouseLeave = handleMouseLeave;
+        }
+      }
+      if (!disableFocusListener) {
+        childrenProps.onFocus = composeEventHandler(handleFocus, childrenProps.onFocus);
+        childrenProps.onBlur = composeEventHandler(handleBlur, childrenProps.onBlur);
+        if (!disableInteractive) {
+          interactiveWrapperListeners.onFocus = handleFocus;
+          interactiveWrapperListeners.onBlur = handleBlur;
+        }
+      }
+      const popperOptions = react.exports.useMemo(() => {
+        var _PopperProps$popperOp;
+        let tooltipModifiers = [{
+          name: "arrow",
+          enabled: Boolean(arrowRef),
+          options: {
+            element: arrowRef,
+            padding: 4
+          }
+        }];
+        if ((_PopperProps$popperOp = PopperProps.popperOptions) != null && _PopperProps$popperOp.modifiers) {
+          tooltipModifiers = tooltipModifiers.concat(PopperProps.popperOptions.modifiers);
+        }
+        return _extends({}, PopperProps.popperOptions, {
+          modifiers: tooltipModifiers
+        });
+      }, [arrowRef, PopperProps]);
+      const ownerState = _extends({}, props2, {
+        isRtl,
+        arrow: arrow2,
+        disableInteractive,
+        placement,
+        PopperComponentProp,
+        touch: ignoreNonTouchEvents.current
+      });
+      const classes = useUtilityClasses$q(ownerState);
+      const PopperComponent = (_ref = (_slots$popper = slots.popper) != null ? _slots$popper : components.Popper) != null ? _ref : TooltipPopper;
+      const TransitionComponent = (_ref2 = (_ref3 = (_slots$transition = slots.transition) != null ? _slots$transition : components.Transition) != null ? _ref3 : TransitionComponentProp) != null ? _ref2 : Grow$1;
+      const TooltipComponent = (_ref4 = (_slots$tooltip = slots.tooltip) != null ? _slots$tooltip : components.Tooltip) != null ? _ref4 : TooltipTooltip;
+      const ArrowComponent = (_ref5 = (_slots$arrow = slots.arrow) != null ? _slots$arrow : components.Arrow) != null ? _ref5 : TooltipArrow;
+      const popperProps = appendOwnerState(PopperComponent, _extends({}, PopperProps, (_slotProps$popper = slotProps.popper) != null ? _slotProps$popper : componentsProps.popper, {
+        className: clsx(classes.popper, PopperProps == null ? void 0 : PopperProps.className, (_ref6 = (_slotProps$popper2 = slotProps.popper) != null ? _slotProps$popper2 : componentsProps.popper) == null ? void 0 : _ref6.className)
+      }), ownerState);
+      const transitionProps = appendOwnerState(TransitionComponent, _extends({}, TransitionProps, (_slotProps$transition = slotProps.transition) != null ? _slotProps$transition : componentsProps.transition), ownerState);
+      const tooltipProps = appendOwnerState(TooltipComponent, _extends({}, (_slotProps$tooltip = slotProps.tooltip) != null ? _slotProps$tooltip : componentsProps.tooltip, {
+        className: clsx(classes.tooltip, (_ref7 = (_slotProps$tooltip2 = slotProps.tooltip) != null ? _slotProps$tooltip2 : componentsProps.tooltip) == null ? void 0 : _ref7.className)
+      }), ownerState);
+      const tooltipArrowProps = appendOwnerState(ArrowComponent, _extends({}, (_slotProps$arrow = slotProps.arrow) != null ? _slotProps$arrow : componentsProps.arrow, {
+        className: clsx(classes.arrow, (_ref8 = (_slotProps$arrow2 = slotProps.arrow) != null ? _slotProps$arrow2 : componentsProps.arrow) == null ? void 0 : _ref8.className)
+      }), ownerState);
+      return /* @__PURE__ */ jsxs(react.exports.Fragment, {
+        children: [/* @__PURE__ */ react.exports.cloneElement(children, childrenProps), /* @__PURE__ */ jsx(PopperComponent, _extends({
+          as: PopperComponentProp != null ? PopperComponentProp : Popper$1,
+          placement,
+          anchorEl: followCursor ? {
+            getBoundingClientRect: () => ({
+              top: positionRef.current.y,
+              left: positionRef.current.x,
+              right: positionRef.current.x,
+              bottom: positionRef.current.y,
+              width: 0,
+              height: 0
+            })
+          } : childNode,
+          popperRef,
+          open: childNode ? open : false,
+          id: id2,
+          transition: true
+        }, interactiveWrapperListeners, popperProps, {
+          popperOptions,
+          children: ({
+            TransitionProps: TransitionPropsInner
+          }) => /* @__PURE__ */ jsx(TransitionComponent, _extends({
+            timeout: theme.transitions.duration.shorter
+          }, TransitionPropsInner, transitionProps, {
+            "data-foo": "bar",
+            children: /* @__PURE__ */ jsxs(TooltipComponent, _extends({}, tooltipProps, {
+              children: [title, arrow2 ? /* @__PURE__ */ jsx(ArrowComponent, _extends({}, tooltipArrowProps, {
+                ref: setArrowRef
+              })) : null]
+            }))
+          }))
+        }))]
+      });
+    });
+    const Tooltip$1 = Tooltip;
     const _excluded$q = ["component", "direction", "spacing", "divider", "children"];
     function joinChildren(children, separator) {
       const childrenArray = react.exports.Children.toArray(children).filter(Boolean);
@@ -27222,17 +27729,17 @@ var require_index_81daafcd = __commonJS({
       return createSvgIcon;
     }
     const require$$2 = /* @__PURE__ */ getAugmentedNamespace(jsxRuntime);
-    var _interopRequireDefault$e = interopRequireDefault.exports;
+    var _interopRequireDefault$h = interopRequireDefault.exports;
     Object.defineProperty(Login$1, "__esModule", {
       value: true
     });
-    var default_1$e = Login$1.default = void 0;
-    var _createSvgIcon$e = _interopRequireDefault$e(requireCreateSvgIcon());
-    var _jsxRuntime$e = require$$2;
-    var _default$e = (0, _createSvgIcon$e.default)(/* @__PURE__ */ (0, _jsxRuntime$e.jsx)("path", {
+    var default_1$h = Login$1.default = void 0;
+    var _createSvgIcon$h = _interopRequireDefault$h(requireCreateSvgIcon());
+    var _jsxRuntime$h = require$$2;
+    var _default$h = (0, _createSvgIcon$h.default)(/* @__PURE__ */ (0, _jsxRuntime$h.jsx)("path", {
       d: "M11 7 9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"
     }), "Login");
-    default_1$e = Login$1.default = _default$e;
+    default_1$h = Login$1.default = _default$h;
     const LogoCayalti = "/assets/LogoCayalti.eaedeb6d.jpg";
     const LogoYarabamba = "/assets/Yarabamba_Logo.0d94149c.jpeg";
     function DialogSincronize({
@@ -33075,31 +33582,32 @@ var require_index_81daafcd = __commonJS({
       { storeName: "Personal", sincronizeAsk: true, definition: "++id,dni,nombres_apellidos,rol,idplanilla,idempresa" },
       { storeName: "PuntoAcceso", sincronizeAsk: true, definition: "++id,id_idpuntoacceso,descripcion" },
       { storeName: "Usuario", sincronizeAsk: true, definition: "++id,dni,nombres_apellidos,usuario,clave,idresponsable,idempresa" },
-      { storeName: "Turno", sincronizeAsk: true, definition: "++id,id_turno,descripcion" },
-      { storeName: "consumidoresMaquinaria", sincronizeAsk: true, definition: "++cod,id,descripcion,idempresa", indexes: ["[idempresa]"] },
-      { storeName: "Maquinarias", sincronizeAsk: true, definition: "++cod,id,descripcion,costoha_mof,costo_mof,idempresa" },
-      { storeName: "Jirones", sincronizeAsk: true, definition: "++cod,id,descripcion" },
-      { storeName: "Cuarteles", sincronizeAsk: true, definition: "++cod,id,descripcion" },
+      { storeName: "Turno", sincronizeAsk: true, definition: "++id,id_turno,descripcion", indexes: ["[ID]"] },
+      { storeName: "consumidoresMaquinaria", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION,idempresa", indexes: ["[ID]"] },
+      { storeName: "Maquinarias", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION,costoha_mof,costo_mof,idempresa", indexes: ["[idempresa+ID]"] },
+      { storeName: "Jirones", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION", indexes: ["[ID]"] },
+      { storeName: "Cuarteles", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION", indexes: ["[ID]"] },
       { storeName: "Proveedores", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION", indexes: ["[DESCRIPCION]"] },
-      { storeName: "Actividades", sincronizeAsk: true, definition: "++cod,id,descripcion" },
+      { storeName: "Actividades", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION", indexes: ["[ID]"] },
       { storeName: "Labores", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION,IDACTIVIDAD" },
-      { storeName: "Areas", sincronizeAsk: true, definition: "++cod,id,descripcion" },
-      { storeName: "Operarios", sincronizeAsk: true, definition: "++cod,id,descripcion,idempresa" },
+      { storeName: "Areas", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION" },
+      { storeName: "Operarios", sincronizeAsk: true, definition: "++cod,ID,DESCRIPCION,idempresa", indexes: ["[ID]"] },
       { storeName: "Implementos", sincronizeAsk: true, definition: "++cod,id,descripcion,idempresa" },
       { storeName: "Combustibles", sincronizeAsk: true, definition: "++cod,id,descripcion,idmedida,idempresa" },
       {
         storeName: "AC_PARTEMAQUINARIA",
         sincronizeAsk: false,
-        definition: "++cod,IDPARTEMAQ,IDCLIEPROV,PROVEEDOR,IDDOCUMENTO,IDCONSUMIDORMAQUINARIA,MAQUINA,OPERARIO,IDOPERARIO,HORAS_TRAB,HORAS_TRAB1,TURNO,IDTURNOTRABAJO,TOTAL_COSTO,FORMAPAGO,TOTALAREA_TRAB,AREA,IDAREA,COSTO_HORA,IDUSUARIO,ESTADO,FECHA,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,GLOSA,IDCONSUMIDORIMPLEMENTO,DESCIMPLEMENTO,DESCCONSUMIDOR,idempresa",
+        definition: "++cod,IDPARTEMAQ,NUMERO,PROVEEDOR,IDDOCUMENTO,MAQUINA,ACTIVIDAD,LABOROPERARIO,IDOPERARIO,HORAS_TRAB,HORAS_TRAB1,TURNO,IDTURNOTRABAJO,TOTAL_COSTO,FORMAPAGO,TOTALAREA_TRAB,AREA,COSTO_HORA,IDUSUARIO,ESTADO,FECHA,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,GLOSA,TOTAL_MINUTOS,idempresa",
         indexes: [
           "[FECHA+IDCONSUMIDORMAQUINARIA+ESTADO+idempresa]",
-          "[FECHA+ESTADO+idempresa]"
+          "[FECHA+ESTADO+idempresa]",
+          "[ESTADO+idempresa]"
         ]
       },
       {
         storeName: "AC_DPARTEMAQUINARIA",
         sincronizeAsk: false,
-        definition: "++cod,IDPARTEMAQ,ITEM,IDCONSUMIDOR,DESCRIPCION,AREA_TRAB,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,HORAS_TRAB,HORAS_TRAB1,COSTO_HORA,IDACTIVIDAD,IDLABOR,HOROMETRO_DIFERENCIA,DSC_LABOR,COSTO_TOTAL,IDCUARTEL,IDJIRON,DESCJIRON,DESCCUARTEL",
+        definition: "++cod,IDPARTEMAQ,ITEM,CONSUMIDOR,AREA_TRAB,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,HORAS_TRAB,HORAS_TRAB1,COSTO_HORA,ACTIVIDAD,LABOR,HOROMETRO_DIFERENCIA,COSTO_TOTAL,CUARTEL,JIRON",
         indexes: ["[IDPARTEMAQ]"]
       },
       {
@@ -33127,8 +33635,8 @@ var require_index_81daafcd = __commonJS({
     localDataBase.version(4).stores({
       AC_PARTEMAQUINARIA: "++cod,IDPARTEMAQ,IDCLIEPROV,PROVEEDOR,IDDOCUMENTO,IDCONSUMIDORMAQUINARIA,MAQUINA,OPERARIO,IDOPERARIO,HORAS_TRAB,HORAS_TRAB1,TURNO,IDTURNOTRABAJO,TOTAL_COSTO,FORMAPAGO,TOTALAREA_TRABAREA,IDAREA,COSTO_HORA,IDUSUARIO,ESTADO,FECHA,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,GLOSA,IDCONSUMIDORIMPLEMENTO,DESCIMPLEMENTO,DESCCONSUMIDOR,[FECHA+ESTADO],[FECHA+IDCONSUMIDORMAQUINARIA+ESTADO]"
     });
-    localDataBase.version(11).stores({
-      AC_PARTEMAQUINARIA: "++cod,IDPARTEMAQ,IDCLIEPROV,PROVEEDOR,IDDOCUMENTO,IDCONSUMIDORMAQUINARIA,MAQUINA,OPERARIO,IDOPERARIO,HORAS_TRAB,HORAS_TRAB1,TURNO,IDTURNOTRABAJO,TOTAL_COSTO,FORMAPAGO,TOTALAREA_TRABAREA,IDAREA,COSTO_HORA,IDUSUARIO,ESTADO,FECHA,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,GLOSA,IDCONSUMIDORIMPLEMENTO,DESCIMPLEMENTO,DESCCONSUMIDOR,idmepresa,[FECHA+ESTADO+idempresa],[FECHA+IDCONSUMIDORMAQUINARIA+ESTADO+idempresa]",
+    localDataBase.version(12).stores({
+      AC_PARTEMAQUINARIA: "++cod,IDPARTEMAQ,IDCLIEPROV,PROVEEDOR,IDDOCUMENTO,IDCONSUMIDORMAQUINARIA,MAQUINA,OPERARIO,IDOPERARIO,HORAS_TRAB,HORAS_TRAB1,TURNO,IDTURNOTRABAJO,TOTAL_COSTO,FORMAPAGO,TOTALAREA_TRABAREA,IDAREA,COSTO_HORA,IDUSUARIO,ESTADO,FECHA,HORAINICIO,HORAFINAL,HOROMETROINICIAL,HOROMETROFINAL,GLOSA,IDCONSUMIDORIMPLEMENTO,DESCIMPLEMENTO,DESCCONSUMIDOR,idmepresa,[FECHA+ESTADO+idempresa],[ESTADO+idempresa],[FECHA+IDCONSUMIDORMAQUINARIA+ESTADO+idempresa]",
       Combustibles: "++cod,id,descripcion,idmedida,idempresa"
     });
     const logIn = async ({ username }) => {
@@ -33322,17 +33830,17 @@ var require_index_81daafcd = __commonJS({
       };
     }
     var Sync = {};
-    var _interopRequireDefault$d = interopRequireDefault.exports;
+    var _interopRequireDefault$g = interopRequireDefault.exports;
     Object.defineProperty(Sync, "__esModule", {
       value: true
     });
-    var default_1$d = Sync.default = void 0;
-    var _createSvgIcon$d = _interopRequireDefault$d(requireCreateSvgIcon());
-    var _jsxRuntime$d = require$$2;
-    var _default$d = (0, _createSvgIcon$d.default)(/* @__PURE__ */ (0, _jsxRuntime$d.jsx)("path", {
+    var default_1$g = Sync.default = void 0;
+    var _createSvgIcon$g = _interopRequireDefault$g(requireCreateSvgIcon());
+    var _jsxRuntime$g = require$$2;
+    var _default$g = (0, _createSvgIcon$g.default)(/* @__PURE__ */ (0, _jsxRuntime$g.jsx)("path", {
       d: "M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"
     }), "Sync");
-    default_1$d = Sync.default = _default$d;
+    default_1$g = Sync.default = _default$g;
     const Visibility = createSvgIcon$1(/* @__PURE__ */ jsx("path", {
       d: "M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
     }), "Visibility");
@@ -33340,6 +33848,230 @@ var require_index_81daafcd = __commonJS({
       d: "M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78 3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z"
     }), "VisibilityOff");
     const nameApp$1 = "AppMaquinaria";
+    function useAppUtility() {
+      const isMovil = Boolean(window.cordova);
+      const getAppVersion = () => {
+        if (!isMovil) {
+          return "-";
+        }
+        return window.AppVersion.version;
+      };
+      const alertar = ({ txtMessage, callback }) => {
+        const callbackExists = typeof callback === "function";
+        if (isMovil) {
+          window.navigator.notification.alert(txtMessage, callbackExists ? callback : null, nameApp$1, "LISTO");
+          return;
+        }
+        alert(txtMessage);
+        if (callbackExists) {
+          callback();
+        }
+      };
+      const confirmar = ({ txtMessage, onConfirm, onReject }) => {
+        const fnOK = function(index2) {
+          if (typeof onConfirm === "function") {
+            if (index2 === 1) {
+              onConfirm();
+              return;
+            }
+            if (typeof onReject === "function") {
+              onReject();
+            }
+            return;
+          }
+          console.error("Funci\xF3n de confirmaci\xF3n inv\xE1lida.");
+        };
+        if (isMovil) {
+          window.navigator.notification.confirm(txtMessage, fnOK, nameApp$1, ["ACEPTAR", "CANCELAR"]);
+          return;
+        }
+        const answer = confirm(txtMessage) === true ? 1 : 0;
+        fnOK(answer);
+      };
+      const getDevice = () => {
+        if (isMovil) {
+          return window.device.uuid;
+        }
+        return navigator.userAgent.substr(0, 30);
+      };
+      const isActivatedGPS = ({ onSuccess, onError }) => {
+        if (isMovil) {
+          window.CheckGPS.check(onSuccess, onError);
+          return;
+        }
+        onSuccess();
+      };
+      const checkPermissions = ({ requiredPermissions, onGranted, onDenied }) => {
+        const cadenaInformativaDePermisos = () => {
+          return `Esta aplicaci\xF3n necesita permisos de: ${requiredPermissions.join()} para funcionar correctamente.`;
+        };
+        if (!isMovil) {
+          console.error(cadenaInformativaDePermisos());
+          return;
+        }
+        const permissions = window.cordova.plugins.permissions;
+        const permissionList = requiredPermissions.map(function(permission) {
+          return permissions[permission];
+        });
+        const error = () => {
+          alertar({ txtMessage: cadenaInformativaDePermisos() });
+        };
+        const success = (status) => {
+          if (!status.hasPermission) {
+            permissions.requestPermissions(
+              permissionList,
+              (status2) => {
+                if (!status2.hasPermission) {
+                  if (onDenied != null && typeof onDenied === "function") {
+                    onDenied();
+                  } else {
+                    error();
+                  }
+                } else {
+                  if (onGranted != null && typeof onGranted === "function") {
+                    onGranted();
+                  }
+                }
+              },
+              error
+            );
+          } else {
+            if (onGranted != null && typeof onGranted === "function") {
+              onGranted();
+            }
+          }
+        };
+        permissions.hasPermission(permissionList, success, null);
+      };
+      const geoposition = ({ onSuccess, onError }) => {
+        const fnSuccess = (posicion) => {
+          if (typeof onSuccess === "function") {
+            onSuccess(posicion);
+            return;
+          }
+          console.error("Funci\xF3n de \xE9xito inv\xE1lida.");
+        };
+        const showError = (error) => {
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              alert("Permisos rechazados.");
+              break;
+            case error.POSITION_UNAVAILABLE:
+              alert("Informaci\xF3n del lugar inaccesible.");
+              break;
+            case error.TIMEOUT:
+              alert("No encontr\xE9 posici\xF3n GPS.");
+              break;
+            case error.UNKNOWN_ERROR:
+              alert("Error desconocido.");
+              break;
+          }
+        };
+        const fnError = (error) => {
+          showError(error);
+          if (typeof onError == "function") {
+            onError();
+            return;
+          }
+          console.error("Funci\xF3n de error inv\xE1lida.");
+        };
+        if (window.navigator.geolocation) {
+          window.navigator.geolocation.getCurrentPosition(fnSuccess, fnError, { enableHighAccuracy: true, maximumAge: 5e3, timeout: 15e3 });
+          return;
+        }
+        alert("No tengo la funci\xF3n de geolocaci\xF3n disponible en este dispositivo.");
+      };
+      const barcodeScan = ({ onSuccess, onError }) => {
+        if (isMovil) {
+          alert("No tengo la funci\xF3n de LECTOR DE C\xD3DIGO DE BARRAS disponible en esta versi\xF3n del aplicativo.");
+          return;
+        }
+        const fnSuccess = (result) => {
+          if (typeof onSuccess === "function") {
+            onSuccess(result);
+            return;
+          }
+          console.error("Funci\xF3n de \xE9xito inv\xE1lida.");
+        };
+        const fnError = (error) => {
+          showError(error);
+          if (typeof onError == "function") {
+            onError();
+            return;
+          }
+          console.error("Funci\xF3n de error inv\xE1lida.");
+        };
+        const showError = (error) => {
+          alert("Scanning failed: " + error);
+        };
+        const barcodeScannerInstance = window.cordova.plugins.barcodeScanner;
+        if (!barcodeScannerInstance) {
+          alert("No tengo la funci\xF3n de LECTOR DE C\xD3DIGO DE BARRAS disponible en este dispositivo.");
+          return;
+        }
+        barcodeScannerInstance.scan(
+          fnSuccess,
+          fnError,
+          {
+            preferFrontCamera: false,
+            showFlipCameraButton: true,
+            showTorchButton: true,
+            torchOn: true,
+            saveHistory: false,
+            prompt: "Coloque un c\xF3digo de barras sobre el \xE1rea de escaneo.",
+            resultDisplayDuration: 500,
+            formats: "QR_CODE,CODE_39,PDF_417,CODE_128",
+            orientation: "portrait",
+            disableSuccessBeep: false
+          }
+        );
+      };
+      const checkConexion = () => {
+        if (!isMovil) {
+          return { online: window.navigator.onLine, estados: null };
+        }
+        const networkState = window.navigator.connection.type;
+        let states = {};
+        states[window.Connection.UNKNOWN] = "Conexi\xF3n Desconocida";
+        states[window.Connection.ETHERNET] = "Conexi\xF3n Ethernet";
+        states[window.Connection.WIFI] = "Conexi\xF3n WiFi";
+        states[window.Connection.CELL_2G] = "Conexi\xF3n 2G";
+        states[window.Connection.CELL_3G] = "Conexi\xF3n 3G";
+        states[window.Connection.CELL_4G] = "Conexi\xF3n 4G";
+        states[window.Connection.CELL] = "Conexi\xF3n generica";
+        states[window.Connection.NONE] = "Sin conexi\xF3n red";
+        return { online: networkState != window.Connection.NONE, state: states[networkState] };
+      };
+      const checkUpdate = () => {
+        if (!isMovil) {
+          return false;
+        }
+        const updaterURL = `${"https://apps.cayalti.com.pe/apk/maquinaria/version.xml"}`;
+        window.AppUpdate.checkAppUpdate(
+          (e2) => {
+            console.log(e2);
+          },
+          (e2) => {
+            console.error(e2);
+          },
+          updaterURL
+        );
+        console.log("actualizando");
+      };
+      return {
+        alertar,
+        confirmar,
+        getDevice,
+        checkPermissions,
+        geoposition,
+        isActivatedGPS,
+        barcodeScan,
+        checkConexion,
+        checkUpdate,
+        getAppVersion
+      };
+    }
+    const nameApp = "AppMaquinaria";
     function Login() {
       var _a2, _b;
       const [username, setUsername] = react.exports.useState("");
@@ -33364,6 +34096,9 @@ var require_index_81daafcd = __commonJS({
         registrosActuales,
         sincronizeAsk
       } = useSincronize();
+      const {
+        getAppVersion
+      } = useAppUtility();
       react.exports.useEffect(() => {
         if (isLoggedIn) {
           navigate(from2, {
@@ -33405,7 +34140,7 @@ var require_index_81daafcd = __commonJS({
             fontWeight: "bold"
           },
           onClick: sincronizar,
-          children: [/* @__PURE__ */ jsx(default_1$d, {}), "SINCRONIZAR"]
+          children: [/* @__PURE__ */ jsx(default_1$g, {}), "SINCRONIZAR"]
         }), /* @__PURE__ */ jsxs(Box$1, {
           sx: {
             marginTop: 3,
@@ -33418,7 +34153,7 @@ var require_index_81daafcd = __commonJS({
             component: "h1",
             variant: "h5",
             children: /* @__PURE__ */ jsxs("strong", {
-              children: [" ", nameApp$1]
+              children: [" ", nameApp]
             })
           }), /* @__PURE__ */ jsx(Avatar$1, {
             sx: {
@@ -33476,7 +34211,7 @@ var require_index_81daafcd = __commonJS({
               },
               focused: presionar,
               error: password.length < 8 && presionar == true ? true : false,
-              helperText: password.length < 8 && presionar == true ? "Clave debe tener 6 d\xEDgitos" : "",
+              helperText: password.length < 8 && presionar == true ? "Clave debe tener 8 d\xEDgitos" : "",
               fullWidth: true,
               label: "Clave",
               type: showPassword ? "number" : "password",
@@ -33513,7 +34248,7 @@ var require_index_81daafcd = __commonJS({
               fullWidth: true,
               type: "submit",
               loadingPosition: "start",
-              startIcon: /* @__PURE__ */ jsx(default_1$e, {}),
+              startIcon: /* @__PURE__ */ jsx(default_1$h, {}),
               variant: "contained",
               sx: {
                 mt: 3,
@@ -33521,6 +34256,12 @@ var require_index_81daafcd = __commonJS({
                 background: "#2e7d32"
               },
               children: "INGRESAR"
+            }), /* @__PURE__ */ jsxs("div", {
+              style: {
+                fontSize: "small",
+                textAlign: "center"
+              },
+              children: ["Version ", getAppVersion()]
             })]
           })]
         }), /* @__PURE__ */ jsx(DialogSincronize, {
@@ -33531,43 +34272,43 @@ var require_index_81daafcd = __commonJS({
       });
     }
     var Menu = {};
-    var _interopRequireDefault$c = interopRequireDefault.exports;
+    var _interopRequireDefault$f = interopRequireDefault.exports;
     Object.defineProperty(Menu, "__esModule", {
       value: true
     });
-    var default_1$c = Menu.default = void 0;
-    var _createSvgIcon$c = _interopRequireDefault$c(requireCreateSvgIcon());
-    var _jsxRuntime$c = require$$2;
-    var _default$c = (0, _createSvgIcon$c.default)(/* @__PURE__ */ (0, _jsxRuntime$c.jsx)("path", {
+    var default_1$f = Menu.default = void 0;
+    var _createSvgIcon$f = _interopRequireDefault$f(requireCreateSvgIcon());
+    var _jsxRuntime$f = require$$2;
+    var _default$f = (0, _createSvgIcon$f.default)(/* @__PURE__ */ (0, _jsxRuntime$f.jsx)("path", {
       d: "M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
     }), "Menu");
-    default_1$c = Menu.default = _default$c;
+    default_1$f = Menu.default = _default$f;
     var Agriculture = {};
-    var _interopRequireDefault$b = interopRequireDefault.exports;
+    var _interopRequireDefault$e = interopRequireDefault.exports;
     Object.defineProperty(Agriculture, "__esModule", {
       value: true
     });
-    var default_1$b = Agriculture.default = void 0;
-    var _createSvgIcon$b = _interopRequireDefault$b(requireCreateSvgIcon());
-    var _jsxRuntime$b = require$$2;
-    var _default$b = (0, _createSvgIcon$b.default)([/* @__PURE__ */ (0, _jsxRuntime$b.jsx)("path", {
+    var default_1$e = Agriculture.default = void 0;
+    var _createSvgIcon$e = _interopRequireDefault$e(requireCreateSvgIcon());
+    var _jsxRuntime$e = require$$2;
+    var _default$e = (0, _createSvgIcon$e.default)([/* @__PURE__ */ (0, _jsxRuntime$e.jsx)("path", {
       d: "M19.5 12c.93 0 1.78.28 2.5.76V8c0-1.1-.9-2-2-2h-6.29l-1.06-1.06 1.41-1.41-.71-.71-3.53 3.53.71.71 1.41-1.41L13 6.71V9c0 1.1-.9 2-2 2h-.54c.95 1.06 1.54 2.46 1.54 4 0 .34-.04.67-.09 1h3.14c.25-2.25 2.14-4 4.45-4z"
-    }, "0"), /* @__PURE__ */ (0, _jsxRuntime$b.jsx)("path", {
+    }, "0"), /* @__PURE__ */ (0, _jsxRuntime$e.jsx)("path", {
       d: "M19.5 13c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5zm0 5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM4 9h5c0-1.1-.9-2-2-2H4c-.55 0-1 .45-1 1s.45 1 1 1zm5.83 4.82-.18-.47.93-.35c-.46-1.06-1.28-1.91-2.31-2.43l-.4.89-.46-.21.4-.9C7.26 10.13 6.64 10 6 10c-.53 0-1.04.11-1.52.26l.34.91-.47.18-.35-.93c-1.06.46-1.91 1.28-2.43 2.31l.89.4-.21.46-.9-.4C1.13 13.74 1 14.36 1 15c0 .53.11 1.04.26 1.52l.91-.34.18.47-.93.35c.46 1.06 1.28 1.91 2.31 2.43l.4-.89.46.21-.4.9c.55.22 1.17.35 1.81.35.53 0 1.04-.11 1.52-.26l-.34-.91.47-.18.35.93c1.06-.46 1.91-1.28 2.43-2.31l-.89-.4.21-.46.9.4c.22-.55.35-1.17.35-1.81 0-.53-.11-1.04-.26-1.52l-.91.34zm-2.68 3.95c-1.53.63-3.29-.09-3.92-1.62-.63-1.53.09-3.29 1.62-3.92 1.53-.63 3.29.09 3.92 1.62.64 1.53-.09 3.29-1.62 3.92z"
     }, "1")], "Agriculture");
-    default_1$b = Agriculture.default = _default$b;
+    default_1$e = Agriculture.default = _default$e;
     var NoteAlt = {};
-    var _interopRequireDefault$a = interopRequireDefault.exports;
+    var _interopRequireDefault$d = interopRequireDefault.exports;
     Object.defineProperty(NoteAlt, "__esModule", {
       value: true
     });
-    var default_1$a = NoteAlt.default = void 0;
-    var _createSvgIcon$a = _interopRequireDefault$a(requireCreateSvgIcon());
-    var _jsxRuntime$a = require$$2;
-    var _default$a = (0, _createSvgIcon$a.default)(/* @__PURE__ */ (0, _jsxRuntime$a.jsx)("path", {
+    var default_1$d = NoteAlt.default = void 0;
+    var _createSvgIcon$d = _interopRequireDefault$d(requireCreateSvgIcon());
+    var _jsxRuntime$d = require$$2;
+    var _default$d = (0, _createSvgIcon$d.default)(/* @__PURE__ */ (0, _jsxRuntime$d.jsx)("path", {
       d: "M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM9.1 17H7v-2.14l5.96-5.96 2.12 2.12L9.1 17zm7.75-7.73-1.06 1.06-2.12-2.12 1.06-1.06c.2-.2.51-.2.71 0l1.41 1.41c.2.2.2.51 0 .71z"
     }), "NoteAlt");
-    default_1$a = NoteAlt.default = _default$a;
+    default_1$d = NoteAlt.default = _default$d;
     const Navbar = (props2) => {
       const theme = useTheme();
       const navigate = useNavigate();
@@ -33607,7 +34348,7 @@ var require_index_81daafcd = __commonJS({
             children: [/* @__PURE__ */ jsxs(ListItemButton$1, {
               onClick: () => irMaqPropia(),
               children: [/* @__PURE__ */ jsx(ListItemIcon$1, {
-                children: /* @__PURE__ */ jsx(default_1$b, {})
+                children: /* @__PURE__ */ jsx(default_1$e, {})
               }), /* @__PURE__ */ jsx(ListItemText$1, {
                 primary: /* @__PURE__ */ jsx(Typography$1, {
                   type: "body2",
@@ -33620,7 +34361,7 @@ var require_index_81daafcd = __commonJS({
             }), /* @__PURE__ */ jsxs(ListItemButton$1, {
               onClick: () => listarEnviados(),
               children: [/* @__PURE__ */ jsx(ListItemIcon$1, {
-                children: /* @__PURE__ */ jsx(default_1$a, {})
+                children: /* @__PURE__ */ jsx(default_1$d, {})
               }), /* @__PURE__ */ jsx(ListItemText$1, {
                 primary: /* @__PURE__ */ jsx(Typography$1, {
                   type: "body2",
@@ -33636,41 +34377,41 @@ var require_index_81daafcd = __commonJS({
       });
     };
     var ExitToApp = {};
-    var _interopRequireDefault$9 = interopRequireDefault.exports;
+    var _interopRequireDefault$c = interopRequireDefault.exports;
     Object.defineProperty(ExitToApp, "__esModule", {
       value: true
     });
-    var default_1$9 = ExitToApp.default = void 0;
-    var _createSvgIcon$9 = _interopRequireDefault$9(requireCreateSvgIcon());
-    var _jsxRuntime$9 = require$$2;
-    var _default$9 = (0, _createSvgIcon$9.default)(/* @__PURE__ */ (0, _jsxRuntime$9.jsx)("path", {
+    var default_1$c = ExitToApp.default = void 0;
+    var _createSvgIcon$c = _interopRequireDefault$c(requireCreateSvgIcon());
+    var _jsxRuntime$c = require$$2;
+    var _default$c = (0, _createSvgIcon$c.default)(/* @__PURE__ */ (0, _jsxRuntime$c.jsx)("path", {
       d: "M10.09 15.59 11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
     }), "ExitToApp");
-    default_1$9 = ExitToApp.default = _default$9;
+    default_1$c = ExitToApp.default = _default$c;
     var Send = {};
-    var _interopRequireDefault$8 = interopRequireDefault.exports;
+    var _interopRequireDefault$b = interopRequireDefault.exports;
     Object.defineProperty(Send, "__esModule", {
       value: true
     });
-    var default_1$8 = Send.default = void 0;
-    var _createSvgIcon$8 = _interopRequireDefault$8(requireCreateSvgIcon());
-    var _jsxRuntime$8 = require$$2;
-    var _default$8 = (0, _createSvgIcon$8.default)(/* @__PURE__ */ (0, _jsxRuntime$8.jsx)("path", {
+    var default_1$b = Send.default = void 0;
+    var _createSvgIcon$b = _interopRequireDefault$b(requireCreateSvgIcon());
+    var _jsxRuntime$b = require$$2;
+    var _default$b = (0, _createSvgIcon$b.default)(/* @__PURE__ */ (0, _jsxRuntime$b.jsx)("path", {
       d: "M2.01 21 23 12 2.01 3 2 10l15 2-15 2z"
     }), "Send");
-    default_1$8 = Send.default = _default$8;
+    default_1$b = Send.default = _default$b;
     var Save = {};
-    var _interopRequireDefault$7 = interopRequireDefault.exports;
+    var _interopRequireDefault$a = interopRequireDefault.exports;
     Object.defineProperty(Save, "__esModule", {
       value: true
     });
-    var default_1$7 = Save.default = void 0;
-    var _createSvgIcon$7 = _interopRequireDefault$7(requireCreateSvgIcon());
-    var _jsxRuntime$7 = require$$2;
-    var _default$7 = (0, _createSvgIcon$7.default)(/* @__PURE__ */ (0, _jsxRuntime$7.jsx)("path", {
+    var default_1$a = Save.default = void 0;
+    var _createSvgIcon$a = _interopRequireDefault$a(requireCreateSvgIcon());
+    var _jsxRuntime$a = require$$2;
+    var _default$a = (0, _createSvgIcon$a.default)(/* @__PURE__ */ (0, _jsxRuntime$a.jsx)("path", {
       d: "M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
     }), "Save");
-    default_1$7 = Save.default = _default$7;
+    default_1$a = Save.default = _default$a;
     const Appbar = (props2) => {
       const [state, setState] = react.exports.useState(false);
       function ElevationScroll(props22) {
@@ -33712,7 +34453,7 @@ var require_index_81daafcd = __commonJS({
                   mr: 2
                 },
                 onClick: toggleDrawer(true),
-                children: /* @__PURE__ */ jsx(default_1$c, {})
+                children: /* @__PURE__ */ jsx(default_1$f, {})
               }), /* @__PURE__ */ jsx(Typography$1, {
                 variant: "h6",
                 component: "div",
@@ -33722,7 +34463,7 @@ var require_index_81daafcd = __commonJS({
                 children: props2.nombre
               }), /* @__PURE__ */ jsx(Button$1, {
                 color: "inherit",
-                endIcon: /* @__PURE__ */ jsx(default_1$9, {}),
+                endIcon: /* @__PURE__ */ jsx(default_1$c, {}),
                 onClick: props2.salir,
                 sx: {
                   display: props2.mostrarSalir
@@ -33731,12 +34472,13 @@ var require_index_81daafcd = __commonJS({
               }), /* @__PURE__ */ jsx(Button$1, {
                 variant: "contained",
                 color: "warning",
-                startIcon: /* @__PURE__ */ jsx(default_1$8, {}),
+                startIcon: /* @__PURE__ */ jsx(default_1$b, {}),
                 onClick: props2.enviar,
                 sx: {
                   display: props2.mostrarEnviar,
                   borderRadius: 4
                 },
+                disabled: props2.deshabilitar,
                 children: "Enviar"
               }), /* @__PURE__ */ jsx(Button$1, {
                 sx: {
@@ -33746,8 +34488,7 @@ var require_index_81daafcd = __commonJS({
                 variant: "contained",
                 color: "warning",
                 onClick: props2.guardar,
-                disabled: props2.deshabilitar,
-                startIcon: /* @__PURE__ */ jsx(default_1$7, {}),
+                startIcon: /* @__PURE__ */ jsx(default_1$a, {}),
                 children: "Guardar"
               })]
             })
@@ -33759,17 +34500,17 @@ var require_index_81daafcd = __commonJS({
       });
     };
     var Add = {};
-    var _interopRequireDefault$6 = interopRequireDefault.exports;
+    var _interopRequireDefault$9 = interopRequireDefault.exports;
     Object.defineProperty(Add, "__esModule", {
       value: true
     });
-    var default_1$6 = Add.default = void 0;
-    var _createSvgIcon$6 = _interopRequireDefault$6(requireCreateSvgIcon());
-    var _jsxRuntime$6 = require$$2;
-    var _default$6 = (0, _createSvgIcon$6.default)(/* @__PURE__ */ (0, _jsxRuntime$6.jsx)("path", {
+    var default_1$9 = Add.default = void 0;
+    var _createSvgIcon$9 = _interopRequireDefault$9(requireCreateSvgIcon());
+    var _jsxRuntime$9 = require$$2;
+    var _default$9 = (0, _createSvgIcon$9.default)(/* @__PURE__ */ (0, _jsxRuntime$9.jsx)("path", {
       d: "M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
     }), "Add");
-    default_1$6 = Add.default = _default$6;
+    default_1$9 = Add.default = _default$9;
     const Loading = (props2) => {
       return /* @__PURE__ */ jsxs(Backdrop$1, {
         open: props2.open,
@@ -33794,7 +34535,7 @@ var require_index_81daafcd = __commonJS({
           display: props2.esconder
         },
         id: "txtAutocomplete",
-        getOptionLabel: (option) => option.DESCRIPCION ? option.DESCRIPCION : "",
+        getOptionLabel: (option) => option.DESCRIPCION ? option.ID.trim() + "-" + option.DESCRIPCION : "",
         options: props2.options,
         value: props2.value,
         disabled: props2.disabled,
@@ -33805,7 +34546,9 @@ var require_index_81daafcd = __commonJS({
           size: "small",
           helperText: props2.error === "" ? "Seleccione campo" : ""
         }),
-        isOptionEqualToValue: (option, val) => option.DESCRIPCION === val.DESCRIPCION,
+        isOptionEqualToValue: (option, val) => {
+          option.ID == val.ID;
+        },
         onChange: (event, newValue) => props2.cambiar(event, newValue),
         noOptionsText: "Sin resultado",
         renderOption: (props22, item) => /* @__PURE__ */ react.exports.createElement(Box$1, {
@@ -33815,86 +34558,52 @@ var require_index_81daafcd = __commonJS({
       });
     };
     var DeleteForever = {};
-    var _interopRequireDefault$5 = interopRequireDefault.exports;
+    var _interopRequireDefault$8 = interopRequireDefault.exports;
     Object.defineProperty(DeleteForever, "__esModule", {
       value: true
     });
-    var default_1$5 = DeleteForever.default = void 0;
-    var _createSvgIcon$5 = _interopRequireDefault$5(requireCreateSvgIcon());
-    var _jsxRuntime$5 = require$$2;
-    var _default$5 = (0, _createSvgIcon$5.default)(/* @__PURE__ */ (0, _jsxRuntime$5.jsx)("path", {
+    var default_1$8 = DeleteForever.default = void 0;
+    var _createSvgIcon$8 = _interopRequireDefault$8(requireCreateSvgIcon());
+    var _jsxRuntime$8 = require$$2;
+    var _default$8 = (0, _createSvgIcon$8.default)(/* @__PURE__ */ (0, _jsxRuntime$8.jsx)("path", {
       d: "M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12 1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
     }), "DeleteForever");
-    default_1$5 = DeleteForever.default = _default$5;
-    var SendToMobile = {};
-    var _interopRequireDefault$4 = interopRequireDefault.exports;
-    Object.defineProperty(SendToMobile, "__esModule", {
+    default_1$8 = DeleteForever.default = _default$8;
+    var DriveFileRenameOutlineRounded = {};
+    var _interopRequireDefault$7 = interopRequireDefault.exports;
+    Object.defineProperty(DriveFileRenameOutlineRounded, "__esModule", {
       value: true
     });
-    var default_1$4 = SendToMobile.default = void 0;
-    var _createSvgIcon$4 = _interopRequireDefault$4(requireCreateSvgIcon());
-    var _jsxRuntime$4 = require$$2;
-    var _default$4 = (0, _createSvgIcon$4.default)(/* @__PURE__ */ (0, _jsxRuntime$4.jsx)("path", {
-      d: "M17 17h2v4c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2V3c0-1.1.9-1.99 2-1.99L17 1c1.1 0 2 .9 2 2v4h-2V6H7v12h10v-1zm5-5-4-4v3h-5v2h5v3l4-4z"
-    }), "SendToMobile");
-    default_1$4 = SendToMobile.default = _default$4;
-    const Dialogs = (props2) => {
-      return /* @__PURE__ */ jsxs(Dialog$1, {
-        open: props2.open,
-        onClose: props2.cerraDialog,
-        "aria-labelledby": "alert-dialog-title",
-        "aria-describedby": "alert-dialog-description",
-        children: [/* @__PURE__ */ jsxs(DialogTitle$1, {
-          id: "alert-dialog-title",
-          children: [props2.mensaje, /* @__PURE__ */ jsx("p", {}), /* @__PURE__ */ jsxs(TextField$1, {
-            id: "txtturno",
-            select: true,
-            label: "Implemento de terceros",
-            size: "small",
-            value: props2.implemento,
-            sx: {
-              width: "100%",
-              display: props2.esconder
-            },
-            onChange: (event, newvalue) => props2.cambiarImplemento(event, newvalue),
-            children: [/* @__PURE__ */ jsx(MenuItem$1, {
-              value: "1",
-              children: /* @__PURE__ */ jsx(Typography$1, {
-                fontSize: 12,
-                children: "Si"
-              })
-            }, "1"), /* @__PURE__ */ jsx(MenuItem$1, {
-              value: "0",
-              children: /* @__PURE__ */ jsx(Typography$1, {
-                fontSize: 12,
-                children: "No"
-              })
-            }, "0")]
-          }), /* @__PURE__ */ jsx("p", {}), /* @__PURE__ */ jsx(Autocompletar, {
-            esconder: props2.esconder,
-            label: "Responsable",
-            options: props2.responsbles,
-            cambiar: (event, newValue) => props2.cambiarResponsable(newValue)
-          })]
-        }), /* @__PURE__ */ jsxs(DialogActions$1, {
-          children: [/* @__PURE__ */ jsx(Button$1, {
-            sx: {
-              display: props2.display
-            },
-            onClick: props2.cerrar,
-            children: "Cancelar"
-          }), /* @__PURE__ */ jsx(Button$1, {
-            onClick: props2.aceptar,
-            disabled: props2.disabled,
-            autoFocus: true,
-            children: "Aceptar"
-          })]
-        })]
-      });
-    };
+    var default_1$7 = DriveFileRenameOutlineRounded.default = void 0;
+    var _createSvgIcon$7 = _interopRequireDefault$7(requireCreateSvgIcon());
+    var _jsxRuntime$7 = require$$2;
+    var _default$7 = (0, _createSvgIcon$7.default)(/* @__PURE__ */ (0, _jsxRuntime$7.jsx)("path", {
+      d: "m15 16-4 4h8c1.1 0 2-.9 2-2s-.9-2-2-2h-4zm-2.94-8.81-8.77 8.77c-.18.18-.29.44-.29.7V19c0 .55.45 1 1 1h2.34c.27 0 .52-.11.71-.29l8.77-8.77-3.76-3.75zm6.65.85c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+    }), "DriveFileRenameOutlineRounded");
+    default_1$7 = DriveFileRenameOutlineRounded.default = _default$7;
+    var Backup = {};
+    var _interopRequireDefault$6 = interopRequireDefault.exports;
+    Object.defineProperty(Backup, "__esModule", {
+      value: true
+    });
+    var default_1$6 = Backup.default = void 0;
+    var _createSvgIcon$6 = _interopRequireDefault$6(requireCreateSvgIcon());
+    var _jsxRuntime$6 = require$$2;
+    var _default$6 = (0, _createSvgIcon$6.default)(/* @__PURE__ */ (0, _jsxRuntime$6.jsx)("path", {
+      d: "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"
+    }), "Backup");
+    default_1$6 = Backup.default = _default$6;
     const ListaParteMaq = (props2) => {
       const navigate = useNavigate();
-      function itemSeleccionado(cod, cabecera) {
+      function enviarParte(cod, cabecera) {
+        navigate("/enviarParte/" + cod, {
+          state: {
+            cabecera,
+            deshabilitar: false
+          }
+        });
+      }
+      function editarParte(cod, cabecera) {
         navigate("/editarParte/" + cod, {
           state: {
             cabecera,
@@ -33904,48 +34613,80 @@ var require_index_81daafcd = __commonJS({
       }
       return props2.datos != null ? props2.datos.map((item, i) => /* @__PURE__ */ jsxs(Box$1, {
         children: [/* @__PURE__ */ jsxs(ListItem$1, {
-          secondaryAction: /* @__PURE__ */ jsx(IconButton$1, {
-            edge: "end",
-            "aria-label": "delete",
-            onClick: () => props2.abrirDialogBorrar(item.cod),
-            children: /* @__PURE__ */ jsx(default_1$5, {
-              color: "primary",
-              sx: {
-                color: "red"
-              }
-            })
+          secondaryAction: /* @__PURE__ */ jsxs(Fragment, {
+            children: [/* @__PURE__ */ jsx(Tooltip$1, {
+              title: "Editar",
+              children: /* @__PURE__ */ jsx(IconButton$1, {
+                edge: "end",
+                "aria-label": "delete",
+                onClick: () => {
+                  editarParte(item.cod, item);
+                },
+                children: /* @__PURE__ */ jsx(default_1$7, {
+                  color: "primary",
+                  sx: {
+                    color: "#ed6c02",
+                    marginRight: 1,
+                    height: 30,
+                    width: 30
+                  }
+                })
+              })
+            }), /* @__PURE__ */ jsx(Tooltip$1, {
+              title: "Eliminar",
+              children: /* @__PURE__ */ jsx(IconButton$1, {
+                edge: "end",
+                "aria-label": "delete",
+                onClick: () => props2.abrirDialogBorrar(item.cod),
+                children: /* @__PURE__ */ jsx(default_1$8, {
+                  color: "primary",
+                  sx: {
+                    color: "red",
+                    marginRight: 0,
+                    height: 30,
+                    width: 30
+                  }
+                })
+              })
+            })]
           }),
-          children: [/* @__PURE__ */ jsx(ListItemAvatar$1, {
-            onClick: () => {
-              itemSeleccionado(item.cod, item), console.log(item);
-            },
-            children: /* @__PURE__ */ jsx(default_1$4, {
-              color: "warning"
-            })
-          }, `avatar-${i}`), /* @__PURE__ */ jsx(ListItemText$1, {
-            primary: /* @__PURE__ */ jsx(Typography$1, {
-              variant: "h1",
-              color: "green",
-              fontSize: 14,
-              children: item.IDDOCUMENTO == "PMA" ? "PARTE DE MAQUINARIA ALQUILADA" : "PARTE DE MAQUINARIA PROPIA"
+          children: [/* @__PURE__ */ jsx(Tooltip$1, {
+            title: "Enviar",
+            children: /* @__PURE__ */ jsx(ListItemAvatar$1, {
+              onClick: () => {
+                enviarParte(item.cod, item);
+              },
+              children: /* @__PURE__ */ jsx(default_1$6, {
+                color: "success",
+                sx: {
+                  height: 45,
+                  width: 45
+                }
+              })
+            }, `avatar-${i}`)
+          }), /* @__PURE__ */ jsx(ListItemText$1, {
+            primary: /* @__PURE__ */ jsxs(Fragment, {
+              children: [/* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Typography$1, {
+                variant: "h1",
+                color: "green",
+                fontSize: 15,
+                fontWeight: "bold",
+                children: item.IDDOCUMENTO + " - FECHA: " + (item == null ? void 0 : item.FECHA)
+              })]
             }),
-            secondary: /* @__PURE__ */ jsxs(React.Fragment, {
+            secondary: /* @__PURE__ */ jsxs(Fragment, {
               children: [/* @__PURE__ */ jsx(Typography$1, {
                 component: "span",
                 variant: "body2",
                 fontWeight: "bold",
                 fontSize: 12,
-                children: item.MAQUINA
+                children: item == null ? void 0 : item.MAQUINA.DESCRIPCION
               }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Typography$1, {
                 component: "span",
                 variant: "body2",
                 fontWeight: "bold",
                 fontSize: 12,
-                children: ["OPERARIO: ", item.OPERARIO, " || FECHA: ", " " + item.FECHA]
-              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Typography$1, {
-                component: "span",
-                variant: "body2",
-                fontWeight: "bold"
+                children: ["OPERARIO: ", item == null ? void 0 : item.OPERARIO.DESCRIPCION]
               })]
             })
           }, `txt-${i}`)]
@@ -42629,42 +43370,67 @@ var require_index_81daafcd = __commonJS({
       const data = await localDataBase.Maquinarias.where("idempresa").equals(empresa).toArray();
       return data;
     };
+    const getById$7 = async (id2) => {
+      const empresa = localStorage.getItem("empresa");
+      const data = await localDataBase.Maquinarias.get({ idempresa: empresa, ID: id2 });
+      return data;
+    };
     function useMaquinaria() {
       const [maquinarias, setMaquinarias] = react.exports.useState([]);
+      const [maquina, setMaquina] = react.exports.useState([]);
+      const [costoHora, setCostoHora] = react.exports.useState("");
       const getMaquinarias = () => {
         get$b().then((response) => {
           setMaquinarias(response);
-        }).catch(Dexie$1.DexieError, (e2) => {
+        }).catch((e2) => {
           console.error(e2);
         });
       };
+      const getMaquinaById = (id2) => {
+        getById$7(id2).then((response) => {
+          setMaquina(response);
+          setCostoHora(parseFloat(response.COSTO_MOF).toFixed(2));
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarMaquina = (newValue) => {
+        if (newValue != null) {
+          setMaquina(newValue);
+          setCostoHora(parseFloat(newValue.COSTO_MOF).toFixed(2));
+        } else {
+          setMaquina("");
+        }
+      };
       return {
         maquinarias,
-        getMaquinarias
+        maquina,
+        costoHora,
+        setCostoHora,
+        setMaquina,
+        getMaquinarias,
+        getMaquinaById,
+        cambiarMaquina
       };
     }
     const registerMaquinaria = async (cabecera, detalle, user, combustible) => {
       const empresa = localStorage.getItem("empresa");
-      console.log(combustible);
       const cod_partemaq = await localDataBase.AC_PARTEMAQUINARIA.add(
         {
           PROVEEDOR: cabecera.PROVEEDOR,
-          IDCLIEPROV: cabecera.IDCLIEPROV,
           IDDOCUMENTO: cabecera.IDDOCUMENTO,
-          IDCONSUMIDORMAQUINARIA: cabecera.IDCONSUMIDORMAQUINARIA,
           MAQUINA: cabecera.MAQUINA,
+          ACTIVIDAD: cabecera.ACTIVIDAD,
+          LABOR: cabecera.LABOR,
           OPERARIO: cabecera.OPERARIO,
-          IDOPERARIO: cabecera.IDOPERARIO,
           HORAS_TRAB: cabecera.HORAS_TRAB,
           HORAS_TRAB1: cabecera.HORAS_TRAB1,
           TURNO: cabecera.TURNO,
-          IDTURNOTRABAJO: cabecera.IDTURNOTRABAJO,
           TOTAL_COSTO: cabecera.TOTAL_COSTO,
           FORMAPAGO: cabecera.FORMAPAGO,
           AREA: cabecera.AREA,
-          IDAREA: cabecera.IDAREA,
           COSTO_HORA: cabecera.COSTO_HORA,
-          IDUSUARIO: user,
+          IDUSUARIO: cabecera.IDUSUARIO,
           ESTADO: "P",
           FECHA: cabecera.FECHA,
           HORAINICIO: cabecera.HORAINICIO,
@@ -42673,10 +43439,8 @@ var require_index_81daafcd = __commonJS({
           HOROMETROFINAL: cabecera.HOROMETROFINAL,
           TOTALAREA_TRAB: cabecera.TOTALAREA_TRAB,
           GLOSA: cabecera.GLOSA,
-          IDCONSUMIDORIMPLEMENTO: cabecera.IDIMPLEMENTO,
-          DESCIMPLEMENTO: cabecera.DESCIMPLEMENTO,
-          DESCCONSUMIDOR: cabecera.DESCCONSUMIDOR,
-          idempresa: empresa
+          idempresa: empresa,
+          TOTAL_MINUTOS: cabecera.TOTAL_MINUTOS
         }
       );
       detalle.map((item, index2) => {
@@ -42684,8 +43448,7 @@ var require_index_81daafcd = __commonJS({
           {
             IDPARTEMAQ: cod_partemaq,
             ITEM: index2,
-            IDCONSUMIDOR: item.IDCONSUMIDOR,
-            DESCRIPCION: item.DESCRIPCION,
+            CONSUMIDOR: item.CONSUMIDOR,
             AREA_TRAB: item.AREA_TRAB,
             HORAINICIO: item.HORAINICIO,
             HORAFINAL: item.HORAFINAL,
@@ -42694,15 +43457,12 @@ var require_index_81daafcd = __commonJS({
             HORAS_TRAB: item.HORAS_TRAB,
             HORAS_TRAB1: item.HORAS_TRAB1,
             COSTO_HORA: item.COSTO_HORA,
-            IDACTIVIDAD: item.IDACTIVIDAD,
-            IDLABOR: item.IDLABOR,
+            ACTIVIDAD: item.ACTIVIDAD,
+            LABOR: item.LABOR,
             HOROMETRO_DIFERENCIA: item.HOROMETRO_DIFERENCIA,
-            DSC_LABOR: item.DSC_LABOR,
             COSTO_TOTAL: item.COSTO_TOTAL,
-            IDCUARTEL: item.IDCUARTEL,
-            IDJIRON: item.IDJIRON,
-            DESCJIRON: item.DESCJIRON,
-            DESCCUARTEL: item.DESCCUARTEL
+            CUARTEL: item.CUARTEL,
+            JIRON: item.JIRON
           }
         );
       });
@@ -42721,14 +43481,32 @@ var require_index_81daafcd = __commonJS({
         return res;
       }
     };
+    const getAllPM = async () => {
+      const empresa = localStorage.getItem("empresa");
+      let table = localDataBase.AC_PARTEMAQUINARIA;
+      let result = await table.orderBy("FECHA").toArray();
+      let datos = [];
+      result.map((item) => {
+        if (item.ESTADO === "P" && item.idempresa === empresa) {
+          datos.push(item);
+        }
+      });
+      return datos;
+    };
     const getPartesEnviados = async (fecha, idmaquina) => {
       const empresa = localStorage.getItem("empresa");
       if (idmaquina != "") {
         const res = await localDataBase.AC_PARTEMAQUINARIA.where(["FECHA", "IDCONSUMIDORMAQUINARIA", "ESTADO", "idempresa"]).equals([fecha, idmaquina, "A", empresa]).toArray();
         return res;
       } else {
-        const res = await localDataBase.AC_PARTEMAQUINARIA.where({ FECHA: fecha, ESTADO: "A", idempresa: empresa }).toArray();
-        return res;
+        const res = await localDataBase.AC_PARTEMAQUINARIA.where({ FECHA: fecha, idempresa: empresa }).toArray();
+        let datos = [];
+        res.map((item) => {
+          if (item.ESTADO != "P" && item.idempresa === empresa) {
+            datos.push(item);
+          }
+        });
+        return datos;
       }
     };
     const getDetalle = async (id2) => {
@@ -42745,9 +43523,67 @@ var require_index_81daafcd = __commonJS({
       await localDataBase.AC_COMBUSTIBLE.where("IDPARTEMAQ").equals(parseInt(id2)).delete();
       return "elemento eliminado: " + id2;
     };
-    const updateParteMaq = async (id2) => {
-      await localDataBase.AC_PARTEMAQUINARIA.update(id2, { ESTADO: "A" });
+    const updateParteMaq = async (id2, data) => {
+      await localDataBase.AC_PARTEMAQUINARIA.update(id2, { IDPARTEMAQ: data.IDPARTEMAQ, NUMERO: data.NUMERO, ESTADO: "E" });
       return "elemento actualizado: " + id2;
+    };
+    const anularParteMaq = async (id2, data) => {
+      console.log(id2);
+      const res = await localDataBase.AC_PARTEMAQUINARIA.get({ IDPARTEMAQ: id2 });
+      await localDataBase.AC_PARTEMAQUINARIA.update(res.cod, { ESTADO: "A" });
+      return "elemento anulado: " + res.cod;
+    };
+    const updateById = async (id2, cabecera, detalle) => {
+      console.log(id2);
+      await localDataBase.AC_PARTEMAQUINARIA.update(parseInt(id2), {
+        ACTIVIDAD: cabecera.ACTIVIDAD,
+        AREA: cabecera.AREA,
+        COSTO_HORA: cabecera.COSTO_HORA,
+        FECHA: cabecera.FECHA,
+        FORMAPAGO: cabecera.FORMAPAGO,
+        GLOSA: cabecera.GLOSA,
+        HORAINICIO: cabecera.HORAINICIO,
+        HORAFINAL: cabecera.HORAFINAL,
+        HORAS_TRAB: cabecera.HORAS_TRAB,
+        HORAS_TRAB1: cabecera.HORAS_TRAB1,
+        HOROMETROINICIAL: cabecera.HOROMETROINICIAL,
+        HOROMETROFINAL: cabecera.HOROMETROFINAL,
+        IDDOCUMENTO: cabecera.IDDOCUMENTO,
+        IDUSUARIO: cabecera.IDUSUARIO,
+        LABOR: cabecera.LABOR,
+        MAQUINA: cabecera.MAQUINA,
+        OPERARIO: cabecera.OPERARIO,
+        PROVEEDOR: cabecera.PROVEEDOR,
+        TOTAL_COSTO: cabecera.TOTAL_COSTO,
+        TOTAL_MINUTOS: cabecera.TOTAL_MINUTOS,
+        TURNO: cabecera.TURNO,
+        TOTALAREA_TRAB: cabecera.TOTALAREA_TRAB
+      });
+      localDataBase.AC_DPARTEMAQUINARIA.where("IDPARTEMAQ").equals(parseInt(id2)).delete();
+      detalle.map((item, index2) => {
+        localDataBase.AC_DPARTEMAQUINARIA.add(
+          {
+            IDPARTEMAQ: parseInt(id2),
+            ITEM: index2,
+            CONSUMIDOR: item.CONSUMIDOR,
+            AREA_TRAB: item.AREA_TRAB,
+            HORAINICIO: item.HORAINICIO,
+            HORAFINAL: item.HORAFINAL,
+            HOROMETROINICIAL: item.HOROMETROINICIAL,
+            HOROMETROFINAL: item.HOROMETROFINAL,
+            HORAS_TRAB: item.HORAS_TRAB,
+            HORAS_TRAB1: item.HORAS_TRAB1,
+            COSTO_HORA: item.COSTO_HORA,
+            ACTIVIDAD: item.ACTIVIDAD,
+            LABOR: item.LABOR,
+            HOROMETRO_DIFERENCIA: item.HOROMETRO_DIFERENCIA,
+            COSTO_TOTAL: item.COSTO_TOTAL,
+            CUARTEL: item.CUARTEL,
+            JIRON: item.JIRON
+          }
+        );
+      });
+      return "parte modificado: " + id2;
     };
     function useParteMaquinaria() {
       useNavigate();
@@ -42761,8 +43597,28 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
+      const updateParte = ({ id: id2, cabecera, detalle: detalle2, onSuccess }) => {
+        updateById(id2, cabecera, detalle2).then((response) => {
+          onSuccess(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const anularParteMaquinaria = ({ idparte }) => {
+        anularParteMaq(idparte).then((response) => {
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
       const getParteMaquinariaAll$1 = (fecha, idmaquina) => {
         getParteMaquinariaAll(fecha, idmaquina).then((response) => {
+          setPartesMaq(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const getAllPartes = () => {
+        getAllPM().then((response) => {
           setPartesMaq(response);
         }).catch((e2) => {
           console.error(e2);
@@ -42789,8 +43645,8 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
-      const updateParteMaq$1 = (idpartemaq) => {
-        updateParteMaq(idpartemaq).then((response) => {
+      const updateParteMaq$1 = (id2, data) => {
+        updateParteMaq(id2, data).then((response) => {
           console.log(response);
         }).catch((e2) => {
           console.error(e2);
@@ -42798,7 +43654,6 @@ var require_index_81daafcd = __commonJS({
       };
       const getParteMaquinariaEnviados = (fecha, idmaquina) => {
         getPartesEnviados(fecha, idmaquina).then((response) => {
-          console.log(response);
           setPartesMaq(response);
         }).catch((e2) => {
           console.error(e2);
@@ -42808,15 +43663,75 @@ var require_index_81daafcd = __commonJS({
         parteMaquinaria,
         detalle,
         combustible,
+        setDetalle,
         getCombustible: getCombustible$1,
+        updateParte,
         updateParteMaq: updateParteMaq$1,
         deleteParteMaq,
+        anularParteMaquinaria,
         getDetalleMaq,
         registrarParte,
         getParteMaquinariaAll: getParteMaquinariaAll$1,
+        getAllPartes,
         getParteMaquinariaEnviados
       };
     }
+    const Dialogs = (props2) => {
+      return /* @__PURE__ */ jsxs(Dialog$1, {
+        open: props2.open,
+        onClose: props2.cerraDialog,
+        "aria-labelledby": "alert-dialog-title",
+        "aria-describedby": "alert-dialog-description",
+        children: [/* @__PURE__ */ jsxs(DialogTitle$1, {
+          id: "alert-dialog-title",
+          children: [props2.mensaje, /* @__PURE__ */ jsx("p", {}), props2.flag == true && /* @__PURE__ */ jsxs(Fragment, {
+            children: [/* @__PURE__ */ jsxs(TextField$1, {
+              id: "txtturno",
+              select: true,
+              label: "\xBFMaquina utiliz\xF3 Implemento de terceros?",
+              size: "small",
+              value: props2.implemento,
+              sx: {
+                width: "100%",
+                display: props2.esconder
+              },
+              onChange: (event, newvalue) => props2.cambiarImplemento(event, newvalue),
+              children: [/* @__PURE__ */ jsx(MenuItem$1, {
+                value: "1",
+                children: /* @__PURE__ */ jsx(Typography$1, {
+                  fontSize: 12,
+                  children: "Si"
+                })
+              }, "1"), /* @__PURE__ */ jsx(MenuItem$1, {
+                value: "0",
+                children: /* @__PURE__ */ jsx(Typography$1, {
+                  fontSize: 12,
+                  children: "No"
+                })
+              }, "0")]
+            }), /* @__PURE__ */ jsx("p", {}), /* @__PURE__ */ jsx(Autocompletar, {
+              esconder: props2.esconder,
+              label: "Seleccione Responsable",
+              options: props2.responsbles,
+              cambiar: (event, newValue) => props2.cambiarResponsable(newValue)
+            })]
+          })]
+        }), /* @__PURE__ */ jsxs(DialogActions$1, {
+          children: [/* @__PURE__ */ jsx(Button$1, {
+            sx: {
+              display: props2.display
+            },
+            onClick: props2.cerrar,
+            children: "Cancelar"
+          }), /* @__PURE__ */ jsx(Button$1, {
+            onClick: props2.aceptar,
+            disabled: props2.disabled,
+            autoFocus: true,
+            children: "Aceptar"
+          })]
+        })]
+      });
+    };
     const HomeMaquinariaPropia = () => {
       var usuario = JSON.parse(localStorage.getItem("usuario"));
       usuario.usuario;
@@ -42828,7 +43743,8 @@ var require_index_81daafcd = __commonJS({
       const {
         parteMaquinaria,
         getParteMaquinariaAll: getParteMaquinariaAll2,
-        deleteParteMaq
+        deleteParteMaq,
+        getAllPartes
       } = useParteMaquinaria();
       const {
         user,
@@ -42836,35 +43752,20 @@ var require_index_81daafcd = __commonJS({
         logOut
       } = useAuth();
       const [openBorrar, setOpenBorrar] = react.exports.useState(false);
-      const [idMquina, setIdMaquina] = react.exports.useState("");
+      react.exports.useState("");
       const [idparte, setIdParte] = react.exports.useState("");
-      const [fechaBusqueda, setFechaBusqueda] = react.exports.useState(dateFormat(new Date(), "yyyy-mm-dd"));
-      const onChangeAutocompleteHome = (newValue) => {
-        console.log(newValue);
-        if (newValue != null) {
-          setIdMaquina(newValue.ID);
-        } else {
-          setIdMaquina("");
-        }
-      };
+      react.exports.useState(dateFormat(new Date(), "yyyy-mm-dd"));
       const salir = () => {
         logOut();
         navigate("/", {
           replace: true
         });
       };
-      function listarParteMaquinaria() {
-        getParteMaquinariaAll2(fechaBusqueda, idMquina);
-      }
       function elimnarParte() {
-        console.log(idparte);
         deleteParteMaq(idparte);
-        listarParteMaquinaria();
+        getAllPartes();
         setOpenBorrar(false);
       }
-      const asignarFechaBusqueda = (newValue) => {
-        setFechaBusqueda(dateFormat(newValue, "yyyy-mm-dd"));
-      };
       const cerrarDialogBorrar = () => {
         setOpenBorrar(false);
       };
@@ -42874,7 +43775,7 @@ var require_index_81daafcd = __commonJS({
       };
       react.exports.useEffect(() => {
         getMaquinarias();
-        listarParteMaquinaria();
+        getAllPartes();
       }, []);
       return /* @__PURE__ */ jsx("div", {
         children: /* @__PURE__ */ jsxs(Box$1, {
@@ -42887,47 +43788,11 @@ var require_index_81daafcd = __commonJS({
             open: openBorrar,
             cerrar: cerrarDialogBorrar,
             aceptar: elimnarParte,
-            mensaje: "\xBFEst\xE1 seguro de borrar parte de maquinaria?"
+            mensaje: "\xBFEst\xE1 seguro de borrar parte de maquinaria?",
+            esconder: "none"
           }), /* @__PURE__ */ jsx("h3", {
-            children: "Buscar Parte de Maquinaria"
-          }), /* @__PURE__ */ jsx(Card$1, {
-            children: /* @__PURE__ */ jsx(CardContent$1, {
-              children: /* @__PURE__ */ jsxs(Grid$1, {
-                container: true,
-                spacing: 1,
-                children: [/* @__PURE__ */ jsx(Grid$1, {
-                  item: true,
-                  xs: 4,
-                  children: /* @__PURE__ */ jsx(InputFecha, {
-                    fecha: fechaBusqueda,
-                    label: "Fecha",
-                    asignarFecha: (val) => asignarFechaBusqueda(val)
-                  })
-                }), /* @__PURE__ */ jsx(Grid$1, {
-                  item: true,
-                  xs: 8,
-                  children: /* @__PURE__ */ jsx(Autocompletar, {
-                    label: "Buscar Maquina",
-                    options: maquinarias,
-                    cambiar: (event, newValue) => onChangeAutocompleteHome(newValue)
-                  })
-                }), /* @__PURE__ */ jsx(Grid$1, {
-                  item: true,
-                  xs: 12,
-                  sx: {
-                    position: "center"
-                  },
-                  children: /* @__PURE__ */ jsx(Button$1, {
-                    variant: "contained",
-                    fullWidth: true,
-                    color: "success",
-                    onClick: () => listarParteMaquinaria(),
-                    children: "Buscar"
-                  })
-                })]
-              })
-            })
-          }), /* @__PURE__ */ jsx(List$1, {
+            children: "Listado de Partes de Maquinaria"
+          }), parteMaquinaria.length == 0 ? "No hay partes registrados pendientes de env\xEDo" : /* @__PURE__ */ jsx(List$1, {
             sx: {
               width: "100%",
               maxWidth: "100%",
@@ -42952,8 +43817,8 @@ var require_index_81daafcd = __commonJS({
             "aria-label": "Add",
             color: "warning",
             size: "large",
-            onClick: () => navigate("/nuevoParte"),
-            children: /* @__PURE__ */ jsx(default_1$6, {})
+            onClick: () => navigate("/editarParte/0"),
+            children: /* @__PURE__ */ jsx(default_1$9, {})
           }), /* @__PURE__ */ jsx(Loading, {
             open: false,
             label: "Buscando datos"
@@ -42962,26 +43827,26 @@ var require_index_81daafcd = __commonJS({
       });
     };
     var Article = {};
-    var _interopRequireDefault$3 = interopRequireDefault.exports;
+    var _interopRequireDefault$5 = interopRequireDefault.exports;
     Object.defineProperty(Article, "__esModule", {
       value: true
     });
-    var default_1$3 = Article.default = void 0;
-    var _createSvgIcon$3 = _interopRequireDefault$3(requireCreateSvgIcon());
-    var _jsxRuntime$3 = require$$2;
-    var _default$3 = (0, _createSvgIcon$3.default)(/* @__PURE__ */ (0, _jsxRuntime$3.jsx)("path", {
+    var default_1$5 = Article.default = void 0;
+    var _createSvgIcon$5 = _interopRequireDefault$5(requireCreateSvgIcon());
+    var _jsxRuntime$5 = require$$2;
+    var _default$5 = (0, _createSvgIcon$5.default)(/* @__PURE__ */ (0, _jsxRuntime$5.jsx)("path", {
       d: "M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
     }), "Article");
-    default_1$3 = Article.default = _default$3;
+    default_1$5 = Article.default = _default$5;
     const Detalle = (props2) => {
       return props2.detalle.map((item, i) => /* @__PURE__ */ jsxs(Box$1, {
         children: [/* @__PURE__ */ jsxs(ListItem$1, {
-          onClick: () => props2.itemSeleccionado(props2.detalle[i], i),
+          onClick: () => props2.itemSeleccionado ? props2.itemSeleccionado(props2.detalle[i], i) : "",
           sx: {
             marginLeft: 0
           },
           children: [/* @__PURE__ */ jsx(ListItemAvatar$1, {
-            children: /* @__PURE__ */ jsx(default_1$3, {})
+            children: /* @__PURE__ */ jsx(default_1$5, {})
           }), /* @__PURE__ */ jsx(Grid$1, {
             container: true,
             spacing: 0,
@@ -42993,17 +43858,17 @@ var require_index_81daafcd = __commonJS({
                   fontSize: 11,
                   fontWeight: "bold"
                 },
-                children: item.IDCONSUMIDOR + " - " + item.DESCRIPCION
+                children: item.CONSUMIDOR.ID + " - " + item.CONSUMIDOR.DESCRIPCION
               }), /* @__PURE__ */ jsxs(Typography$1, {
                 style: {
                   fontSize: 10
                 },
-                children: ["Labor: ", item.IDLABOR + " - " + item.DSC_LABOR]
+                children: ["Labor: ", item.LABOR.ID + " - " + item.LABOR.DESCRIPCION]
               }), /* @__PURE__ */ jsxs(Typography$1, {
                 sx: {
                   fontSize: 10
                 },
-                children: [item.DESCJIRON, " - ", item.DESCCUARTEL, "- Area(Has): ", parseFloat(item.AREA_TRAB).toFixed(2), "  "]
+                children: [item.JIRON.DESCRIPCION, " - ", item.CUARTEL.DESCRIPCION, "- Area(Has): ", parseFloat(item.AREA_TRAB).toFixed(2), "  "]
               })]
             })
           })]
@@ -43022,9 +43887,9 @@ var require_index_81daafcd = __commonJS({
           children: /* @__PURE__ */ jsx(TextField$1, {
             id: "txtarea",
             select: true,
-            label: "\xC1rea",
+            label: "Seleccione \xE1rea",
             size: "small",
-            value: props2.idArea,
+            value: props2.areas != null ? props2.idArea : null,
             sx: {
               width: "100%"
             },
@@ -43044,7 +43909,7 @@ var require_index_81daafcd = __commonJS({
           children: /* @__PURE__ */ jsx(TextField$1, {
             id: "txtturno",
             select: true,
-            label: "Turno",
+            label: "Seleccione turno",
             size: "small",
             value: props2.idTurno,
             sx: {
@@ -43067,7 +43932,7 @@ var require_index_81daafcd = __commonJS({
           children: /* @__PURE__ */ jsx(TextField$1, {
             id: "txtformaPago",
             select: true,
-            label: "Forma de Pago",
+            label: "Seleccione forma de pago",
             size: "small",
             value: props2.idFormaPago,
             sx: {
@@ -43087,7 +43952,7 @@ var require_index_81daafcd = __commonJS({
           xs: 3,
           children: /* @__PURE__ */ jsx(InputFecha, {
             fecha: props2.fecha,
-            label: "Fecha",
+            label: "Seleccione fecha",
             asignarFecha: (value) => props2.asignarFecha(value)
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
@@ -43097,24 +43962,18 @@ var require_index_81daafcd = __commonJS({
             label: "Maquina",
             options: props2.maquinarias,
             cambiar: (event, newValue) => props2.cambiarMaquina(newValue),
-            disabled: props2.disabled
-          })
-        }), /* @__PURE__ */ jsx(Grid$1, {
-          item: true,
-          xs: 12,
-          children: /* @__PURE__ */ jsx(Autocompletar, {
-            label: "Implemento",
-            options: props2.implementos,
-            cambiar: (event, newValue) => props2.cambiarImplemento(newValue)
+            disabled: props2.disabled,
+            value: props2.maquina
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
           xs: 6,
           children: /* @__PURE__ */ jsx(Autocompletar, {
-            label: "proveedor",
-            options: props2.proveedor,
+            label: "Proveedor",
+            options: props2.proveedores,
             cambiar: (event, newValue) => props2.cambiarProveedor(newValue),
-            disabled: props2.tipoParte == "PMQ" ? true : false
+            disabled: props2.tipoParte == "PMQ" ? true : false,
+            value: props2.proveedor
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
@@ -43122,7 +43981,8 @@ var require_index_81daafcd = __commonJS({
           children: /* @__PURE__ */ jsx(Autocompletar, {
             label: "Operario",
             options: props2.operarios,
-            cambiar: (event, newValue) => props2.cambiarOperario(newValue)
+            cambiar: (event, newValue) => props2.cambiarOperario(newValue),
+            value: props2.operador
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
@@ -43130,7 +43990,8 @@ var require_index_81daafcd = __commonJS({
           children: /* @__PURE__ */ jsx(Autocompletar, {
             label: "Actividad",
             options: props2.actividades,
-            cambiar: (event, newValue) => props2.cambiarActividad(newValue)
+            cambiar: (event, newValue) => props2.cambiarActividad(newValue),
+            value: props2.actividad
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
@@ -43140,7 +44001,7 @@ var require_index_81daafcd = __commonJS({
             options: props2.labores,
             cambiar: (event, newValue) => props2.cambiarLabor(newValue),
             input: props2.descLabor,
-            value: props2.valueLabor
+            value: props2.labor
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
@@ -43200,8 +44061,12 @@ var require_index_81daafcd = __commonJS({
               width: "100%"
             },
             type: "number",
+            InputLabelProps: {
+              shrink: true
+            },
             onChange: (event) => props2.cambiarHorometroInicio(event),
-            size: "small"
+            size: "small",
+            value: props2.horometroInicio
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
@@ -43212,8 +44077,12 @@ var require_index_81daafcd = __commonJS({
               width: "100%"
             },
             type: "number",
+            InputLabelProps: {
+              shrink: true
+            },
             onChange: (event) => props2.cambiarHorometroFin(event),
-            size: "small"
+            size: "small",
+            value: props2.horometroFin
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
           item: true,
@@ -43228,7 +44097,7 @@ var require_index_81daafcd = __commonJS({
             InputLabelProps: {
               shrink: true
             },
-            value: props2.difHorometro,
+            value: props2.horas_trabCabecera,
             size: "small"
           })
         }), /* @__PURE__ */ jsx(Grid$1, {
@@ -43247,30 +44116,36 @@ var require_index_81daafcd = __commonJS({
             onChange: (event) => {
               props2.inputGlosa(event);
             },
-            size: "small"
+            size: "small",
+            value: props2.glosa
           })
         })]
       });
     };
     var Close = {};
-    var _interopRequireDefault$2 = interopRequireDefault.exports;
+    var _interopRequireDefault$4 = interopRequireDefault.exports;
     Object.defineProperty(Close, "__esModule", {
       value: true
     });
-    var default_1$2 = Close.default = void 0;
-    var _createSvgIcon$2 = _interopRequireDefault$2(requireCreateSvgIcon());
-    var _jsxRuntime$2 = require$$2;
-    var _default$2 = (0, _createSvgIcon$2.default)(/* @__PURE__ */ (0, _jsxRuntime$2.jsx)("path", {
+    var default_1$4 = Close.default = void 0;
+    var _createSvgIcon$4 = _interopRequireDefault$4(requireCreateSvgIcon());
+    var _jsxRuntime$4 = require$$2;
+    var _default$4 = (0, _createSvgIcon$4.default)(/* @__PURE__ */ (0, _jsxRuntime$4.jsx)("path", {
       d: "M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
     }), "Close");
-    default_1$2 = Close.default = _default$2;
+    default_1$4 = Close.default = _default$4;
     const get$a = async () => {
       const empresa = localStorage.getItem("empresa");
       const data = await localDataBase.consumidoresMaquinaria.where("idempresa").equals(empresa).toArray();
       return data;
     };
+    const getById$6 = async (id2) => {
+      const data = await localDataBase.consumidoresMaquinaria.get({ ID: id2 });
+      return data;
+    };
     function useConsumidores() {
       const [consumidores, setConsumidores] = react.exports.useState([]);
+      const [consumidor, setConsumidor] = react.exports.useState([]);
       const getConsumidores = () => {
         get$a().then((response) => {
           setConsumidores(response);
@@ -43278,17 +44153,43 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
+      const getConsumidorById = (id2) => {
+        getById$6(id2).then((response) => {
+          console.log(response);
+          setConsumidor(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarConsumidor = (newValue) => {
+        if (newValue != null) {
+          console.log(newValue);
+          setConsumidor(newValue);
+        } else {
+          setConsumidor("");
+        }
+      };
       return {
         consumidores,
-        getConsumidores
+        consumidor,
+        setConsumidor,
+        getConsumidores,
+        getConsumidorById,
+        cambiarConsumidor
       };
     }
     const get$9 = async () => {
       const data = await localDataBase.Jirones.toArray();
       return data;
     };
+    const getById$5 = async (id2) => {
+      const data = await localDataBase.Jirones.get({ ID: id2 });
+      console.log(data);
+      return data;
+    };
     function useJirones() {
       const [jirones, setJirones] = react.exports.useState([]);
+      const [jiron, setJiron] = react.exports.useState([]);
       const getJirones = () => {
         get$9().then((response) => {
           setJirones(response);
@@ -43296,17 +44197,42 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
+      const getJironById = (id2) => {
+        getById$5(id2).then((response) => {
+          setJiron(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarJiron = (newValue) => {
+        if (newValue != null) {
+          console.log(newValue);
+          setJiron(newValue);
+        } else {
+          setJiron("");
+        }
+      };
       return {
         jirones,
-        getJirones
+        jiron,
+        setJiron,
+        cambiarJiron,
+        getJirones,
+        getJironById
       };
     }
     const get$8 = async () => {
       const data = await localDataBase.Cuarteles.toArray();
       return data;
     };
+    const getById$4 = async (id2) => {
+      const data = await localDataBase.Cuarteles.get({ ID: id2 });
+      console.log(data);
+      return data;
+    };
     function useCuartel() {
       const [cuarteles, setCuarteles] = react.exports.useState([]);
+      const [cuartel, setCuartel] = react.exports.useState([]);
       const getCuarteles = () => {
         get$8().then((response) => {
           setCuarteles(response);
@@ -43314,9 +44240,28 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
+      const getCuartelById = (id2) => {
+        getById$4(id2).then((response) => {
+          setCuartel(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarCuartel = (newValue) => {
+        if (newValue != null) {
+          console.log(newValue);
+          setCuartel(newValue);
+        } else {
+          setCuartel("");
+        }
+      };
       return {
         cuarteles,
-        getCuarteles
+        cuartel,
+        setCuartel,
+        cambiarCuartel,
+        getCuarteles,
+        getCuartelById
       };
     }
     const BootstrapDialog$3 = styled$1(Dialog$1)(({
@@ -43350,7 +44295,7 @@ var require_index_81daafcd = __commonJS({
             right: 8,
             top: 8
           },
-          children: /* @__PURE__ */ jsx(default_1$2, {})
+          children: /* @__PURE__ */ jsx(default_1$4, {})
         })]
       });
     };
@@ -43378,7 +44323,7 @@ var require_index_81daafcd = __commonJS({
           "aria-labelledby": "customized-dialog-title",
           children: [/* @__PURE__ */ jsx(BootstrapDialogTitle$3, {
             onClose: props2.handleCloseModal,
-            children: "Nuevo Item"
+            children: props2.editar == false ? "Nuevo Item" : "Editar Item"
           }), /* @__PURE__ */ jsx(DialogContent$1, {
             dividers: true,
             children: /* @__PURE__ */ jsxs(Grid$1, {
@@ -43390,7 +44335,8 @@ var require_index_81daafcd = __commonJS({
                 children: /* @__PURE__ */ jsx(Autocompletar, {
                   label: "Consumidor",
                   options: consumidores,
-                  cambiar: (event, newValue) => props2.cambiarConsumidor(newValue)
+                  cambiar: (event, newValue) => props2.cambiarConsumidor(newValue),
+                  value: props2.consumidor
                 })
               }), /* @__PURE__ */ jsx(Grid$1, {
                 item: true,
@@ -43398,7 +44344,8 @@ var require_index_81daafcd = __commonJS({
                 children: /* @__PURE__ */ jsx(Autocompletar, {
                   label: "Lote",
                   options: jirones,
-                  cambiar: (event, newValue) => props2.cambiarJiron(newValue)
+                  cambiar: (event, newValue) => props2.cambiarJiron(newValue),
+                  value: props2.jiron
                 })
               }), /* @__PURE__ */ jsx(Grid$1, {
                 item: true,
@@ -43406,7 +44353,8 @@ var require_index_81daafcd = __commonJS({
                 children: /* @__PURE__ */ jsx(Autocompletar, {
                   label: "V\xE1lvula",
                   options: cuarteles,
-                  cambiar: (event, newValue) => props2.cambiarCuartel(newValue)
+                  cambiar: (event, newValue) => props2.cambiarCuartel(newValue),
+                  value: props2.cuartel
                 })
               }), /* @__PURE__ */ jsx(Grid$1, {
                 item: true,
@@ -43421,22 +44369,23 @@ var require_index_81daafcd = __commonJS({
                   size: "small",
                   InputLabelProps: {
                     shrink: true
-                  }
+                  },
+                  value: props2.areaItem
                 })
               })]
             })
           }), /* @__PURE__ */ jsxs(DialogActions$1, {
             children: [/* @__PURE__ */ jsx(Button$1, {
               autoFocus: true,
-              onClick: props2.handleCloseModal,
+              onClick: () => props2.editar != false ? props2.dialogBorrar() : props2.handleCloseModal(),
               variant: "contained",
               color: "error",
-              children: "Cancelar"
+              children: props2.editar != false ? "Borrar" : "Cerrar"
             }), /* @__PURE__ */ jsx(Button$1, {
               onClick: () => props2.guardar(),
               variant: "contained",
               color: "success",
-              children: "Agregar"
+              children: props2.editar != false ? "Editar" : "Agregar"
             })]
           })]
         })
@@ -43473,7 +44422,7 @@ var require_index_81daafcd = __commonJS({
             right: 8,
             top: 8
           },
-          children: /* @__PURE__ */ jsx(default_1$2, {})
+          children: /* @__PURE__ */ jsx(default_1$4, {})
         })]
       });
     };
@@ -43634,6 +44583,7 @@ var require_index_81daafcd = __commonJS({
     };
     function useAreas() {
       const [areas, setAreas] = react.exports.useState([]);
+      const [area, setArea] = react.exports.useState({ ID: "005", DESCRIPCION: "AREA DE CAMPO" });
       const getAreas = () => {
         get$7().then((response) => {
           setAreas(response);
@@ -43643,6 +44593,8 @@ var require_index_81daafcd = __commonJS({
       };
       return {
         areas,
+        area,
+        setArea,
         getAreas
       };
     }
@@ -43650,8 +44602,13 @@ var require_index_81daafcd = __commonJS({
       const data = await localDataBase.Proveedores.toArray();
       return data;
     };
+    const getById$3 = async (id2) => {
+      const data = await localDataBase.Proveedores.get({ ID: id2 });
+      return data;
+    };
     function useProveedores() {
       const [proveedores, setProveedores] = react.exports.useState([]);
+      const [proveedor, setProveedor] = react.exports.useState([]);
       const getProveedores = () => {
         get$6().then((response) => {
           setProveedores(response);
@@ -43659,17 +44616,41 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
+      const getProveedorById = (id2) => {
+        getById$3(id2).then((response) => {
+          setProveedor(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarProveedor = (newValue) => {
+        if (newValue != null) {
+          console.log(newValue);
+          setProveedor(newValue);
+        } else {
+          setProveedor("");
+        }
+      };
       return {
         proveedores,
-        getProveedores
+        proveedor,
+        getProveedores,
+        getProveedorById,
+        cambiarProveedor
       };
     }
     const get$5 = async () => {
       const data = await localDataBase.Operarios.toArray();
       return data;
     };
+    const getById$2 = async (id2) => {
+      const data = await localDataBase.Operarios.get({ ID: id2 });
+      var operador = { ID: data.ID, DESCRIPCION: data.DESCRIPCION };
+      return operador;
+    };
     function useOperario() {
       const [operarios, setOperarios] = react.exports.useState([]);
+      const [operador, setOperador] = react.exports.useState([]);
       const getOperarios = () => {
         get$5().then((response) => {
           setOperarios(response);
@@ -43677,17 +44658,83 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
+      const getOperarioById = (id2) => {
+        getById$2(id2).then((response) => {
+          setOperador(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarOperario = (newValue) => {
+        if (newValue != null) {
+          console.log(newValue);
+          setOperador(newValue);
+        } else {
+          setOperador("");
+        }
+      };
       return {
         operarios,
-        getOperarios
+        operador,
+        getOperarios,
+        getOperarioById,
+        cambiarOperario
       };
     }
     const get$4 = async () => {
       const data = await localDataBase.Actividades.toArray();
       return data;
     };
+    const getById$1 = async (id2) => {
+      const data = await localDataBase.Actividades.get({ ID: id2 });
+      return data;
+    };
+    const get$3 = async ({ id_actividad }) => {
+      const data = await localDataBase.Labores.where("IDACTIVIDAD").equals(id_actividad).toArray();
+      return data;
+    };
+    const getById = async ({ id_labor }) => {
+      const data = await localDataBase.Labores.get({ ID: id_labor });
+      return data;
+    };
+    function useLabores() {
+      const [labores, setLabores] = react.exports.useState([]);
+      const [labor, setLabor] = react.exports.useState([]);
+      const getLabores = (id_actividad) => {
+        get$3({ id_actividad }).then((response) => {
+          setLabores(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const getLaborById = (id_labor) => {
+        getById({ id_labor }).then((response) => {
+          setLabor(response);
+        }).catch((e2) => {
+          console.error(e2);
+        });
+      };
+      const cambiarLabor = (newValue) => {
+        if (newValue != null) {
+          setLabor(newValue);
+        } else {
+          setLabor("");
+        }
+      };
+      return {
+        labores,
+        labor,
+        setLabor,
+        setLabores,
+        getLabores,
+        getLaborById,
+        cambiarLabor
+      };
+    }
     function useActividad() {
       const [actividades, setActividades] = react.exports.useState([]);
+      const [actividad, setActividad] = react.exports.useState([]);
+      useLabores();
       const getActividades = () => {
         get$4().then((response) => {
           setActividades(response);
@@ -43695,28 +44742,19 @@ var require_index_81daafcd = __commonJS({
           console.error(e2);
         });
       };
-      return {
-        actividades,
-        getActividades
-      };
-    }
-    const get$3 = async ({ id_actividad }) => {
-      console.log(id_actividad);
-      const data = await localDataBase.Labores.where("IDACTIVIDAD").equals(id_actividad).toArray();
-      return data;
-    };
-    function useLabores() {
-      const [labores, setLabores] = react.exports.useState([]);
-      const getLabores = (id_actividad) => {
-        get$3({ id_actividad }).then((response) => {
-          setLabores(response);
-        }).catch(Dexie$1.DexieError, (e2) => {
+      const getActividadById = (id2) => {
+        getById$1(id2).then((response) => {
+          setActividad(response);
+        }).catch((e2) => {
           console.error(e2);
         });
       };
       return {
-        labores,
-        getLabores
+        actividades,
+        actividad,
+        getActividades,
+        getActividadById,
+        setActividad
       };
     }
     const get$2 = async () => {
@@ -43725,6 +44763,7 @@ var require_index_81daafcd = __commonJS({
     };
     function useTurnoTrabajo() {
       const [turnostrabajo, setTurnostrabajo] = react.exports.useState([]);
+      const [turno, setTurno] = react.exports.useState({ ID: "01", DESCRIPCION: "DIURNO" });
       const getTurnosTrabajo = () => {
         get$2().then((response) => {
           setTurnostrabajo(response);
@@ -43734,6 +44773,8 @@ var require_index_81daafcd = __commonJS({
       };
       return {
         turnostrabajo,
+        turno,
+        setTurno,
         getTurnosTrabajo
       };
     }
@@ -43881,29 +44922,29 @@ var require_index_81daafcd = __commonJS({
     });
     const TabPanel$1 = TabPanel;
     var Signpost = {};
-    var _interopRequireDefault$1 = interopRequireDefault.exports;
+    var _interopRequireDefault$3 = interopRequireDefault.exports;
     Object.defineProperty(Signpost, "__esModule", {
       value: true
     });
-    var default_1$1 = Signpost.default = void 0;
-    var _createSvgIcon$1 = _interopRequireDefault$1(requireCreateSvgIcon());
-    var _jsxRuntime$1 = require$$2;
-    var _default$1 = (0, _createSvgIcon$1.default)(/* @__PURE__ */ (0, _jsxRuntime$1.jsx)("path", {
+    var default_1$3 = Signpost.default = void 0;
+    var _createSvgIcon$3 = _interopRequireDefault$3(requireCreateSvgIcon());
+    var _jsxRuntime$3 = require$$2;
+    var _default$3 = (0, _createSvgIcon$3.default)(/* @__PURE__ */ (0, _jsxRuntime$3.jsx)("path", {
       d: "M13 10h5l3-3-3-3h-5V2h-2v2H4v6h7v2H6l-3 3 3 3h5v4h2v-4h7v-6h-7z"
     }), "Signpost");
-    default_1$1 = Signpost.default = _default$1;
+    default_1$3 = Signpost.default = _default$3;
     var LocalGasStation = {};
-    var _interopRequireDefault = interopRequireDefault.exports;
+    var _interopRequireDefault$2 = interopRequireDefault.exports;
     Object.defineProperty(LocalGasStation, "__esModule", {
       value: true
     });
-    var default_1 = LocalGasStation.default = void 0;
-    var _createSvgIcon = _interopRequireDefault(requireCreateSvgIcon());
-    var _jsxRuntime = require$$2;
-    var _default = (0, _createSvgIcon.default)(/* @__PURE__ */ (0, _jsxRuntime.jsx)("path", {
+    var default_1$2 = LocalGasStation.default = void 0;
+    var _createSvgIcon$2 = _interopRequireDefault$2(requireCreateSvgIcon());
+    var _jsxRuntime$2 = require$$2;
+    var _default$2 = (0, _createSvgIcon$2.default)(/* @__PURE__ */ (0, _jsxRuntime$2.jsx)("path", {
       d: "m19.77 7.23.01-.01-3.72-3.72L15 4.56l2.11 2.11c-.94.36-1.61 1.26-1.61 2.33 0 1.38 1.12 2.5 2.5 2.5.36 0 .69-.08 1-.21v7.21c0 .55-.45 1-1 1s-1-.45-1-1V14c0-1.1-.9-2-2-2h-1V5c0-1.1-.9-2-2-2H6c-1.1 0-2 .9-2 2v16h10v-7.5h1.5v5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V9c0-.69-.28-1.32-.73-1.77zM12 10H6V5h6v5zm6 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"
     }), "LocalGasStation");
-    default_1 = LocalGasStation.default = _default;
+    default_1$2 = LocalGasStation.default = _default$2;
     const get = async () => {
       const empresa = localStorage.getItem("empresa");
       const data = await localDataBase.Combustibles.where("idempresa").equals(empresa).toArray();
@@ -43954,7 +44995,7 @@ var require_index_81daafcd = __commonJS({
             right: 8,
             top: 8
           },
-          children: /* @__PURE__ */ jsx(default_1$2, {})
+          children: /* @__PURE__ */ jsx(default_1$4, {})
         })]
       });
     };
@@ -43965,7 +45006,6 @@ var require_index_81daafcd = __commonJS({
       } = useCombustibles();
       react.exports.useEffect(() => {
         getCombustibles();
-        console.log(combustibles);
       }, []);
       return /* @__PURE__ */ jsx(Box$1, {
         children: /* @__PURE__ */ jsxs(BootstrapDialog$1, {
@@ -44029,7 +45069,7 @@ var require_index_81daafcd = __commonJS({
             marginLeft: 0
           },
           children: [/* @__PURE__ */ jsx(ListItemAvatar$1, {
-            children: /* @__PURE__ */ jsx(default_1, {})
+            children: /* @__PURE__ */ jsx(default_1$2, {})
           }), /* @__PURE__ */ jsx(Grid$1, {
             container: true,
             spacing: 0,
@@ -44086,7 +45126,7 @@ var require_index_81daafcd = __commonJS({
             right: 8,
             top: 8
           },
-          children: /* @__PURE__ */ jsx(default_1$2, {})
+          children: /* @__PURE__ */ jsx(default_1$4, {})
         })]
       });
     };
@@ -44159,13 +45199,16 @@ var require_index_81daafcd = __commonJS({
       var idUsuario = usuario.IDUSUARIO;
       var user = usuario.usuario;
       const navigate = useNavigate();
-      const formaPago = [{
-        ID: "HR",
-        DESCRIPCION: "POR HORA"
-      }, {
-        ID: "HA",
-        DESCRIPCION: "POR HECTAREA"
-      }];
+      const formaPago2 = [
+        {
+          ID: "HR",
+          DESCRIPCION: "POR HORA"
+        },
+        {
+          ID: "HA",
+          DESCRIPCION: "POR HECTAREA"
+        }
+      ];
       const {
         registrarParte
       } = useParteMaquinaria();
@@ -44240,7 +45283,7 @@ var require_index_81daafcd = __commonJS({
       const [totalAreaTrabajada, setTotalAreaTrabajada] = react.exports.useState(0);
       const [horometroInicio, setHorometroInicio] = react.exports.useState("");
       const [horometroFin, setHorometroFin] = react.exports.useState("");
-      const [difHorometro, setDifHorometro] = react.exports.useState(0);
+      const [difHorometro, setDifHorometro2] = react.exports.useState(0);
       const [disabledFab, setDisabledFab] = react.exports.useState(true);
       const [disabledGuardar, setDisabledGuardar] = react.exports.useState(true);
       const [mensajeDialog, setMensajeDialog] = react.exports.useState("");
@@ -44284,14 +45327,14 @@ var require_index_81daafcd = __commonJS({
           if (parseFloat(horometroInicio) < parseFloat(event.target.value)) {
             setHorometroFin(event.target.value);
             var dif_horo = parseFloat(event.target.value) - parseFloat(horometroInicio);
-            setDifHorometro(dif_horo.toFixed(2));
+            setDifHorometro2(dif_horo.toFixed(2));
             setHoras_trabCabecera(dif_horo.toFixed(2));
           } else {
-            setDifHorometro(0);
+            setDifHorometro2(0);
             console.log("Horometro final menor que horoemtro de inicio");
           }
         } else {
-          setDifHorometro(0);
+          setDifHorometro2(0);
           alert("ingrese horometro de Inicio");
         }
       };
@@ -44620,7 +45663,7 @@ var require_index_81daafcd = __commonJS({
       const EditarItem = () => {
         detalle.map((item, i) => {
           detalle[index2].AREA_TRAB = areaTrabajada;
-          if (formaPago === "HA") {
+          if (formaPago2 === "HA") {
             detalle[index2].COSTO_TOTAL = (areaTrabajada * detalle[index2].COSTO_HORA).toFixed(2);
           }
         });
@@ -44640,6 +45683,14 @@ var require_index_81daafcd = __commonJS({
       const guardarBorrador = () => {
         if (idMquina == "") {
           setMensajeDialog("Seleccione una maquina para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (idProveedor == "" && tipoParte == "PMA") {
+          console.log(idProveedor);
+          console.log(tipoParte);
+          setMensajeDialog("Ingrese un proveedor para continuar");
           setOpenDilog(true);
           setOpenGuardar(false);
           return;
@@ -44674,14 +45725,6 @@ var require_index_81daafcd = __commonJS({
           setOpenGuardar(false);
           return;
         }
-        if (idProveedor == "" && tipoParte == "PMA") {
-          console.log(idProveedor);
-          console.log(tipoParte);
-          setMensajeDialog("Ingrese un proveedor para continuar");
-          setOpenDilog(true);
-          setOpenGuardar(false);
-          return;
-        }
         if (horometroInicio == "") {
           setMensajeDialog("Ingrese horometro inicio para continuar");
           setOpenDilog(true);
@@ -44690,6 +45733,12 @@ var require_index_81daafcd = __commonJS({
         }
         if (horometroFin == "") {
           setMensajeDialog("Ingrese horometro final para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (detalle.length == 0) {
+          setMensajeDialog("Ingrese almenos un item en el detalle para guardar");
           setOpenDilog(true);
           setOpenGuardar(false);
           return;
@@ -44709,6 +45758,8 @@ var require_index_81daafcd = __commonJS({
           IDOPERARIO: idOperario,
           HORAINICIO: HoraInicio,
           HORAFINAL: HoraFin,
+          IDACTIVIDAD: idActividad,
+          IDLABOR: idLabor,
           HOROMETROINICIAL: horometroInicio,
           HOROMETROFINAL: horometroFin,
           HORAS_TRAB: horas_trabCabecera,
@@ -44745,10 +45796,11 @@ var require_index_81daafcd = __commonJS({
             detalle[i].HORAINICIO = parseFloat(rango[i]).toFixed(2);
             detalle[i].HORAFINAL = parseFloat(rango[i] + parseFloat(minutos_item)).toFixed(2);
             var dif_horo = difHorometro * area_percent / 100;
+            console.log(dif_horo);
             fin_horometro = parseFloat(rango_horometro[i]) + dif_horo;
-            rango_horometro.push(fin_horometro);
+            rango_horometro.push(fin_horometro.toFixed(2));
             detalle[i].HOROMETROINICIAL = parseFloat(rango_horometro[i]).toFixed(2);
-            detalle[i].HOROMETROFINAL = parseFloat(parseFloat(rango_horometro[i]) + dif_horo).toFixed(2);
+            detalle[i].HOROMETROFINAL = parseFloat(rango_horometro[i + 1]).toFixed(2);
             detalle[i].HOROMETRO_DIFERENCIA = dif_horo.toFixed(2);
           });
           detalle.map((item, i) => {
@@ -44784,8 +45836,6 @@ var require_index_81daafcd = __commonJS({
           detalle[0].COSTO_TOTAL = (parseFloat(detalle[0].HORAS_TRAB) * parseFloat(detalle[0].COSTO_HORA)).toFixed(2);
         }
         setBloquearGuardar(true);
-        console.log(cabecera2);
-        console.log(combustible);
         registrarParte({
           cabecera: cabecera2,
           detalle,
@@ -44898,7 +45948,6 @@ var require_index_81daafcd = __commonJS({
             nombre: "Nuevo Parte de Maquinaria",
             mostrarSalir: "none",
             mostrarEnviar: "none",
-            deshabilitar: detalle.length > 0 ? disabledGuardar : true,
             guardar: abrirDialogGuardar
           }), /* @__PURE__ */ jsx(Dialogs, {
             open: openGuardar,
@@ -44934,14 +45983,14 @@ var require_index_81daafcd = __commonJS({
               cambiarTurno,
               maquinarias,
               cambiarMaquina,
-              proveedor: proveedores,
+              proveedores,
               cambiarProveedor,
               actividades,
               cambiarActividad,
               labores,
               descLabor,
               cambiarLabor,
-              formaPago,
+              formaPago: formaPago2,
               idFormaPago,
               cambiarFormaPago,
               operarios,
@@ -45021,7 +46070,7 @@ var require_index_81daafcd = __commonJS({
                   color: "success",
                   size: "large",
                   onClick: OpenModal,
-                  children: /* @__PURE__ */ jsx(default_1$1, {})
+                  children: /* @__PURE__ */ jsx(default_1$3, {})
                 })]
               }), /* @__PURE__ */ jsxs(TabPanel$1, {
                 value: "2",
@@ -45046,7 +46095,7 @@ var require_index_81daafcd = __commonJS({
                   },
                   color: "success",
                   onClick: OpenModalCombustible,
-                  children: /* @__PURE__ */ jsx(default_1, {})
+                  children: /* @__PURE__ */ jsx(default_1$2, {})
                 })]
               })]
             }), /* @__PURE__ */ jsx(FormularioModal, {
@@ -45093,11 +46142,20 @@ var require_index_81daafcd = __commonJS({
       return /* @__PURE__ */ jsx(Box$1, {
         children: /* @__PURE__ */ jsxs(Grid$1, {
           container: true,
-          spacing: 0.5,
+          spacing: 1,
           sx: {
             marginTop: 1
           },
           children: [/* @__PURE__ */ jsx(Grid$1, {
+            item: true,
+            xs: 12,
+            children: cabecera.ESTADO != "P" && /* @__PURE__ */ jsx(Chip$1, {
+              fontSize: 18,
+              fontWeight: "bold",
+              label: cabecera.ESTADO == "A" ? "PMA-0002-" + cabecera.NUMERO + " - ANULADO" : "PMA-0002:" + cabecera.NUMERO + " - ENVIADO",
+              color: cabecera.ESTADO == "A" ? "error" : "success"
+            })
+          }), /* @__PURE__ */ jsx(Grid$1, {
             item: true,
             xs: 4.7,
             children: /* @__PURE__ */ jsxs(Typography$1, {
@@ -45109,7 +46167,7 @@ var require_index_81daafcd = __commonJS({
                 sx: {
                   marginLeft: 3.7
                 },
-                label: cabecera.AREA,
+                label: cabecera.AREA.DESCRIPCION,
                 variant: "outlined",
                 size: "small",
                 color: "success"
@@ -45125,7 +46183,7 @@ var require_index_81daafcd = __commonJS({
               component: "h5",
               marginRight: 5,
               children: ["Turno: ", /* @__PURE__ */ jsx(Chip$1, {
-                label: cabecera.TURNO,
+                label: cabecera.TURNO.DESCRIPCION,
                 variant: "outlined",
                 size: "small",
                 color: "success"
@@ -45158,22 +46216,7 @@ var require_index_81daafcd = __commonJS({
                 sx: {
                   marginLeft: 1
                 },
-                label: cabecera.MAQUINA,
-                variant: "outlined",
-                size: "small",
-                color: "success"
-              })]
-            })
-          }), /* @__PURE__ */ jsx(Grid$1, {
-            item: true,
-            xs: 12,
-            children: cabecera.DESCIMPLEMENTO && /* @__PURE__ */ jsxs(Typography$1, {
-              fontSize: 12,
-              textAlign: "left",
-              fontWeight: "bold",
-              component: "h5",
-              children: ["Implemen: ", /* @__PURE__ */ jsx(Chip$1, {
-                label: cabecera.DESCIMPLEMENTO,
+                label: cabecera.MAQUINA.DESCRIPCION,
                 variant: "outlined",
                 size: "small",
                 color: "success"
@@ -45188,7 +46231,7 @@ var require_index_81daafcd = __commonJS({
               fontWeight: "bold",
               component: "h5",
               children: ["Proveedor: ", /* @__PURE__ */ jsx(Chip$1, {
-                label: cabecera.PROVEEDOR,
+                label: cabecera.PROVEEDOR.DESCRIPCION,
                 variant: "outlined",
                 size: "small",
                 color: "success"
@@ -45206,7 +46249,7 @@ var require_index_81daafcd = __commonJS({
                 sx: {
                   marginLeft: 1
                 },
-                label: cabecera.OPERARIO,
+                label: cabecera.OPERARIO.DESCRIPCION,
                 variant: "outlined",
                 size: "small",
                 color: "success"
@@ -45336,10 +46379,10 @@ var require_index_81daafcd = __commonJS({
         })
       });
     };
-    const EditarParteMaquinaria = () => {
+    const EnviarParteMaquinaria = () => {
       const url_api2 = "https://69.64.95.68:6061/cayaltiservernisira/controlador/index.php";
       var {
-        state: data
+        state
       } = useLocation();
       let {
         id: id2
@@ -45376,18 +46419,111 @@ var require_index_81daafcd = __commonJS({
       };
       const enviarDatos = () => {
         if (implemento == "") {
-          alert("seleccione opcion de implemento de terceros");
+          alert("seleccione si maquina utiliz\xF3 implemento de terceros");
           return;
         }
-        console.log("enviando datos");
-        console.log(data.cabecera);
-        console.log(detalle);
-        console.log(combustible);
+        if (detalle.length > 1) {
+          const rango = [];
+          var rango_horometro = [];
+          const hora_ini = parseFloat(state.cabecera.HORAINICIO.replace(":", ".")).toFixed(2);
+          rango.push(hora_ini);
+          rango_horometro.push(parseFloat(state.cabecera.HOROMETROINICIAL).toFixed(2));
+          var fin_horometro = 0;
+          detalle.map((item, i) => {
+            var area_percent = item.AREA_TRAB * 100 / state.cabecera.TOTALAREA_TRAB;
+            var minutos = state.cabecera.TOTAL_MINUTOS * roundToTwo(area_percent.toFixed(3)) / 100;
+            var minutos_item = minutos / 60;
+            var ele = rango[i].toString();
+            var hora1 = ele.split(".");
+            var t1 = new Date();
+            t1.setHours(hora1[0], hora1[1]);
+            t1.setHours(t1.getHours(), t1.getMinutes() + Math.round(minutos));
+            var fin_hora = (t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00");
+            rango.push(fin_hora);
+            detalle[i].HORAINICIO = parseFloat(rango[i]).toFixed(2);
+            detalle[i].HORAFINAL = parseFloat(rango[i + 1]).toFixed(2);
+            var hora1 = detalle[i].HORAINICIO.split(".");
+            var hora2 = detalle[i].HORAFINAL.split(".");
+            var t1 = new Date();
+            var t2 = new Date();
+            t2.setHours(hora1[0], hora1[1]);
+            t1.setHours(hora2[0], hora2[1]);
+            t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+            var horas_t1 = (t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00");
+            detalle[i].HORAS_TRAB = minutos_item.toFixed(2);
+            detalle[i].COSTO_TOTAL = (parseFloat(detalle[i].HORAS_TRAB) * parseFloat(detalle[i].COSTO_HORA)).toFixed(2);
+            var dif_horo = state.cabecera.HORAS_TRAB * roundToTwo(area_percent.toFixed(3)) / 100;
+            fin_horometro = parseFloat(rango_horometro[i]) + parseFloat(dif_horo.toFixed(3));
+            rango_horometro.push(fin_horometro);
+            detalle[i].HOROMETROINICIAL = parseFloat(rango_horometro[i]).toFixed(2);
+            detalle[i].HOROMETROFINAL = parseFloat(rango_horometro[i + 1]).toFixed(2);
+            detalle[i].HOROMETRO_DIFERENCIA = roundToTwo(dif_horo.toFixed(4));
+            detalle[i].HORAS_TRAB1 = horas_t1;
+          });
+        } else {
+          detalle[0].HORAINICIO = state.cabecera.HORAINICIO.replace(":", ".");
+          detalle[0].HORAFINAL = state.cabecera.HORAFINAL.replace(":", ".");
+          detalle[0].HORAS_TRAB = state.cabecera.HORAS_TRAB;
+          detalle[0].HORAS_TRAB1 = state.cabecera.HORAS_TRAB1;
+          detalle[0].HOROMETROINICIAL = state.cabecera.HOROMETROINICIAL;
+          detalle[0].HOROMETROFINAL = state.cabecera.HOROMETROFINAL;
+          detalle[0].HOROMETRO_DIFERENCIA = state.cabecera.HORAS_TRAB;
+          detalle[0].COSTO_TOTAL = (parseFloat(detalle[0].HORAS_TRAB) * parseFloat(detalle[0].COSTO_HORA)).toFixed(2);
+        }
+        var cabecera = {
+          IDDOCUMENTO: state.cabecera.IDDOCUMENTO,
+          IDCONSUMIDORMAQUINARIA: state.cabecera.MAQUINA.ID,
+          MAQUINA: state.cabecera.MAQUINA.DESCRIPCION,
+          OPERARIO: state.cabecera.OPERARIO.DESCRIPCION,
+          AREA: state.cabecera.AREA.DESCRIPCION,
+          PROVEEDOR: state.cabecera.PROVEEDOR.DESCRIPCION,
+          TURNO: state.cabecera.TURNO.DESCRIPCION,
+          GLOSA: state.cabecera.GLOSA,
+          IDOPERARIO: state.cabecera.OPERARIO.ID,
+          HORAINICIO: state.cabecera.HORAINICIO,
+          HORAFINAL: state.cabecera.HORAFINAL,
+          IDACTIVIDAD: state.cabecera.ACTIVIDAD.ID,
+          IDLABOR: state.cabecera.LABOR.ID,
+          HOROMETROINICIAL: state.cabecera.HOROMETROINICIAL,
+          HOROMETROFINAL: state.cabecera.HOROMETROFINAL,
+          HORAS_TRAB: state.cabecera.HORAS_TRAB,
+          HORAS_TRAB1: state.cabecera.HORAS_TRAB1,
+          IDTURNOTRABAJO: state.cabecera.TURNO.ID,
+          TOTAL_COSTO: state.cabecera.TOTAL_COSTO,
+          TOTALAREA_TRAB: state.cabecera.TOTALAREA_TRAB,
+          FORMAPAGO: state.cabecera.FORMAPAGO,
+          IDAREA: state.cabecera.AREA.ID,
+          COSTO_HORA: state.cabecera.COSTO_HORA,
+          IDCLIEPROV: state.cabecera.PROVEEDOR.ID,
+          IDUSUARIO: state.cabecera.IDUSUARIO,
+          FECHA: state.cabecera.FECHA
+        };
+        detalle.map((item, i) => {
+          detalle[i].IDCONSUMIDOR = item.CONSUMIDOR.ID;
+          detalle[i].DESCRIPCION = item.CONSUMIDOR.DESCRIPCION;
+          detalle[i].AREA_TRAB = item.AREA_TRAB;
+          detalle[i].HORAINICIO = item.HORAINICIO;
+          detalle[i].HORAFINAL = item.HORAFINAL;
+          detalle[i].HOROMETROINICIAL = item.HOROMETROINICIAL;
+          detalle[i].HOROMETROFINAL = item.HOROMETROFINAL;
+          detalle[i].HORAS_TRAB = item.HORAS_TRAB;
+          detalle[i].HORAS_TRAB1 = item.HORAS_TRAB1;
+          detalle[i].COSTO_HORA = item.COSTO_HORA;
+          detalle[i].IDACTIVIDAD = item.ACTIVIDAD.ID;
+          detalle[i].IDLABOR = item.LABOR.ID;
+          detalle[i].DSC_LABOR = item.LABOR.DESCRIPCION;
+          detalle[i].HOROMETRO_DIFERENCIA = item.HOROMETRO_DIFERENCIA;
+          detalle[i].COSTO_TOTAL = item.COSTO_TOTAL;
+          detalle[i].IDJIRON = item.JIRON.ID;
+          detalle[i].DESCJIRON = item.JIRON.DESCRIPCION;
+          detalle[i].IDCUARTEL = item.CUARTEL.ID;
+          detalle[i].DESCCUARTEL = item.CUARTEL.DESCRIPCION;
+        });
         const formData = new FormData();
         formData.append("empresa", empresa);
         formData.append("modelo", "Maquinaria");
         formData.append("metodo", "cerrarParteMaquinaria");
-        formData.append("data_out[0]", JSON.stringify(data.cabecera));
+        formData.append("data_out[0]", JSON.stringify(cabecera));
         formData.append("data_out[1]", JSON.stringify(detalle));
         formData.append("data_out[2]", JSON.stringify(combustible));
         formData.append("data_out[3]", JSON.stringify(idResponsable));
@@ -45399,7 +46535,7 @@ var require_index_81daafcd = __commonJS({
         }).then((res) => res.json()).then((res) => {
           if (res.flag == true) {
             setDisabled(false);
-            updateParteMaq2(data.cabecera.cod);
+            updateParteMaq2(state.cabecera.cod, res.data);
             navigate(-1);
           }
         }).catch((e2) => {
@@ -45409,14 +46545,13 @@ var require_index_81daafcd = __commonJS({
       };
       const listarResponsables = () => {
         const formData = new FormData();
-        formData.append("empresa", "002");
+        formData.append("empresa", empresa);
         formData.append("modelo", "Maquinaria");
         formData.append("metodo", "listarResponsable");
         fetch(url_api2, {
           body: formData,
           method: "POST"
         }).then((res) => res.json()).then((res) => {
-          console.log(res);
           setResponsables(res);
         }).catch((e2) => {
           console.log(e2);
@@ -45424,7 +46559,6 @@ var require_index_81daafcd = __commonJS({
       };
       const cambiarResponsable = (event, newValue) => {
         if (event != null) {
-          console.log(event.ID);
           setIdResponsable(event.ID);
           setDisabled(false);
         } else {
@@ -45437,6 +46571,9 @@ var require_index_81daafcd = __commonJS({
           setIdImplemento(event.target.value);
         }
       };
+      function roundToTwo(num) {
+        return +(Math.round(num + "e+2") + "e-2");
+      }
       react.exports.useEffect(() => {
         getDParteMap();
         listarResponsables();
@@ -45444,22 +46581,24 @@ var require_index_81daafcd = __commonJS({
       return /* @__PURE__ */ jsx(Box$3, {
         children: /* @__PURE__ */ jsxs(Box$3, {
           children: [/* @__PURE__ */ jsx(Appbar, {
-            nombre: data.cabecera.IDDOCUMENTO === "PMA" ? " Cerrar Parte de Maquinaria Alquilada" : "Cerrar Parte de Maquinaria Propia",
+            nombre: state.cabecera.ESTADO == "P" ? state.cabecera.IDDOCUMENTO === "PMA" ? " Cerrar Parte de Maquinaria Alquilada" : "Cerrar Parte de Maquinaria Propia" : "PARTE DE MAQUINARIA ",
             mostrarSalir: "none",
             mostrarGuardar: "none",
+            mostrarEnviar: state.cabecera.ESTADO == "P" ? "" : "none",
             enviar: abrirDialogEnviar
           }), /* @__PURE__ */ jsx(Dialogs, {
             open: openEnviar,
             cerrar: cerrarDialogEnviar,
             aceptar: enviarDatos,
-            mensaje: "Seleccione responsable para guardar",
+            mensaje: "Ingrese los siguientes datos para guardar",
             disabled,
+            flag: true,
             responsbles,
             cambiarResponsable,
             cambiarImplemento,
             implemento
           }), /* @__PURE__ */ jsx(CabeceraEditarParteMaquinaria, {
-            cabecera: data.cabecera
+            cabecera: state.cabecera
           }), /* @__PURE__ */ jsxs(TabContext, {
             value,
             children: [/* @__PURE__ */ jsx(Box$3, {
@@ -45525,46 +46664,919 @@ var require_index_81daafcd = __commonJS({
         })
       });
     };
+    const formaPago = [{
+      ID: "HR",
+      DESCRIPCION: "POR HORA"
+    }, {
+      ID: "HA",
+      DESCRIPCION: "POR HECTAREA"
+    }];
+    const EditarParteMaquinaria = () => {
+      var {
+        state
+      } = useLocation();
+      var cod = useParams();
+      const navigate = useNavigate();
+      const {
+        usuario
+      } = JSON.parse(localStorage.getItem("usuario"));
+      const [horas_min, setHoras_min] = react.exports.useState(0);
+      const [openModal, setOpenModal] = react.exports.useState(false);
+      const [openModalCombustible, setOpenModalCombustible] = react.exports.useState(false);
+      const [editar, setEditar] = react.exports.useState(false);
+      const [openModalEditarCombustible, setOpenModalEditarCombustible] = react.exports.useState(false);
+      const [openDialog, setOpenDilog] = react.exports.useState(false);
+      const [switchChecked, setSwitch] = react.exports.useState(true);
+      const [openGuardar, setOpenGuardar] = react.exports.useState(false);
+      const [openBorrar, setOpenBorrar] = react.exports.useState(false);
+      const [mensajeDialog, setMensajeDialog] = react.exports.useState("");
+      react.exports.useState(false);
+      const [tab, setTab] = react.exports.useState("1");
+      const {
+        registrarParte,
+        getDetalleMaq,
+        detalle,
+        setDetalle,
+        updateParte,
+        getAllPartes
+      } = useParteMaquinaria();
+      const {
+        turnostrabajo,
+        getTurnosTrabajo,
+        turno,
+        setTurno
+      } = useTurnoTrabajo();
+      const {
+        areas,
+        getAreas,
+        area,
+        setArea
+      } = useAreas();
+      const {
+        maquinarias,
+        getMaquinarias,
+        maquina,
+        getMaquinaById,
+        cambiarMaquina,
+        costoHora
+      } = useMaquinaria();
+      const {
+        proveedores,
+        getProveedores,
+        proveedor,
+        getProveedorById,
+        cambiarProveedor
+      } = useProveedores();
+      const {
+        operarios,
+        getOperarios,
+        operador,
+        getOperarioById,
+        cambiarOperario
+      } = useOperario();
+      const {
+        actividades,
+        getActividades,
+        actividad,
+        getActividadById,
+        setActividad
+      } = useActividad();
+      const {
+        labores,
+        getLabores,
+        labor,
+        setLabor,
+        getLaborById,
+        cambiarLabor
+      } = useLabores();
+      const {
+        consumidor,
+        setConsumidor,
+        getConsumidorById,
+        cambiarConsumidor
+      } = useConsumidores();
+      const {
+        jiron,
+        setJiron,
+        getJironById,
+        cambiarJiron
+      } = useJirones();
+      const {
+        cuartel,
+        setCuartel,
+        getCuartelById,
+        cambiarCuartel
+      } = useCuartel();
+      react.exports.useEffect(() => {
+        if (parseFloat(cod.id) != 0) {
+          console.log(state == null ? void 0 : state.cabecera);
+          getMaquinaById(state == null ? void 0 : state.cabecera.MAQUINA.ID);
+          getProveedorById(state == null ? void 0 : state.cabecera.PROVEEDOR.ID);
+          getOperarioById(state == null ? void 0 : state.cabecera.OPERARIO.ID);
+          getActividadById(state == null ? void 0 : state.cabecera.ACTIVIDAD.ID);
+          getLabores(state == null ? void 0 : state.cabecera.ACTIVIDAD.ID);
+          getLaborById(state == null ? void 0 : state.cabecera.LABOR.ID);
+          getDetalleMaq(cod.id);
+          setArea(state == null ? void 0 : state.cabecera.AREA);
+          setTurno(state == null ? void 0 : state.cabecera.TURNO);
+        }
+        getTurnosTrabajo();
+        getAreas();
+        getMaquinarias();
+        getOperarios();
+        getActividades();
+        getProveedores();
+      }, []);
+      const [tipoParte, setTipoParte] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.IDDOCUMENTO : "PMA");
+      const [idFormaPago, setIdFormaPago] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.FORMAPAGO : "HR");
+      const [fecha, setFecha] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.FECHA : dateFormat(new Date(), "yyyy-mm-dd"));
+      const [HoraInicio, setHoraInicio] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.HORAINICIO : "");
+      const [HoraFin, setHoraFin] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.HORAFINAL : "");
+      const [horometroInicio, setHorometroInicio] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.HOROMETROINICIAL : "");
+      const [horometroFin, setHorometroFin] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.HOROMETROFINAL : "");
+      const [horas_trabCabecera, setHoras_trabCabecera] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.HORAS_TRAB : 0);
+      const [horas_trab1_cabecera, setHoras_trab1_cabecera] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.HORAS_TRAB1 : 0);
+      const [totalAreaTrabajada, setTotalAreaTrabajada] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.TOTALAREA_TRAB : 0);
+      const [glosa, setGlosa] = react.exports.useState(state ? state == null ? void 0 : state.cabecera.GLOSA : "");
+      const [costoTotal, setCostoTotal] = react.exports.useState(0);
+      const [areaTrabajada, setAreaTrabajada] = react.exports.useState("");
+      const [totalCostoCabecera, setTotalCostoCabecera] = react.exports.useState(0);
+      const [index2, setIndex] = react.exports.useState("");
+      const [combustible, setCombustible] = react.exports.useState([]);
+      const [idCombustible, setIdCombustible] = react.exports.useState("");
+      const [descCombustible, setDescCombustible] = react.exports.useState("");
+      const [idMedidaCom, setIdMedidaCom] = react.exports.useState("");
+      const [cantCombustible, setCantCombustible] = react.exports.useState("");
+      const [indexCombustible, setIndexCombustible] = react.exports.useState("");
+      const cambiarTab = (event, newValue) => {
+        setTab(newValue);
+      };
+      const cerrarDialog = () => {
+        setOpenDilog(false);
+      };
+      const cambiarActividad = (newValue) => {
+        if (newValue != null) {
+          console.log(newValue.ID);
+          setActividad(newValue);
+          getLabores(newValue.ID);
+          setLabor("");
+        } else {
+          setActividad("");
+        }
+      };
+      const cambiarSwitch = (event) => {
+        if (event.target.checked === true) {
+          setSwitch(true);
+          setTipoParte("PMA");
+        } else {
+          setTipoParte("PMQ");
+          setSwitch(false);
+        }
+      };
+      const cambiarHorometroFin = (event) => {
+        if (horometroInicio != "") {
+          setHorometroFin(event.target.value);
+          var dif_horo = parseFloat(event.target.value) - parseFloat(horometroInicio);
+          if (parseFloat(dif_horo) > 0) {
+            setHoras_trabCabecera(dif_horo.toFixed(2));
+          } else {
+            setHoras_trabCabecera(0);
+          }
+        } else {
+          setHorometroFin("");
+          setDifHorometro(0);
+        }
+      };
+      const cambiarHorometroInicio = (event) => {
+        if (event.target.value != "") {
+          setHorometroInicio(event.target.value);
+          if (horometroFin <= event.target.value && horometroFin != "") {
+            setHorometroInicio("");
+            setHoras_trabCabecera(0);
+            alert("Horometro Inicio no puede ser mayor o igual a Horometro fin");
+          } else {
+            if (parseFloat(horometroFin) > 0) {
+              var dif_horo = parseFloat(horometroFin) - parseFloat(event.target.value);
+              setHoras_trabCabecera(dif_horo.toFixed(2));
+            }
+          }
+        } else
+          setHorometroInicio("");
+      };
+      const cambiarAreaTrabajada = (event) => {
+        if (event.target.value != null) {
+          console.log(event.target.value);
+          setAreaTrabajada(event.target.value);
+          if (idFormaPago === "HA") {
+            var total_costo = event.target.value * costoHora;
+            setCostoTotal(total_costo.toFixed(2));
+            console.log(event.target.value * costoHora);
+          }
+        }
+      };
+      const cambiarCantidad = (event) => {
+        if (event.target.value != null) {
+          console.log(event.target.value);
+          setCantCombustible(event.target.value);
+        }
+      };
+      const cambiarHoraInicio = (event) => {
+        if (event.target.value != "") {
+          if (HoraFin < event.target.value && HoraFin != "") {
+            setHoraInicio("");
+            setHoras_trab1_cabecera(0);
+            alert("Hora Inicio no puede ser mayor a hora fin");
+          } else {
+            setHoraInicio(event.target.value);
+            if (idFormaPago === "HR") {
+              var hora1 = HoraFin.split(":");
+              var hora2 = event.target.value.split(":");
+              var t1 = new Date();
+              var t2 = new Date();
+              t1.setHours(hora1[0], hora1[1]);
+              t2.setHours(hora2[0], hora2[1]);
+              t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+              setHoras_trab1_cabecera((t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00"));
+              setHoras_min((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+              console.log((t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00"));
+            }
+          }
+        } else {
+          setHoraInicio("");
+        }
+      };
+      const cambiarHoraFin = (event) => {
+        if (HoraInicio != "") {
+          if (HoraInicio < event.target.value) {
+            setHoraFin(event.target.value);
+            if (idFormaPago === "HR") {
+              var hora2 = HoraInicio.split(":");
+              var hora1 = event.target.value.split(":");
+              var t1 = new Date();
+              var t2 = new Date();
+              t1.setHours(hora1[0], hora1[1]);
+              t2.setHours(hora2[0], hora2[1]);
+              t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+              setHoras_trab1_cabecera((t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00"));
+              setHoras_min((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+              console.log((t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00"));
+            }
+          } else {
+            setHoraFin("");
+            if (idFormaPago === "HR") {
+              setHoras_trab1_cabecera(0);
+            }
+            alert("Hora fin no puede ser menor a hora de inicio");
+          }
+        } else {
+          setHoraFin("");
+          alert("Seleccione hora inicio primero");
+        }
+      };
+      const cambiarGlosa = (event) => {
+        if (event.target.value != null) {
+          setGlosa(event.target.value);
+        }
+      };
+      const cambiarArea = (event, newValue) => {
+        var area2 = {
+          ID: newValue.props.value,
+          DESCRIPCION: newValue.props.name
+        };
+        setArea(area2);
+      };
+      const cambiarTurno = (event, newValue) => {
+        var turno_trabajo = {
+          ID: newValue.props.value,
+          DESCRIPCION: newValue.props.name
+        };
+        setTurno(turno_trabajo);
+      };
+      const cambiarFormaPago = (event) => {
+        console.log(totalAreaTrabajada);
+        setIdFormaPago(event.target.value);
+        if (event.target.value === "HR") {
+          var hora2 = HoraInicio.split(":");
+          var hora1 = HoraFin.split(":");
+          var t1 = new Date();
+          var t2 = new Date();
+          t1.setHours(hora1[0], hora1[1]);
+          t2.setHours(hora2[0], hora2[1]);
+          t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+          setHoras_trab1_cabecera((t1.getHours() ? t1.getHours() : "0") + (t1.getMinutes() ? "." + (t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ".00"));
+          setHoras_min((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+          console.log((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+        } else {
+          var hora2 = HoraInicio.split(":");
+          var hora1 = HoraFin.split(":");
+          var t1 = new Date();
+          var t2 = new Date();
+          t1.setHours(hora1[0], hora1[1]);
+          t2.setHours(hora2[0], hora2[1]);
+          t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+          setHoras_trab1_cabecera(totalAreaTrabajada);
+          setHoras_min((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+          console.log((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+        }
+      };
+      const OpenModal = (flag) => {
+        setConsumidor("");
+        setJiron("");
+        setCuartel("");
+        flag == false ? setAreaTrabajada("") : "";
+        setOpenModal(true);
+      };
+      const CloseModal = () => {
+        setOpenModal(false);
+        setEditar(false);
+      };
+      const OpenModalCombustible = () => {
+        setIdCombustible("");
+        setCantCombustible("");
+        setOpenModalCombustible(true);
+      };
+      const CloseModalCombustible = () => {
+        setOpenModalCombustible(false);
+      };
+      const OpenModalEditarCombustible = () => {
+        setOpenModalEditarCombustible(true);
+      };
+      const CloseModalEditarCombustible = () => {
+        setOpenModalEditarCombustible(false);
+      };
+      const guardarItem = () => {
+        if (consumidor == "") {
+          setMensajeDialog("Ingrese un consumidor para continuar");
+          setOpenDilog(true);
+          return;
+        }
+        if (jiron == "" && tipoParte == "PMA") {
+          setMensajeDialog("Ingrese un lote para continuar");
+          setOpenDilog(true);
+          return;
+        }
+        if (cuartel == "" && tipoParte == "PMA") {
+          setMensajeDialog("Ingrese un valvula para continuar");
+          setOpenDilog(true);
+          return;
+        }
+        if (areaTrabajada == "" && tipoParte == "PMA") {
+          setMensajeDialog("Ingrese el area para continuar");
+          setOpenDilog(true);
+          return;
+        }
+        if (labor == "") {
+          setMensajeDialog("Ingrese una labor para continuar");
+          setOpenDilog(true);
+          return;
+        }
+        var item = new Object({
+          ACTIVIDAD: actividad,
+          LABOR: labor,
+          CONSUMIDOR: consumidor,
+          AREA_TRAB: areaTrabajada != "" ? areaTrabajada : 0,
+          HORAINICIO: HoraInicio,
+          HORAFINAL: HoraFin,
+          HOROMETROINICIAL: horometroInicio,
+          HOROMETROFINAL: horometroFin,
+          HORAS_TRAB: horas_trabCabecera,
+          HORAS_TRAB1: horas_trab1_cabecera,
+          COSTO_HORA: costoHora,
+          HOROMETRO_DIFERENCIA: horas_trab1_cabecera,
+          COSTO_TOTAL: costoTotal,
+          JIRON: jiron,
+          CUARTEL: cuartel
+        });
+        detalle.push(item);
+        if (idFormaPago == "HR") {
+          var total_area = areaTrabajada != "" ? parseFloat(totalAreaTrabajada) + parseFloat(areaTrabajada) : 0;
+          var total_costo = parseFloat(costoHora) * parseFloat(horas_trab1_cabecera);
+          setTotalCostoCabecera(total_costo.toFixed(2));
+          setTotalAreaTrabajada(total_area.toFixed(2));
+          console.log(total_area);
+        } else {
+          var total_area = areaTrabajada != "" ? parseFloat(totalAreaTrabajada) + parseFloat(areaTrabajada) : 0;
+          var suma = parseFloat(horas_trab1_cabecera) + parseFloat(areaTrabajada);
+          var suma_totalCosto = parseFloat(horas_trab1_cabecera) * parseFloat(costoHora);
+          setHoras_trab1_cabecera(suma.toFixed(2));
+          setTotalCostoCabecera(suma_totalCosto.toFixed(2));
+          setTotalAreaTrabajada(total_area.toFixed(2));
+          console.log(total_area);
+        }
+        var hora2 = HoraInicio.split(":");
+        var hora1 = HoraFin.split(":");
+        var t1 = new Date();
+        var t2 = new Date();
+        t1.setHours(hora1[0], hora1[1]);
+        t2.setHours(hora2[0], hora2[1]);
+        t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+        setHoras_min((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+        console.log((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+        CloseModal();
+      };
+      const EditarItem = () => {
+        detalle.map((item, i) => {
+          detalle[index2].AREA_TRAB = areaTrabajada;
+          detalle[index2].CONSUMIDOR = consumidor;
+          detalle[index2].JIRON = jiron;
+          detalle[index2].CUARTEL = cuartel;
+          if (formaPago === "HA") {
+            detalle[index2].COSTO_TOTAL = (areaTrabajada * detalle[index2].COSTO_HORA).toFixed(2);
+          }
+        });
+        let suma = detalle.reduce((acumulador, actual) => parseFloat(acumulador) + parseFloat(actual.AREA_TRAB), 0);
+        if (idFormaPago == "HA") {
+          setHoras_trab1_cabecera(suma.toFixed(2));
+        }
+        setTotalAreaTrabajada(suma.toFixed(2));
+        CloseModal();
+      };
+      const editarCombustible = () => {
+        combustible[indexCombustible].CANTIDAD = cantCombustible;
+        console.log(combustible);
+        CloseModalEditarCombustible();
+      };
+      const editarparte = () => {
+        if (maquina == "") {
+          setMensajeDialog("Seleccione una maquina para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (proveedor == "" && tipoParte == "PMA") {
+          setMensajeDialog("Ingrese un proveedor para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (operador == "") {
+          setMensajeDialog("Seleccione un operario para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (actividad == "") {
+          setMensajeDialog("Seleccione una actividad para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (labor == "") {
+          setMensajeDialog("Seleccione una labor para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (HoraInicio == "") {
+          setMensajeDialog("Ingrese la hora de Inicio para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (HoraFin == "") {
+          setMensajeDialog("Ingrese la hora de Fin para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (horometroInicio == "") {
+          setMensajeDialog("Ingrese horometro inicio para continuar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (horometroFin == "" || horas_trabCabecera == 0) {
+          setMensajeDialog("Diferencia de Horometro es 0, verificar Horometro final");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        if (detalle.length == 0) {
+          setMensajeDialog("Ingrese almenos un item en el detalle para guardar");
+          setOpenDilog(true);
+          setOpenGuardar(false);
+          return;
+        }
+        var cabecera = {
+          IDDOCUMENTO: tipoParte,
+          MAQUINA: maquina,
+          OPERARIO: operador,
+          AREA: area,
+          ACTIVIDAD: actividad,
+          LABOR: labor,
+          PROVEEDOR: proveedor,
+          TURNO: turno,
+          GLOSA: glosa,
+          HORAINICIO: HoraInicio,
+          HORAFINAL: HoraFin,
+          HOROMETROINICIAL: horometroInicio,
+          HOROMETROFINAL: horometroFin,
+          HORAS_TRAB: horas_trabCabecera,
+          HORAS_TRAB1: horas_trab1_cabecera,
+          TOTAL_COSTO: totalCostoCabecera,
+          TOTAL_MINUTOS: horas_min,
+          TOTALAREA_TRAB: totalAreaTrabajada,
+          FORMAPAGO: idFormaPago,
+          COSTO_HORA: costoHora,
+          IDUSUARIO: usuario,
+          FECHA: fecha
+        };
+        if (cod.id != 0) {
+          detalle.map((item) => {
+            item.ACTIVIDAD = actividad;
+            item.LABOR = labor;
+          });
+          updateParte({
+            id: cod.id,
+            cabecera,
+            detalle,
+            onSuccess: (response) => {
+              console.log(response);
+              navigate("/home", {
+                replace: true
+              });
+            }
+          });
+        } else {
+          registrarParte({
+            cabecera,
+            detalle,
+            user: usuario.usuario,
+            combustible,
+            onSuccess: (response) => {
+              console.log(response);
+              navigate("/home", {
+                replace: true
+              });
+            }
+          });
+        }
+      };
+      const abrirDialogGuardar = () => {
+        setOpenGuardar(true);
+      };
+      const cerrarDialogGuardar = () => {
+        setOpenGuardar(false);
+      };
+      const itemSeleccionado = (item, i) => {
+        setEditar(true);
+        getConsumidorById(item.CONSUMIDOR.ID);
+        getCuartelById(item.CUARTEL.ID);
+        getJironById(item.JIRON.ID);
+        setAreaTrabajada(item.AREA_TRAB);
+        setIndex(i);
+        OpenModal(true);
+      };
+      const itemSelectCombustible = (item, i) => {
+        console.log(item);
+        setIndexCombustible(i);
+        setIdCombustible(item.IDCOMBUSTIBLE);
+        setDescCombustible(item.DESCRIPCION);
+        setCantCombustible(item.CANTIDAD);
+        OpenModalEditarCombustible();
+      };
+      const asignarFecha = (newValue) => {
+        console.log(dateFormat(newValue, "yyyy-mm-dd"));
+        setFecha(dateFormat(newValue, "yyyy-mm-dd"));
+      };
+      const cerrarDialogBorrar = () => {
+        setOpenBorrar(false);
+      };
+      const abrirDialogBorrar = () => {
+        setOpenBorrar(true);
+      };
+      const borrarItem = () => {
+        console.log(index2);
+        var filter = detalle.filter((item, i) => {
+          return detalle[i] !== detalle[index2];
+        });
+        setDetalle(filter);
+        let suma = filter.reduce((acumulador, actual) => parseFloat(acumulador) + parseFloat(actual.AREA_TRAB), 0);
+        if (idFormaPago == "HA") {
+          setHoras_trab1_cabecera(suma.toFixed(2));
+        }
+        var hora2 = HoraInicio.split(":");
+        var hora1 = HoraFin.split(":");
+        var t1 = new Date();
+        var t2 = new Date();
+        t1.setHours(hora1[0], hora1[1]);
+        t2.setHours(hora2[0], hora2[1]);
+        t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+        setHoras_min((t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : ""));
+        setTotalAreaTrabajada(suma.toFixed(2));
+        setOpenBorrar(false);
+        CloseModal();
+      };
+      const cambiarCombustible = (newValue) => {
+        console.log(newValue);
+        if (newValue != null) {
+          console.log(newValue.ID);
+          setIdCombustible(newValue.ID);
+          setDescCombustible(newValue.DESCRIPCION);
+          setIdMedidaCom(newValue.IDMEDIDA);
+        } else {
+          setIdCombustible("");
+          setDescCombustible("");
+          setIdMedidaCom("");
+        }
+      };
+      const guardarCombustible = () => {
+        if (idCombustible == "") {
+          setMensajeDialog("Falta seleccionar Combustible");
+          setOpenDilog(true);
+          return;
+        }
+        if (cantCombustible == "") {
+          setMensajeDialog("Ingrese la cantidad de combustible");
+          setOpenDilog(true);
+          return;
+        }
+        var data = new Object({
+          IDCOMBUSTIBLE: idCombustible.trim(),
+          DESCRIPCION: descCombustible,
+          IDMEDIDA: idMedidaCom.trim(),
+          CANTIDAD: cantCombustible
+        });
+        console.log(data);
+        combustible.push(data);
+        CloseModalCombustible();
+        console.log(combustible);
+      };
+      return /* @__PURE__ */ jsx("div", {
+        children: /* @__PURE__ */ jsxs("div", {
+          children: [/* @__PURE__ */ jsx(Appbar, {
+            nombre: cod.id != 0 ? "Edici\xF3n de Parte de Maquinaria" : "Nuevo Parte de Maquinaria",
+            mostrarSalir: "none",
+            mostrarEnviar: "none",
+            guardar: abrirDialogGuardar
+          }), /* @__PURE__ */ jsx(Dialogs, {
+            open: openGuardar,
+            cerrar: cerrarDialogGuardar,
+            aceptar: editarparte,
+            mensaje: "\xBFEst\xE1 seguro de guardar los datos?",
+            esconder: "none",
+            flag: false
+          }), /* @__PURE__ */ jsx(Dialogs, {
+            open: openDialog,
+            cerrar: cerrarDialog,
+            aceptar: cerrarDialog,
+            mensaje: mensajeDialog,
+            esconder: "none"
+          }), /* @__PURE__ */ jsx(Dialogs, {
+            open: openBorrar,
+            cerrar: cerrarDialogBorrar,
+            aceptar: borrarItem,
+            mensaje: "\xBFEst\xE1 seguro de borrar item?",
+            esconder: "none"
+          }), /* @__PURE__ */ jsx(Interruptor, {
+            cambiarSwitch,
+            switchChecked
+          }), /* @__PURE__ */ jsx(Box$3, {
+            children: /* @__PURE__ */ jsx(CabeceraParteMaquinaria, {
+              codigo: cod.id,
+              areas,
+              idArea: area.ID,
+              cambiarArea,
+              turnos: turnostrabajo,
+              idTurno: turno.ID,
+              cambiarTurno,
+              maquinarias,
+              maquina,
+              cambiarMaquina,
+              proveedores,
+              proveedor,
+              cambiarProveedor,
+              actividades,
+              actividad,
+              cambiarActividad,
+              labores,
+              cambiarLabor,
+              labor,
+              formaPago,
+              idFormaPago,
+              cambiarFormaPago,
+              operarios,
+              operador,
+              cambiarOperario,
+              horas_trabCabecera,
+              horas_trab1_cabecera,
+              tipoParte,
+              cambiarHoraInicio,
+              cambiarHoraFin,
+              horaFin: HoraFin,
+              horaInicio: HoraInicio,
+              cambiarHorometroInicio,
+              horometroInicio,
+              horometroFin,
+              cambiarHorometroFin,
+              asignarFecha,
+              fecha,
+              cambiarConsumidor,
+              inputGlosa: cambiarGlosa,
+              glosa
+            })
+          }), /* @__PURE__ */ jsx("p", {}), /* @__PURE__ */ jsxs(Box$3, {
+            children: [/* @__PURE__ */ jsxs(TabContext, {
+              value: tab,
+              children: [/* @__PURE__ */ jsx(Box$3, {
+                sx: {
+                  borderBottom: 1,
+                  borderColor: "divider",
+                  marginTop: 2
+                },
+                children: /* @__PURE__ */ jsxs(TabList$1, {
+                  onChange: cambiarTab,
+                  "aria-label": "lab API tabs example",
+                  variant: "fullWidth",
+                  textColor: "inherit",
+                  sx: {
+                    background: "#ed6c02",
+                    color: "white"
+                  },
+                  TabIndicatorProps: {
+                    style: {
+                      backgroundColor: "#ffff"
+                    }
+                  },
+                  children: [/* @__PURE__ */ jsx(Tab$1, {
+                    label: "Detalle",
+                    value: "1"
+                  }), /* @__PURE__ */ jsx(Tab$1, {
+                    label: "Combustible",
+                    value: "2"
+                  })]
+                })
+              }), /* @__PURE__ */ jsxs(TabPanel$1, {
+                value: "1",
+                children: [/* @__PURE__ */ jsx(List$1, {
+                  sx: {
+                    width: "100%",
+                    maxWidth: "100%",
+                    position: "relative",
+                    overflow: "auto",
+                    maxHeight: 200
+                  },
+                  subheader: /* @__PURE__ */ jsx("li", {}),
+                  children: /* @__PURE__ */ jsx(Detalle, {
+                    detalle,
+                    itemSeleccionado
+                  })
+                }), /* @__PURE__ */ jsx(Fab$1, {
+                  sx: {
+                    position: "absolute",
+                    bottom: 20,
+                    right: 20
+                  },
+                  "aria-label": "Add_detalle",
+                  color: "success",
+                  size: "large",
+                  onClick: () => OpenModal(false),
+                  children: /* @__PURE__ */ jsx(default_1$3, {})
+                })]
+              }), /* @__PURE__ */ jsxs(TabPanel$1, {
+                value: "2",
+                children: [/* @__PURE__ */ jsx(List$1, {
+                  sx: {
+                    width: "100%",
+                    maxWidth: "100%",
+                    position: "relative",
+                    overflow: "auto",
+                    maxHeight: 200
+                  },
+                  subheader: /* @__PURE__ */ jsx("li", {}),
+                  children: /* @__PURE__ */ jsx(DetalleCombustible, {
+                    combustible,
+                    itemSeleccionado: itemSelectCombustible
+                  })
+                }), /* @__PURE__ */ jsx(Fab$1, {
+                  sx: {
+                    position: "absolute",
+                    bottom: 20,
+                    right: 20
+                  },
+                  color: "success",
+                  onClick: OpenModalCombustible,
+                  children: /* @__PURE__ */ jsx(default_1$2, {})
+                })]
+              })]
+            }), /* @__PURE__ */ jsx(FormularioModal, {
+              open: openModal,
+              editar,
+              handleCloseModal: CloseModal,
+              consumidor,
+              cambiarConsumidor,
+              jiron,
+              cambiarJiron,
+              cuartel,
+              cambiarCuartel,
+              areaItem: areaTrabajada,
+              cambiarAreaTrabajada,
+              guardar: editar != false ? EditarItem : guardarItem,
+              dialogBorrar: abrirDialogBorrar
+            }), /* @__PURE__ */ jsx(ModalCombustible, {
+              open: openModalCombustible,
+              CloseModal: CloseModalCombustible,
+              cambiarCombustible,
+              cambiarCantidad,
+              guardar: guardarCombustible
+            }), /* @__PURE__ */ jsx(ModalCombustibleEditar, {
+              open: openModalEditarCombustible,
+              CloseModal: CloseModalEditarCombustible,
+              idCombustible,
+              descripcion: descCombustible,
+              cantCombustible,
+              cambiarCantidad,
+              editar: editarCombustible
+            })]
+          })]
+        })
+      });
+    };
+    var TaskAlt = {};
+    var _interopRequireDefault$1 = interopRequireDefault.exports;
+    Object.defineProperty(TaskAlt, "__esModule", {
+      value: true
+    });
+    var default_1$1 = TaskAlt.default = void 0;
+    var _createSvgIcon$1 = _interopRequireDefault$1(requireCreateSvgIcon());
+    var _jsxRuntime$1 = require$$2;
+    var _default$1 = (0, _createSvgIcon$1.default)(/* @__PURE__ */ (0, _jsxRuntime$1.jsx)("path", {
+      d: "M22 5.18 10.59 16.6l-4.24-4.24 1.41-1.41 2.83 2.83 10-10L22 5.18zm-2.21 5.04c.13.57.21 1.17.21 1.78 0 4.42-3.58 8-8 8s-8-3.58-8-8 3.58-8 8-8c1.58 0 3.04.46 4.28 1.25l1.44-1.44C16.1 2.67 14.13 2 12 2 6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-1.19-.22-2.33-.6-3.39l-1.61 1.61z"
+    }), "TaskAlt");
+    default_1$1 = TaskAlt.default = _default$1;
+    var HighlightOff = {};
+    var _interopRequireDefault = interopRequireDefault.exports;
+    Object.defineProperty(HighlightOff, "__esModule", {
+      value: true
+    });
+    var default_1 = HighlightOff.default = void 0;
+    var _createSvgIcon = _interopRequireDefault(requireCreateSvgIcon());
+    var _jsxRuntime = require$$2;
+    var _default = (0, _createSvgIcon.default)(/* @__PURE__ */ (0, _jsxRuntime.jsx)("path", {
+      d: "M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+    }), "HighlightOff");
+    default_1 = HighlightOff.default = _default;
     const ListaEnviados = (props2) => {
       const navigate = useNavigate();
-      var disabled = true;
       function itemSeleccionado(cod, cabecera) {
-        navigate("/editarParte/" + cod, {
+        navigate("/enviarParte/" + cod, {
           state: {
             cabecera,
-            deshabilitar: disabled
+            deshabilitar: true
           }
         });
       }
       return props2.datos != null ? props2.datos.map((item, i) => /* @__PURE__ */ jsxs(Box$1, {
         children: [/* @__PURE__ */ jsxs(ListItem$1, {
+          secondaryAction: item.ESTADO == "E" ? /* @__PURE__ */ jsx(IconButton$1, {
+            edge: "end",
+            "aria-label": "delete",
+            onClick: () => props2.abrirDialogBorrar(item.IDPARTEMAQ, item),
+            children: /* @__PURE__ */ jsx(default_1, {
+              color: "primary",
+              sx: {
+                color: "red",
+                height: 50,
+                width: 50
+              }
+            })
+          }) : "",
           children: [/* @__PURE__ */ jsx(ListItemAvatar$1, {
-            onClick: () => {
-              itemSeleccionado(item.cod, item), console.log(item);
-            },
-            children: /* @__PURE__ */ jsx(default_1$4, {
-              color: "warning"
+            onClick: () => itemSeleccionado(item.cod, item),
+            children: /* @__PURE__ */ jsx(default_1$1, {
+              color: "warning",
+              sx: {
+                height: 45,
+                width: 45
+              }
             })
           }, `avatar-${i}`), /* @__PURE__ */ jsx(ListItemText$1, {
-            primary: /* @__PURE__ */ jsx(Typography$1, {
-              variant: "h1",
-              color: "green",
-              fontSize: 14,
-              children: item.IDDOCUMENTO == "PMA" ? "PARTE DE MAQUINARIA ALQUILADA" : "PARTE DE MAQUINARIA PROPIA"
+            primary: /* @__PURE__ */ jsxs(Fragment, {
+              children: [/* @__PURE__ */ jsx(Chip$1, {
+                label: item.ESTADO == "A" ? "Estado: Anulado" : "Estado: Enviado",
+                size: "medium",
+                color: item.ESTADO === "A" ? "error" : "success"
+              }), /* @__PURE__ */ jsx("p", {}), /* @__PURE__ */ jsx(Typography$1, {
+                variant: "h1",
+                color: "green",
+                fontSize: 16,
+                fontWeight: "bold",
+                children: "PARTE DE MAQUINARIA:" + item.IDDOCUMENTO + "-0002-" + item.NUMERO
+              })]
             }),
             secondary: /* @__PURE__ */ jsxs(React.Fragment, {
               children: [/* @__PURE__ */ jsx(Typography$1, {
                 component: "span",
                 variant: "body2",
                 fontWeight: "bold",
-                fontSize: 12,
-                children: item.MAQUINA
+                fontSize: 14,
+                children: item.MAQUINA.DESCRIPCION
               }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Typography$1, {
                 component: "span",
                 variant: "body2",
                 fontWeight: "bold",
                 fontSize: 12,
-                children: ["OPERARIO: ", item.OPERARIO, " || FECHA: ", " " + item.FECHA]
+                children: ["OPERARIO: ", item.OPERARIO.DESCRIPCION, " || FECHA: ", " " + item.FECHA]
               }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Typography$1, {
                 component: "span",
                 variant: "body2",
@@ -45578,9 +47590,9 @@ var require_index_81daafcd = __commonJS({
       }, i)) : "sin registros";
     };
     const ListarPartesEnviados = () => {
-      var usuario = JSON.parse(localStorage.getItem("usuario"));
-      usuario.usuario;
-      useNavigate();
+      JSON.parse(localStorage.getItem("usuario"));
+      const url_api2 = "https://69.64.95.68:6061/cayaltiservernisira/controlador/index.php";
+      const navigate = useNavigate();
       const {
         maquinarias,
         getMaquinarias
@@ -45588,13 +47600,24 @@ var require_index_81daafcd = __commonJS({
       const {
         parteMaquinaria,
         getParteMaquinariaEnviados,
-        deleteParteMaq
+        anularParteMaquinaria,
+        getDetalleMaq,
+        detalle,
+        registrarParte,
+        combustible,
+        getCombustible: getCombustible2
       } = useParteMaquinaria();
-      useAuth();
+      const {
+        empresa,
+        logOut
+      } = useAuth();
+      const [cabecera, setCabecera] = react.exports.useState();
       const [openBorrar, setOpenBorrar] = react.exports.useState(false);
       const [idMquina, setIdMaquina] = react.exports.useState("");
       const [idparte, setIdParte] = react.exports.useState("");
       const [fechaBusqueda, setFechaBusqueda] = react.exports.useState(dateFormat(new Date(), "yyyy-mm-dd"));
+      const [disabled, setDisabled] = react.exports.useState(false);
+      react.exports.useState(false);
       const onChangeAutocompleteHome = (newValue) => {
         console.log(newValue);
         if (newValue != null) {
@@ -45606,11 +47629,48 @@ var require_index_81daafcd = __commonJS({
       function listarParteMaquinaria() {
         getParteMaquinariaEnviados(fechaBusqueda, idMquina);
       }
-      function elimnarParte() {
-        console.log(idparte);
-        deleteParteMaq(idparte);
-        listarParteMaquinaria();
-        setOpenBorrar(false);
+      function anularParte() {
+        var hora2 = cabecera.HORAINICIO.split(":");
+        var hora1 = cabecera.HORAFINAL.split(":");
+        var t1 = new Date();
+        var t2 = new Date();
+        t1.setHours(hora1[0], hora1[1]);
+        t2.setHours(hora2[0], hora2[1]);
+        t1.setHours(t1.getHours() - t2.getHours(), t1.getMinutes() - t2.getMinutes(), t1.getSeconds() - t2.getSeconds());
+        cabecera.TOTAL_MINUTOS = (t1.getHours() ? t1.getHours() * 60 : "0") + (t1.getMinutes() ? +(t1.getMinutes() < 10 ? "0" : "") + t1.getMinutes() : "");
+        const formData = new FormData();
+        formData.append("empresa", empresa);
+        formData.append("modelo", "Maquinaria");
+        formData.append("metodo", "anularParteMaquinaria");
+        formData.append("data_out[0]", idparte);
+        setDisabled(true);
+        fetch(url_api2, {
+          body: formData,
+          method: "POST"
+        }).then((res) => res.json()).then((res) => {
+          if (res.flag == true) {
+            setDisabled(false);
+            anularParteMaquinaria({
+              idparte
+            });
+            registrarParte({
+              cabecera,
+              detalle,
+              user: "",
+              combustible,
+              onSuccess: (response) => {
+                console.log(response);
+                navigate("/home", {
+                  replace: true
+                });
+              }
+            });
+            navigate(-1);
+          }
+        }).catch((e2) => {
+          setDisabled(false);
+          console.log(e2);
+        });
       }
       const asignarFechaBusqueda = (newValue) => {
         setFechaBusqueda(dateFormat(newValue, "yyyy-mm-dd"));
@@ -45618,9 +47678,12 @@ var require_index_81daafcd = __commonJS({
       const cerrarDialogBorrar = () => {
         setOpenBorrar(false);
       };
-      const abrirDialogBorrar = (id2) => {
+      const abrirDialogBorrar = (IDPARTEMAQ, item) => {
         setOpenBorrar(true);
-        setIdParte(id2);
+        setIdParte(IDPARTEMAQ);
+        setCabecera(item);
+        getDetalleMaq(item.cod);
+        getCombustible2(item.cod);
       };
       react.exports.useEffect(() => {
         getMaquinarias();
@@ -45635,8 +47698,9 @@ var require_index_81daafcd = __commonJS({
           }), /* @__PURE__ */ jsx(Dialogs, {
             open: openBorrar,
             cerrar: cerrarDialogBorrar,
-            aceptar: elimnarParte,
-            mensaje: "\xBFEst\xE1 seguro de borrar parte de maquinaria?"
+            aceptar: anularParte,
+            mensaje: "\xBFEst\xE1 seguro de anular parte de maquinaria?",
+            disabled
           }), /* @__PURE__ */ jsx("h3", {
             children: "Buscar Partes enviados"
           }), /* @__PURE__ */ jsx(Card$1, {
@@ -45687,7 +47751,6 @@ var require_index_81daafcd = __commonJS({
             subheader: /* @__PURE__ */ jsx("li", {}),
             children: /* @__PURE__ */ jsx(ListaEnviados, {
               datos: parteMaquinaria,
-              delete: elimnarParte,
               openBorrar,
               abrirDialogBorrar,
               cerrarDialogBorrar
@@ -45699,223 +47762,6 @@ var require_index_81daafcd = __commonJS({
         })
       });
     };
-    const nameApp = "AppMaquinaria";
-    function useAppUtility() {
-      const isMovil = Boolean(window.cordova);
-      const alertar = ({ txtMessage, callback }) => {
-        const callbackExists = typeof callback === "function";
-        if (isMovil) {
-          window.navigator.notification.alert(txtMessage, callbackExists ? callback : null, nameApp, "LISTO");
-          return;
-        }
-        alert(txtMessage);
-        if (callbackExists) {
-          callback();
-        }
-      };
-      const confirmar = ({ txtMessage, onConfirm, onReject }) => {
-        const fnOK = function(index2) {
-          if (typeof onConfirm === "function") {
-            if (index2 === 1) {
-              onConfirm();
-              return;
-            }
-            if (typeof onReject === "function") {
-              onReject();
-            }
-            return;
-          }
-          console.error("Funci\xF3n de confirmaci\xF3n inv\xE1lida.");
-        };
-        if (isMovil) {
-          window.navigator.notification.confirm(txtMessage, fnOK, nameApp, ["ACEPTAR", "CANCELAR"]);
-          return;
-        }
-        const answer = confirm(txtMessage) === true ? 1 : 0;
-        fnOK(answer);
-      };
-      const getDevice = () => {
-        if (isMovil) {
-          return window.device.uuid;
-        }
-        return navigator.userAgent.substr(0, 30);
-      };
-      const isActivatedGPS = ({ onSuccess, onError }) => {
-        if (isMovil) {
-          window.CheckGPS.check(onSuccess, onError);
-          return;
-        }
-        onSuccess();
-      };
-      const checkPermissions = ({ requiredPermissions, onGranted, onDenied }) => {
-        const cadenaInformativaDePermisos = () => {
-          return `Esta aplicaci\xF3n necesita permisos de: ${requiredPermissions.join()} para funcionar correctamente.`;
-        };
-        if (!isMovil) {
-          console.error(cadenaInformativaDePermisos());
-          return;
-        }
-        const permissions = window.cordova.plugins.permissions;
-        const permissionList = requiredPermissions.map(function(permission) {
-          return permissions[permission];
-        });
-        const error = () => {
-          alertar({ txtMessage: cadenaInformativaDePermisos() });
-        };
-        const success = (status) => {
-          if (!status.hasPermission) {
-            permissions.requestPermissions(
-              permissionList,
-              (status2) => {
-                if (!status2.hasPermission) {
-                  if (onDenied != null && typeof onDenied === "function") {
-                    onDenied();
-                  } else {
-                    error();
-                  }
-                } else {
-                  if (onGranted != null && typeof onGranted === "function") {
-                    onGranted();
-                  }
-                }
-              },
-              error
-            );
-          } else {
-            if (onGranted != null && typeof onGranted === "function") {
-              onGranted();
-            }
-          }
-        };
-        permissions.hasPermission(permissionList, success, null);
-      };
-      const geoposition = ({ onSuccess, onError }) => {
-        const fnSuccess = (posicion) => {
-          if (typeof onSuccess === "function") {
-            onSuccess(posicion);
-            return;
-          }
-          console.error("Funci\xF3n de \xE9xito inv\xE1lida.");
-        };
-        const showError = (error) => {
-          switch (error.code) {
-            case error.PERMISSION_DENIED:
-              alert("Permisos rechazados.");
-              break;
-            case error.POSITION_UNAVAILABLE:
-              alert("Informaci\xF3n del lugar inaccesible.");
-              break;
-            case error.TIMEOUT:
-              alert("No encontr\xE9 posici\xF3n GPS.");
-              break;
-            case error.UNKNOWN_ERROR:
-              alert("Error desconocido.");
-              break;
-          }
-        };
-        const fnError = (error) => {
-          showError(error);
-          if (typeof onError == "function") {
-            onError();
-            return;
-          }
-          console.error("Funci\xF3n de error inv\xE1lida.");
-        };
-        if (window.navigator.geolocation) {
-          window.navigator.geolocation.getCurrentPosition(fnSuccess, fnError, { enableHighAccuracy: true, maximumAge: 5e3, timeout: 15e3 });
-          return;
-        }
-        alert("No tengo la funci\xF3n de geolocaci\xF3n disponible en este dispositivo.");
-      };
-      const barcodeScan = ({ onSuccess, onError }) => {
-        if (isMovil) {
-          alert("No tengo la funci\xF3n de LECTOR DE C\xD3DIGO DE BARRAS disponible en esta versi\xF3n del aplicativo.");
-          return;
-        }
-        const fnSuccess = (result) => {
-          if (typeof onSuccess === "function") {
-            onSuccess(result);
-            return;
-          }
-          console.error("Funci\xF3n de \xE9xito inv\xE1lida.");
-        };
-        const fnError = (error) => {
-          showError(error);
-          if (typeof onError == "function") {
-            onError();
-            return;
-          }
-          console.error("Funci\xF3n de error inv\xE1lida.");
-        };
-        const showError = (error) => {
-          alert("Scanning failed: " + error);
-        };
-        const barcodeScannerInstance = window.cordova.plugins.barcodeScanner;
-        if (!barcodeScannerInstance) {
-          alert("No tengo la funci\xF3n de LECTOR DE C\xD3DIGO DE BARRAS disponible en este dispositivo.");
-          return;
-        }
-        barcodeScannerInstance.scan(
-          fnSuccess,
-          fnError,
-          {
-            preferFrontCamera: false,
-            showFlipCameraButton: true,
-            showTorchButton: true,
-            torchOn: true,
-            saveHistory: false,
-            prompt: "Coloque un c\xF3digo de barras sobre el \xE1rea de escaneo.",
-            resultDisplayDuration: 500,
-            formats: "QR_CODE,CODE_39,PDF_417,CODE_128",
-            orientation: "portrait",
-            disableSuccessBeep: false
-          }
-        );
-      };
-      const checkConexion = () => {
-        if (!isMovil) {
-          return { online: window.navigator.onLine, estados: null };
-        }
-        const networkState = window.navigator.connection.type;
-        let states = {};
-        states[window.Connection.UNKNOWN] = "Conexi\xF3n Desconocida";
-        states[window.Connection.ETHERNET] = "Conexi\xF3n Ethernet";
-        states[window.Connection.WIFI] = "Conexi\xF3n WiFi";
-        states[window.Connection.CELL_2G] = "Conexi\xF3n 2G";
-        states[window.Connection.CELL_3G] = "Conexi\xF3n 3G";
-        states[window.Connection.CELL_4G] = "Conexi\xF3n 4G";
-        states[window.Connection.CELL] = "Conexi\xF3n generica";
-        states[window.Connection.NONE] = "Sin conexi\xF3n red";
-        return { online: networkState != window.Connection.NONE, state: states[networkState] };
-      };
-      const checkUpdate = () => {
-        if (!isMovil) {
-          return false;
-        }
-        const updaterURL = `${"https://apps.cayalti.com.pe/apk/maquinaria/version.xml"}`;
-        window.AppUpdate.checkAppUpdate(
-          (e2) => {
-            console.log(e2);
-          },
-          (e2) => {
-            console.error(e2);
-          },
-          updaterURL
-        );
-        console.log("actualizando");
-      };
-      return {
-        alertar,
-        confirmar,
-        getDevice,
-        checkPermissions,
-        geoposition,
-        isActivatedGPS,
-        barcodeScan,
-        checkConexion,
-        checkUpdate
-      };
-    }
     function App() {
       const navigate = useNavigate();
       const {
@@ -45951,6 +47797,9 @@ var require_index_81daafcd = __commonJS({
             path: "/nuevoParte",
             element: /* @__PURE__ */ jsx(NuevoParteMaquinaria, {})
           }), /* @__PURE__ */ jsx(Route, {
+            path: "/enviarParte/:id",
+            element: /* @__PURE__ */ jsx(EnviarParteMaquinaria, {})
+          }), /* @__PURE__ */ jsx(Route, {
             path: "/editarParte/:id",
             element: /* @__PURE__ */ jsx(EditarParteMaquinaria, {})
           }), /* @__PURE__ */ jsx(Route, {
@@ -45979,4 +47828,4 @@ var require_index_81daafcd = __commonJS({
     }
   }
 });
-export default require_index_81daafcd();
+export default require_index_be62407a();

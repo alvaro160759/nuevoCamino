@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, MenuItem, TextField, Typography } from '@mui/material';
+import { Grid, MenuItem, Select, TextField, Typography } from '@mui/material';
 import { Autocompletar } from '../../components/autocomplete/Autocomplete';
 import InputFecha from '../../components/datePicker/DatePicker';
 
@@ -12,12 +12,13 @@ export const CabeceraParteMaquinaria = (props) => {
   return (
     <Grid container spacing={'5px'} >          
           <Grid item xs={3}>
+
           <TextField
           id="txtarea"
           select
-          label="Área"
+          label="Seleccione área"
           size='small'
-          value={props.idArea}
+          value={props.areas!=null?props.idArea:null}
           sx={{width:'100%',}}
           onChange={(event,newValue)=>props.cambiarArea(event,newValue)}
          >
@@ -33,12 +34,12 @@ export const CabeceraParteMaquinaria = (props) => {
           <TextField
           id="txtturno" 
           select
-          label="Turno"
+          label="Seleccione turno"
           size='small'
           value={props.idTurno}
           sx={{width:'100%'}}
           onChange={(event,newvalue)=>props.cambiarTurno(event,newvalue)}
-          //name={props.turno}
+          
          >
           {props.turnos.map((option) => (
             <MenuItem key={option.idturno} value={option.idturno} name={option.descripcion}>
@@ -52,7 +53,7 @@ export const CabeceraParteMaquinaria = (props) => {
           <TextField
           id="txtformaPago"
           select
-          label="Forma de Pago"
+          label="Seleccione forma de pago"
           size='small'
           value={props.idFormaPago}
           sx={{width:'100%'}}
@@ -63,29 +64,30 @@ export const CabeceraParteMaquinaria = (props) => {
               <Typography fontSize={12}>{option.DESCRIPCION}</Typography>
             </MenuItem>
           ))}
+
         </TextField>  
           </Grid>
 
           <Grid item xs={3}>
-            <InputFecha fecha={props.fecha} label="Fecha" asignarFecha={value=>props.asignarFecha(value)}></InputFecha> 
+            <InputFecha fecha={props.fecha} label="Seleccione fecha" asignarFecha={value=>props.asignarFecha(value)}></InputFecha> 
           </Grid>
           <Grid item xs={12} >
-          <Autocompletar label={'Maquina'} options={props.maquinarias} cambiar={(event,newValue)=>props.cambiarMaquina(newValue)} disabled={props.disabled} ></Autocompletar> 
+          <Autocompletar label={'Maquina'} options={props.maquinarias} cambiar={(event,newValue)=>props.cambiarMaquina(newValue)} disabled={props.disabled} value={props.maquina}></Autocompletar> 
           </Grid>  
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
           <Autocompletar label={'Implemento'} options={props.implementos} cambiar={(event,newValue)=>props.cambiarImplemento(newValue)}></Autocompletar> 
-          </Grid>           
+          </Grid>            */}
           <Grid item xs={6} >            
-          <Autocompletar label={'proveedor'} options={props.proveedor} cambiar={(event,newValue)=>props.cambiarProveedor(newValue)} disabled={props.tipoParte=='PMQ'?true:false}></Autocompletar> 
+          <Autocompletar label={'Proveedor'} options={props.proveedores} cambiar={(event,newValue)=>props.cambiarProveedor(newValue)} disabled={props.tipoParte=='PMQ'?true:false} value={props.proveedor}></Autocompletar> 
           </Grid>
           <Grid item xs={6} >           
-          <Autocompletar label={'Operario'} options={props.operarios} cambiar={(event,newValue)=>props.cambiarOperario(newValue)}></Autocompletar> 
+          <Autocompletar label={'Operario'} options={props.operarios} cambiar={(event,newValue)=>props.cambiarOperario(newValue)} value={props.operador}></Autocompletar> 
           </Grid> 
           <Grid item xs={6} >           
-          <Autocompletar label='Actividad' options={props.actividades} cambiar={(event,newValue)=>props.cambiarActividad(newValue)}></Autocompletar>
+          <Autocompletar label='Actividad' options={props.actividades} cambiar={(event,newValue)=>props.cambiarActividad(newValue)} value={props.actividad}></Autocompletar>
           </Grid>
           <Grid item xs={6} >           
-          <Autocompletar label='Labor' options={props.labores} cambiar={(event,newValue)=>props.cambiarLabor(newValue)} input={props.descLabor} value={props.valueLabor}></Autocompletar>
+          <Autocompletar label='Labor' options={props.labores} cambiar={(event,newValue)=>props.cambiarLabor(newValue)} input={props.descLabor} value={props.labor}></Autocompletar>
           </Grid>
           {/* { props.tipoParte=='PMQ'&&<Grid item xs={12} >
           <Autocompletar label='Consumidor'options={props.consumidores} cambiar={(event,newValue)=>props.cambiarConsumidor(newValue)}></Autocompletar> 
@@ -109,13 +111,13 @@ export const CabeceraParteMaquinaria = (props) => {
           </TextField> 
           </Grid>
           <Grid item xs={4}>
-          <TextField label={'Horometro Inicial'} sx={{width:'100%'}} type={'number'} onChange={(event)=>props.cambiarHorometroInicio(event)} size='small'></TextField> 
+          <TextField label={'Horometro Inicial'} sx={{width:'100%'}} type={'number'} InputLabelProps={{shrink: true}} onChange={(event)=>props.cambiarHorometroInicio(event)} size='small' value={props.horometroInicio}></TextField> 
           </Grid>
           <Grid item xs={4} >
-          <TextField label={'Horometro Final'} sx={{width:'100%'}} type={'number'} onChange={(event)=>props.cambiarHorometroFin(event)} size='small'></TextField>
+          <TextField label={'Horometro Final'} sx={{width:'100%'}} type={'number'} InputLabelProps={{shrink: true}} onChange={(event)=>props.cambiarHorometroFin(event)} size='small' value={props.horometroFin}></TextField>
           </Grid>
           <Grid item xs={4} >
-            <TextField label={'Dif. Horometro'} sx={{width:'100%'}} color='success' focused InputLabelProps={{shrink: true}} value={props.difHorometro} size='small'></TextField>
+            <TextField label={'Dif. Horometro'} sx={{width:'100%'}} color='success' focused InputLabelProps={{shrink: true}} value={props.horas_trabCabecera} size='small'></TextField>
           </Grid>
           {/* <Grid item xs={6} >
           <TextField label={'Total Horas'} sx={{width:'100%', }} color='success' focused InputLabelProps={{shrink: true}} value={props.horas_trab1_cabecera} size='small'></TextField> 
@@ -123,7 +125,7 @@ export const CabeceraParteMaquinaria = (props) => {
           <Grid item xs={12}>
             <TextField
             label={'Observaciones'} sx={{width:'100%'}} color='success' 
-             focused InputLabelProps={{shrink: true}} onChange={(event)=>{props.inputGlosa(event)}} size='small' ></TextField>
+             focused InputLabelProps={{shrink: true}} onChange={(event)=>{props.inputGlosa(event)}} size='small' value={props.glosa}></TextField>
           </Grid> 
     </Grid>
   )

@@ -5,3 +5,8 @@ export const get = async () => {
                     .toArray();
     return data;
 };
+
+export const getById = async (id) => {
+    const data = await db.Actividades.get({ID:id});
+    return data;
+};

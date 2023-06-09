@@ -13,6 +13,7 @@ import useAuth from "../../hooks/useAuth";
 import useSincronize from "../../hooks/useSincronize";
 import SyncIcon from '@mui/icons-material/Sync';
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import useAppUtility from "../../hooks/useAppUtility";
 
 
 const nameApp = import.meta.env.VITE_APP_NAME;
@@ -28,6 +29,7 @@ export default function Login(){
     const from = location.state?.from?.pathname || "/home";
     const { empresa, asignarEmpresa, isLoggedIn, isLoginLoading, errorLogin, logIn } = useAuth();
     const { isOpenDialog, isLoadingSincroAsk, registrosTotales, registrosActuales, sincronizeAsk } = useSincronize();
+    const {getAppVersion} =useAppUtility();
 
     useEffect(() => {
       if (isLoggedIn) {
@@ -129,7 +131,7 @@ export default function Login(){
                 }  
                 focused={presionar}              
                 error={password.length<8 && presionar==true?true:false}
-                helperText={password.length < 8 && presionar==true?"Clave debe tener 6 dígitos":""}
+                helperText={password.length < 8 && presionar==true?"Clave debe tener 8 dígitos":""}
                 fullWidth               
                 label="Clave"                
                 type={showPassword ? 'number' : 'password'}
@@ -170,6 +172,8 @@ export default function Login(){
                     INGRESAR
                   </LoadingButton>
               }
+
+              <div style={{fontSize:'small',textAlign:'center'}}>Version {getAppVersion()}</div>
             </Box>
           </Box>
           <DialogSincronize isOpen={isOpenDialog} isLoadingServer={isLoadingSincroAsk} progress={(registrosActuales / registrosTotales) * 100 }/>

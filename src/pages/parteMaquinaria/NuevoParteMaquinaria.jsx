@@ -39,7 +39,8 @@ export const NuevoParteMaquinaria = () => {
   
   const formaPago = [
     {ID: 'HR', DESCRIPCION: 'POR HORA'},
-    {ID: 'HA', DESCRIPCION: 'POR HECTAREA'}
+    {ID: 'HA', DESCRIPCION: 'POR HECTAREA'},
+    //{ID: 'DI', DESCRIPCION: 'POR DIA'}
   ];
 
   const { registrarParte } = useParteMaquinaria();
@@ -577,10 +578,20 @@ const editarCombustible=()=>{
 
 }
 
+//GUARDA EL PARTE DE MAQUINARIA INTERNAMENTE
  const guardarBorrador =()=>{
 
   if(idMquina==""){
     setMensajeDialog("Seleccione una maquina para continuar")
+    setOpenDilog(true)
+    setOpenGuardar(false)
+    return
+  } 
+
+  if(idProveedor=="" && tipoParte=='PMA'){
+    console.log(idProveedor)
+    console.log(tipoParte)
+    setMensajeDialog("Ingrese un proveedor para continuar")
     setOpenDilog(true)
     setOpenGuardar(false)
     return
@@ -621,15 +632,6 @@ const editarCombustible=()=>{
     return
   } 
 
-  if(idProveedor=="" && tipoParte=='PMA'){
-    console.log(idProveedor)
-    console.log(tipoParte)
-    setMensajeDialog("Ingrese un proveedor para continuar")
-    setOpenDilog(true)
-    setOpenGuardar(false)
-    return
-  } 
-
   if(horometroInicio=="" ){
     setMensajeDialog("Ingrese horometro inicio para continuar")
     setOpenDilog(true)
@@ -643,6 +645,13 @@ const editarCombustible=()=>{
     setOpenGuardar(false)
     return
   } 
+
+  if(detalle.length==0){
+    setMensajeDialog("Ingrese almenos un item en el detalle para guardar")
+    setOpenDilog(true)
+    setOpenGuardar(false)
+    return
+   }
 
   var cabecera= new Object({
     IDDOCUMENTO: tipoParte,
@@ -659,6 +668,8 @@ const editarCombustible=()=>{
     IDOPERARIO: idOperario,
     HORAINICIO:HoraInicio,
     HORAFINAL:HoraFin,
+    IDACTIVIDAD:idActividad,
+    IDLABOR:idLabor,
     HOROMETROINICIAL:horometroInicio,
     HOROMETROFINAL:horometroFin,
     HORAS_TRAB:horas_trabCabecera,
@@ -699,13 +710,17 @@ const editarCombustible=()=>{
           //-----------------------------------------------------------------------------
 
           var dif_horo=(difHorometro*area_percent)/100
+          console.log(dif_horo)
           fin_horometro=parseFloat(rango_horometro[i])+dif_horo
-          rango_horometro.push(fin_horometro)
+          
+          
+          rango_horometro.push(fin_horometro.toFixed(2))
           detalle[i].HOROMETROINICIAL=parseFloat(rango_horometro[i]).toFixed(2)
-          detalle[i].HOROMETROFINAL=parseFloat(parseFloat(rango_horometro[i])+dif_horo).toFixed(2)
+          detalle[i].HOROMETROFINAL=parseFloat(rango_horometro[i+1]).toFixed(2)//+dif_horo.toFixed(2)
           detalle[i].HOROMETRO_DIFERENCIA=dif_horo.toFixed(2)
         })
   
+
       detalle.map((item,i)=>{
         var minInicio=(detalle[i].HORAINICIO).slice(-3)
         var horaInicio=(detalle[i].HORAINICIO).slice(0,-3) 
@@ -749,9 +764,8 @@ const editarCombustible=()=>{
     }
   
   setBloquearGuardar(true)
-  console.log(cabecera)
-  console.log(combustible)
-   //return
+
+   
 
   registrarParte(
     { cabecera,
@@ -891,7 +905,7 @@ const editarCombustible=()=>{
   return (  
     <div>
         <div>
-        <Appbar nombre={"Nuevo Parte de Maquinaria"} mostrarSalir={'none'} mostrarEnviar={"none"} deshabilitar={detalle.length>0?disabledGuardar:true } guardar={abrirDialogGuardar}></Appbar> 
+        <Appbar nombre={"Nuevo Parte de Maquinaria"} mostrarSalir={'none'} mostrarEnviar={"none"} guardar={abrirDialogGuardar}></Appbar> 
         <Dialogs open={openGuardar} cerrar={cerrarDialogGuardar} aceptar={guardarBorrador} mensaje={"¿Está seguro de guardar los datos?"} esconder={'none'} disabled={false}></Dialogs>
         <Dialogs open={openDialog} cerrar={cerrarDialog} aceptar={cerrarDialog} mensaje={mensajeDialog} esconder={'none'}></Dialogs>      
         <Dialogs open={openBorrar} cerrar={cerrarDialogBorrar} aceptar={borrarItem} mensaje={"¿Está seguro de borrar item?"} esconder={'none'}></Dialogs>    
@@ -908,7 +922,7 @@ const editarCombustible=()=>{
           cambiarTurno={cambiarTurno}
           maquinarias={maquinarias}
           cambiarMaquina={cambiarMaquina}
-          proveedor={proveedores}
+          proveedores={proveedores}
           cambiarProveedor={cambiarProveedor}
           actividades={actividades}
           cambiarActividad={cambiarActividad}

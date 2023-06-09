@@ -17,13 +17,11 @@ import { Dialogs } from '../../components/dialog/Dialog';
 export const HomeMaquinariaPropia = () => {
     
   var usuario=JSON.parse(localStorage.getItem("usuario"))
-  //const empresa=localStorage.getItem("empresa").toString();
   var idUsuario=usuario.usuario
   const navigate= useNavigate();
   const { maquinarias, getMaquinarias } = useMaquinaria();
-  const { parteMaquinaria, getParteMaquinariaAll,deleteParteMaq } = useParteMaquinaria();
-  const { user, empresa, logOut } =  useAuth();
-  
+  const { parteMaquinaria, getParteMaquinariaAll,deleteParteMaq,getAllPartes } = useParteMaquinaria();
+  const { user, empresa, logOut } =  useAuth();  
   const [openBorrar,setOpenBorrar]=useState(false);
   const [idMquina,setIdMaquina]=useState("")
   const [idparte,setIdParte]=useState("")
@@ -44,23 +42,18 @@ export const HomeMaquinariaPropia = () => {
   }
 
 function listarParteMaquinaria(){    
-  getParteMaquinariaAll(fechaBusqueda,idMquina)
-
-    
+  getParteMaquinariaAll(fechaBusqueda,idMquina) 
 };
 
-function elimnarParte(){ 
-  console.log(idparte)  
+function elimnarParte(){   
   deleteParteMaq(idparte)
-  listarParteMaquinaria()
+  getAllPartes()
   setOpenBorrar(false)
     
 };
 
-
 const asignarFechaBusqueda = (newValue) => {
   setFechaBusqueda(dateFormat(newValue,'yyyy-mm-dd')) 
-  
 }; 
 
 
@@ -75,10 +68,9 @@ const abrirDialogBorrar = (id) => {
   
 }
 
-
   useEffect( () => {
     getMaquinarias()       
-    listarParteMaquinaria();
+    getAllPartes();
     
   },[]);  
   
@@ -87,11 +79,11 @@ const abrirDialogBorrar = (id) => {
       <Box>     
       
       <Appbar nombre={'Inicio'} salir={salir} mostrarEnviar={"none"} mostrarGuardar={"none"}></Appbar>
-      <Dialogs open={openBorrar} cerrar={cerrarDialogBorrar} aceptar={elimnarParte} mensaje={"¿Está seguro de borrar parte de maquinaria?"}></Dialogs>
+      <Dialogs open={openBorrar} cerrar={cerrarDialogBorrar} aceptar={elimnarParte} mensaje={"¿Está seguro de borrar parte de maquinaria?"} esconder={'none'}></Dialogs>
       
-      <h3>Buscar Parte de Maquinaria</h3>
+      <h3>Listado de Partes de Maquinaria</h3>
 
-      <Card>
+      {/* <Card>
         <CardContent>
         <Grid container spacing={1} >
           <Grid item xs={4}>
@@ -106,10 +98,9 @@ const abrirDialogBorrar = (id) => {
           </Grid> 
         </Grid> 
         </CardContent>
-      </Card>
-      
+      </Card> */}
        
-            
+      {parteMaquinaria.length==0?"No hay partes registrados pendientes de envío":
       <List
             sx={{
               width: '100%',
@@ -121,12 +112,11 @@ const abrirDialogBorrar = (id) => {
             subheader={<li />}
       >
       
-      <ListaParteMaq datos={parteMaquinaria} delete={elimnarParte} openBorrar={openBorrar} abrirDialogBorrar={abrirDialogBorrar} cerrarDialogBorrar={cerrarDialogBorrar}/>
+      <ListaParteMaq datos={parteMaquinaria} delete={elimnarParte} openBorrar={openBorrar} abrirDialogBorrar={abrirDialogBorrar} cerrarDialogBorrar={cerrarDialogBorrar} />
       
-      </List>
+      </List>}
       
-
-      <Fab sx={{position: 'absolute', bottom: 20, right:20}} aria-label={'Add'} color = 'warning' size='large' onClick={()=>navigate('/nuevoParte')}>
+      <Fab sx={{position: 'absolute', bottom: 20, right:20}} aria-label={'Add'} color = 'warning' size='large' onClick={()=>navigate("/editarParte/0")}>
             <AddIcon />
       </Fab>
       <Loading open={false} label={"Buscando datos"}></Loading>    

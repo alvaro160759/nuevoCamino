@@ -4,6 +4,7 @@ import { get as getTurnoServices } from "../services/offline/turnos";
 
 export default function useTurnoTrabajo() {
     const [ turnostrabajo, setTurnostrabajo ] = useState([]);
+    const [turno, setTurno] = useState({ID:'01',DESCRIPCION:"DIURNO"});
 
     const getTurnosTrabajo = () => {
         getTurnoServices()
@@ -17,6 +18,8 @@ export default function useTurnoTrabajo() {
 
     return {
         turnostrabajo,
+        turno,
+        setTurno,
         getTurnosTrabajo
     }
 }

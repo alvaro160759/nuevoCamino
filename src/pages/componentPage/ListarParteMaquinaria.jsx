@@ -1,17 +1,20 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import {ListItem,ListItemText,ListItemAvatar,Typography, Divider, Box, IconButton} from '@mui/material';
-import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
+import {ListItem,ListItemText,ListItemAvatar,Typography, Divider, Box, IconButton, Tooltip, Chip} from '@mui/material';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import SendToMobileIcon from '@mui/icons-material/SendToMobile';
-import { Dialogs } from '../../components/dialog/Dialog';
+import DriveFileRenameOutlineRoundedIcon from '@mui/icons-material/DriveFileRenameOutlineRounded';
+import BackupIcon from '@mui/icons-material/Backup';
 
 
 export const ListaParteMaq = (props) => {
 
 const navigate = useNavigate();
 
-function itemSeleccionado(cod,cabecera){
+function enviarParte(cod,cabecera){
+  navigate("/enviarParte/"+cod,{state:{cabecera,deshabilitar:false}});   
+}
+
+function editarParte(cod,cabecera){
   navigate("/editarParte/"+cod,{state:{cabecera,deshabilitar:false}});   
 }
 
@@ -20,75 +23,56 @@ function itemSeleccionado(cod,cabecera){
   return (
      
     props.datos!=null? props.datos.map((item,i) => (
+      
+      
           <Box key={i}>
-            <ListItem key={`item-${i}`} 
-            
-            secondaryAction={
-              <IconButton edge="end" aria-label="delete" onClick={()=>props.abrirDialogBorrar(item.cod)} >
-                  <DeleteForeverIcon color='primary' sx={{color:'red'}}/>
-                </IconButton>
+            <ListItem key={`item-${i}`}             
+              secondaryAction={
+                <>
+                <Tooltip title="Editar">
+                  <IconButton edge="end" aria-label="delete" onClick={() => {editarParte(item.cod, item )}}>
+                      <DriveFileRenameOutlineRoundedIcon color='primary' sx={{color:'#ed6c02',marginRight:1,height:30,width:30}}/>
+                  </IconButton>
+                </Tooltip>
 
-            
-            }
-            
+                <Tooltip title="Eliminar">
+                  <IconButton edge="end" aria-label="delete" onClick={()=>props.abrirDialogBorrar(item.cod)} >
+                      <DeleteForeverIcon color='primary' sx={{color:'red',marginRight:0,height:30,width:30}}/>
+                  </IconButton>
+                </Tooltip>
+                </>
+              }            
             >
-
-                  
-                                                            
-                <ListItemAvatar key={`avatar-${i}`} onClick={() => {itemSeleccionado(item.cod, item ),
-                                                          console.log(item)}}>
-                  <SendToMobileIcon color='warning'/>               
-                </ListItemAvatar>
+                <Tooltip title="Enviar">                                           
+                  <ListItemAvatar key={`avatar-${i}`} onClick={() => {enviarParte(item.cod, item )}} >
+                    <BackupIcon color='success' sx={{height:45,width:45}}/>               
+                  </ListItemAvatar>
+                </Tooltip>
                 <ListItemText  
                     key={`txt-${i}`}
+                    
                     primary={
-                      <Typography
-                              variant="h1"
-                              color="green"
-                              fontSize={14}
-                              
-                            >
-                              {item.IDDOCUMENTO=='PMA'?"PARTE DE MAQUINARIA ALQUILADA": "PARTE DE MAQUINARIA PROPIA"}
-                            </Typography> 
+                      <>
+                      {/* <Chip label={'Estado:Pendiente'} size='small' color='warning'/> */}
+                      <br />
+                      <Typography variant="h1" color="green"fontSize={15} fontWeight={'bold'}>
+                         {item.IDDOCUMENTO +" - FECHA: "+item?.FECHA}
+                      </Typography> 
+                      </>
+                      
                     } 
                     secondary={
-                          <React.Fragment>
-                            <Typography
-                              component="span"
-                              variant="body2"
-                              fontWeight={'bold'}
-                              fontSize={12}
-                            >
-                              {item.MAQUINA}
-                              
+                          <>
+                            <Typography component="span" variant="body2" fontWeight={'bold'} fontSize={12}>                            
+                              {item?.MAQUINA.DESCRIPCION}
                             </Typography> 
                             <br />
-                            <Typography
-                              component="span"
-                              variant="body2"
-                              fontWeight={'bold'}
-                              fontSize={12}
-                            >
-                              OPERARIO: {item.OPERARIO} || FECHA: {" "+item.FECHA} 
-                            </Typography> 
-                            <br />
-                            <Typography
-                              component="span"
-                              variant="body2"
-                              fontWeight={'bold'}
-                            >
-                                                       
-                            </Typography> 
-                                        
-                          </React.Fragment>                  
-                        }
-                        
-                        >
-                    
-                </ListItemText>
-                
-                
-                    
+                            <Typography component="span" variant="body2" fontWeight={'bold'} fontSize={12}>
+                              OPERARIO: {item?.OPERARIO.DESCRIPCION} 
+                            </Typography>                                       
+                          </>                  
+                        }                        
+                />
             </ListItem>   
             <Divider color="green"></Divider>        
             </Box>       

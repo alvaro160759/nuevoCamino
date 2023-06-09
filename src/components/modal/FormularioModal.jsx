@@ -55,7 +55,9 @@ export const  FormularioModal=(props)=> {
   const { jirones, getJirones } = useJirones();
   const { cuarteles, getCuarteles } = useCuartel();
 
+  
   useEffect( () => {
+    
     getConsumidores()
     getJirones();
     getCuarteles()
@@ -65,34 +67,34 @@ export const  FormularioModal=(props)=> {
   return (
     <Box>      
       <BootstrapDialog open={props.open} aria-labelledby="customized-dialog-title">
-        <BootstrapDialogTitle onClose={props.handleCloseModal}>Nuevo Item</BootstrapDialogTitle>
+        <BootstrapDialogTitle onClose={props.handleCloseModal}>{props.editar==false?"Nuevo Item":"Editar Item"}</BootstrapDialogTitle>
         
         <DialogContent dividers>
         <Grid container spacing={2} >  
           <Grid item xs={12}>
-          <Autocompletar label='Consumidor'options={consumidores} cambiar={(event,newValue)=>props.cambiarConsumidor(newValue)}></Autocompletar> 
+          <Autocompletar label='Consumidor'options={consumidores} cambiar={(event,newValue)=>props.cambiarConsumidor(newValue)} value={props.consumidor}></Autocompletar> 
           </Grid>  
           
           <Grid item xs={6}>
-            <Autocompletar label='Lote' options ={jirones} cambiar={(event,newValue)=>props.cambiarJiron(newValue)}></Autocompletar> 
+            <Autocompletar label='Lote' options ={jirones} cambiar={(event,newValue)=>props.cambiarJiron(newValue)} value={props.jiron}></Autocompletar> 
           </Grid>
 
           <Grid item xs={6}>
-            <Autocompletar label='Válvula' options={cuarteles} cambiar={(event,newValue)=>props.cambiarCuartel(newValue)}></Autocompletar> 
+            <Autocompletar label='Válvula' options={cuarteles} cambiar={(event,newValue)=>props.cambiarCuartel(newValue)} value={props.cuartel}></Autocompletar> 
           </Grid>
 
           <Grid item xs={6}>
-            <TextField label={'Area'} sx={{width:'100%'}} type={'number'} onChange={(event)=>props.cambiarAreaTrabajada(event)} size='small' InputLabelProps={{shrink: true}}></TextField> 
+            <TextField label={'Area'} sx={{width:'100%'}} type={'number'} onChange={(event)=>props.cambiarAreaTrabajada(event)} size='small' InputLabelProps={{shrink: true}} value={props.areaItem}></TextField> 
           </Grid>                  
         </Grid>
         </DialogContent>
 
         <DialogActions>
-          <Button autoFocus onClick={props.handleCloseModal} variant={'contained'} color={'error'}>
-            Cancelar
+          <Button autoFocus onClick={()=>props.editar!=false?props.dialogBorrar():props.handleCloseModal()} variant={'contained'} color={'error'}>
+          {props.editar!=false?"Borrar":"Cerrar"}
           </Button>
           <Button onClick={()=>props.guardar()} variant={'contained'} color={'success'} >
-            Agregar
+            {props.editar!=false?"Editar":"Agregar"}
           </Button>
         </DialogActions>
       </BootstrapDialog>

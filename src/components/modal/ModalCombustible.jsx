@@ -51,9 +51,7 @@ export const  ModalCombustible=(props)=> {
   const { combustibles, getCombustibles } = useCombustibles();
 
   useEffect( () => { 
-    getCombustibles()
-    console.log(combustibles)
-    
+    getCombustibles()    
   },[]);
 
   return (

@@ -7,7 +7,7 @@ export const Autocompletar =(props)=> {
           <Autocomplete
           sx={{display:props.esconder}}
           id="txtAutocomplete"         
-          getOptionLabel={option=>option.DESCRIPCION ? option.DESCRIPCION : ''}
+          getOptionLabel={option=>option.DESCRIPCION ? option.ID.trim()+ '-' +option.DESCRIPCION : ''}
           options={props.options}
           value={props.value}
           disabled={props.disabled}
@@ -15,7 +15,7 @@ export const Autocompletar =(props)=> {
           <TextField  {...params} label={props.label} error={props.error === ""}
           size='small'
           helperText={props.error === "" ? "Seleccione campo":'' } />}
-          isOptionEqualToValue={(option, val) => option.DESCRIPCION === val.DESCRIPCION}
+          isOptionEqualToValue={(option, val) => {option.ID == val.ID}}
           onChange={(event, newValue) => props.cambiar(event,newValue)  }
           noOptionsText={"Sin resultado"}
           renderOption={(props,item)=>(

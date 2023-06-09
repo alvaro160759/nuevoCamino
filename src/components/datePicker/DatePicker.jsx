@@ -13,6 +13,7 @@ const InputFecha = (props) => {
             label={props.label}
             mask="__/__/____"            
             value={props.fecha}
+            
             sx={{fontSize:10}}          
             onChange={newValue => {props.asignarFecha(newValue)}}
             renderInput={(params) => <TextField size='small' {...params} />}

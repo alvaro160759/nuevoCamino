@@ -1,57 +1,50 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import {ListItem,ListItemText,ListItemAvatar,Typography, Divider, Box, IconButton} from '@mui/material';
-import FormatListNumberedIcon from '@mui/icons-material/FormatListNumbered';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import {ListItem,ListItemText,ListItemAvatar,Typography, Divider, Box, IconButton, Chip} from '@mui/material';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import SendToMobileIcon from '@mui/icons-material/SendToMobile';
-import { Dialogs } from '../../components/dialog/Dialog';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 
 export const ListaEnviados = (props) => {
 
+  
 const navigate = useNavigate();
-
-var disabled=true;
-
 function itemSeleccionado(cod,cabecera){
-  navigate("/editarParte/"+cod,{state:{cabecera,deshabilitar:disabled}});   
+  navigate("/enviarParte/"+cod,{state:{cabecera,deshabilitar:true}});   
 }
-
-
-
   return (
      
     props.datos!=null? props.datos.map((item,i) => (
           <Box key={i}>
-            <ListItem key={`item-${i}`} 
-            
-            // secondaryAction={
-            //   <IconButton edge="end" aria-label="delete" onClick={()=>props.abrirDialogBorrar(item.cod)} >
-            //       <DeleteForeverIcon color='primary' sx={{color:'red'}}/>
-            //     </IconButton>
-
-            
-            // }
-            
-            >
-
-                  
-                                                            
-                <ListItemAvatar key={`avatar-${i}`} onClick={() => {itemSeleccionado(item.cod, item ),
-                                                          console.log(item)}}>
-                  <SendToMobileIcon color='warning'/>               
+            <ListItem key={`item-${i}`}             
+              secondaryAction={
+                item.ESTADO=='E'?
+                  <IconButton edge="end" aria-label="delete" onClick={()=>props.abrirDialogBorrar(item.IDPARTEMAQ,item)} >
+                    <HighlightOffIcon color='primary' sx={{color:'red',height:50,width:50}}/>
+                  </IconButton>:""
+              }
+            >                     
+                <ListItemAvatar key={`avatar-${i}`} onClick={() => itemSeleccionado(item.cod, item )}>
+                  <TaskAltIcon color='warning' sx={{height:45,width:45}}/>               
                 </ListItemAvatar>
                 <ListItemText  
                     key={`txt-${i}`}
                     primary={
-                      <Typography
+                            <>
+                            <Chip label={item.ESTADO=='A'?"Estado: Anulado":"Estado: Enviado"} size='medium' color={item.ESTADO==='A'?'error':'success'}/>
+                            <p />
+                            <Typography
                               variant="h1"
                               color="green"
-                              fontSize={14}
+                              fontSize={16}
+                              fontWeight={'bold'}
                               
                             >
-                              {item.IDDOCUMENTO=='PMA'?"PARTE DE MAQUINARIA ALQUILADA": "PARTE DE MAQUINARIA PROPIA"}
+                              {"PARTE DE MAQUINARIA:"+item.IDDOCUMENTO+'-0002-'+item.NUMERO}
                             </Typography> 
+                            </>
+                            
                     } 
                     secondary={
                           <React.Fragment>
@@ -59,9 +52,9 @@ function itemSeleccionado(cod,cabecera){
                               component="span"
                               variant="body2"
                               fontWeight={'bold'}
-                              fontSize={12}
+                              fontSize={14}
                             >
-                              {item.MAQUINA}
+                              {item.MAQUINA.DESCRIPCION}
                               
                             </Typography> 
                             <br />
@@ -71,7 +64,7 @@ function itemSeleccionado(cod,cabecera){
                               fontWeight={'bold'}
                               fontSize={12}
                             >
-                              OPERARIO: {item.OPERARIO} || FECHA: {" "+item.FECHA} 
+                              OPERARIO: {item.OPERARIO.DESCRIPCION} || FECHA: {" "+item.FECHA} 
                             </Typography> 
                             <br />
                             <Typography

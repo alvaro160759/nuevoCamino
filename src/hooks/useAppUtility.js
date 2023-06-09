@@ -3,6 +3,14 @@ const nameApp = import.meta.env.VITE_APP_NAME;
 export default function useAppUtility() {
     const isMovil = Boolean(window.cordova);
 
+    const getAppVersion = ()=>{
+        if (!isMovil){
+            return '-';
+        }
+
+        return window.AppVersion.version;
+    }
+
     const alertar = ({txtMessage, callback}) => {
         const callbackExists = typeof callback === 'function';
         if(isMovil){
@@ -235,6 +243,7 @@ export default function useAppUtility() {
         isActivatedGPS,
         barcodeScan,
         checkConexion,
-        checkUpdate
+        checkUpdate,
+        getAppVersion
     }
 }

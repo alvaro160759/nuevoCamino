@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { Dexie } from 'dexie';
-import { get as getActividadServices } from "../services/offline/actividad";
+import { get as getActividadServices ,
+         getById as getActividadByIdServices} from "../services/offline/actividad";
+import useLabores from "./useLabores";
 
 export default function useActividad() {
     const [ actividades, setActividades ] = useState([]);
+    const [ actividad, setActividad ] = useState([]);
+    const { getLabores} = useLabores();
     const getActividades= () => {
         getActividadServices()
             .then((response)=>{
@@ -14,8 +18,23 @@ export default function useActividad() {
             });
     };
 
+    const getActividadById= (id) => {
+        getActividadByIdServices(id)
+            .then((response)=>{
+                setActividad(response);
+            })
+            .catch( (e)=>{
+                console.error(e);
+            });
+    };
+
+    
+
     return {
         actividades,
-        getActividades
+        actividad,
+        getActividades,
+        getActividadById,
+        setActividad
     }
 }

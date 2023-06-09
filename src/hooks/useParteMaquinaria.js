@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Dexie } from 'dexie';
 import { registerMaquinaria as ParteMaquinariaService,
+        updateById as updateParteMaquinariaService,
+        anularParteMaq as anularParteMaquinariaService,
         getParteMaquinariaAll as getParteMaquinariaAllService,
+        getAllPM as getAllPMService,
         getDetalle as getDetalleService,
         deleteById as DeleteService,
         updateParteMaq as updateService,
@@ -19,11 +22,34 @@ export default function useParteMaquinaria( ) {
     const [ combustible, setCombustible ] = useState([]); 
 
     const registrarParte = ({cabecera,detalle,user,combustible,onSuccess}) =>{
-        
-        
         ParteMaquinariaService(cabecera,detalle,user,combustible)
         .then((response)=>{
             onSuccess(response)
+            //navigate(-1)
+        })
+        .catch( (e)=>{
+            console.error(e);
+        });
+    };
+
+    const updateParte = ({id,cabecera,detalle,onSuccess}) =>{
+        
+        
+        updateParteMaquinariaService(id,cabecera,detalle)
+        .then((response)=>{
+            onSuccess(response)
+            //navigate(-1)
+        })
+        .catch( (e)=>{
+            console.error(e);
+        });
+    };
+
+    const anularParteMaquinaria = ({idparte}) =>{
+
+        anularParteMaquinariaService(idparte)
+        .then((response)=>{
+            //onSuccess(response)
             //navigate(-1)
         })
         .catch( (e)=>{
@@ -42,11 +68,21 @@ export default function useParteMaquinaria( ) {
             });
     };
 
+    const getAllPartes = () => {
+        getAllPMService()
+            .then((response)=>{
+                //console.log(response)
+                setPartesMaq(response);
+            })
+            .catch((e)=>{
+                console.error(e);
+            });
+    };
+
     const getDetalleMaq = (idpartemaq) => {
         
         getDetalleService(idpartemaq)
             .then((response)=>{
-                //console.log(response)
                 setDetalle(response);
             })
             .catch((e)=>{
@@ -78,9 +114,9 @@ export default function useParteMaquinaria( ) {
             });
     };
 
-    const updateParteMaq = (idpartemaq) => {
+    const updateParteMaq = (id,data) => {
         
-        updateService(idpartemaq)
+        updateService(id,data)
             .then((response)=>{
                 console.log(response)
             })
@@ -92,7 +128,6 @@ export default function useParteMaquinaria( ) {
     const getParteMaquinariaEnviados = (fecha,idmaquina) => {
         getPartesEnviadosService(fecha,idmaquina)
             .then((response)=>{
-                console.log(response)
                 setPartesMaq(response);
             })
             .catch((e)=>{
@@ -106,12 +141,16 @@ export default function useParteMaquinaria( ) {
         parteMaquinaria,
         detalle,
         combustible,
+        setDetalle,
         getCombustible,
+        updateParte,
         updateParteMaq,
         deleteParteMaq,
+        anularParteMaquinaria,
         getDetalleMaq,
         registrarParte,
         getParteMaquinariaAll,
+        getAllPartes,
         getParteMaquinariaEnviados
     }
 }

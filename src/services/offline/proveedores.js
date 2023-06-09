@@ -6,3 +6,8 @@ export const get = async () => {
                             
     return data;
 };
+
+export const getById = async (id) => {    
+    const data = await db.Proveedores.get({ID:id});   
+    return data;
+};

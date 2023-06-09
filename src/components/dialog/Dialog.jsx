@@ -17,16 +17,18 @@ export const Dialogs = (props) => {
             <DialogTitle id="alert-dialog-title">
                 {props.mensaje} 
                 <p></p>
-            <TextField
+                
+                {props.flag==true &&
+                <>
+                <TextField
                     id="txtturno" 
                     select
-                    label="Implemento de terceros"
+                    label="¿Maquina utilizó Implemento de terceros?"
                     size='small'
                     value={props.implemento}
                     sx={{width:'100%',display:props.esconder}}
                     onChange={(event,newvalue)=>props.cambiarImplemento(event,newvalue)}
-                    //name={props.turno}
-                    >
+                >
                     <MenuItem key="1" value="1" >
                         <Typography fontSize={12}>Si</Typography>
                     </MenuItem>
@@ -36,12 +38,15 @@ export const Dialogs = (props) => {
                     </MenuItem>
                     </TextField> 
                     <p></p>
-                    <Autocompletar
+                <Autocompletar
                  esconder={props.esconder} 
-                 label={'Responsable'} 
+                 label={'Seleccione Responsable'} 
                  options={props.responsbles} 
                  cambiar={(event,newValue)=>props.cambiarResponsable(newValue)} 
-                 ></Autocompletar> 
+                 ></Autocompletar>
+                 
+                 </>
+                  }
             </DialogTitle>
             <DialogActions>
                 <Button 

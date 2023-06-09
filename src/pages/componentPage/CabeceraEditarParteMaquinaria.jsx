@@ -5,20 +5,22 @@ import { Box, Chip,  Grid, Typography } from '@mui/material';
 
 export const CabeceraEditarParteMaquinaria = ({cabecera}) => {
   
-  //console.log(cabecera)
   return (
     <Box>
-    <Grid container spacing={0.5} sx={{marginTop:1}}  >
+    <Grid container spacing={1} sx={{marginTop:1}}  >
       
+        <Grid item xs={12}>
+          {cabecera.ESTADO!='P'  &&<Chip fontSize={18} fontWeight='bold'   label={cabecera.ESTADO=='A'?'PMA-0002-'+cabecera.NUMERO+' - ANULADO':'PMA-0002:'+cabecera.NUMERO+' - ENVIADO'} color={cabecera.ESTADO=='A'?'error':'success'}/>}
+        </Grid>
         <Grid item xs={4.7}>          
-          <Typography fontSize={12} textAlign={'left'}  fontWeight='bold' component={'h5'}  > 
-            Area: <Chip sx={{marginLeft:3.7}}label={cabecera.AREA} variant="outlined" size='small' color='success' /> 
+          <Typography fontSize={12} textAlign={'left'}  fontWeight='bold' component={'h5'}  >  
+            Area: <Chip sx={{marginLeft:3.7}}label={cabecera.AREA.DESCRIPCION} variant="outlined" size='small' color='success' /> 
           </Typography>
         </Grid>
           
         <Grid item xs={3.8} >
           <Typography fontSize={12} textAlign={'left'} fontWeight='bold' component={'h5'}  marginRight={5}>
-            Turno: <Chip label={cabecera.TURNO} variant="outlined" size='small' color='success'/>
+            Turno: <Chip label={cabecera.TURNO.DESCRIPCION} variant="outlined" size='small' color='success'/>
           </Typography>
         </Grid>
 
@@ -30,27 +32,27 @@ export const CabeceraEditarParteMaquinaria = ({cabecera}) => {
 
         <Grid item xs={12} >
           <Typography fontSize={12} textAlign={'left'} fontWeight='bold' component={'h5'} >
-            Maquina: <Chip sx={{marginLeft:1}}label={cabecera.MAQUINA} variant="outlined" size='small' color='success'/>
+            Maquina: <Chip sx={{marginLeft:1}}label={cabecera.MAQUINA.DESCRIPCION} variant="outlined" size='small' color='success'/>
           </Typography>       
         </Grid>  
 
-        <Grid item xs={12} >
+        {/* <Grid item xs={12} >
           { cabecera.DESCIMPLEMENTO &&
           <Typography fontSize={12} textAlign={'left'} fontWeight='bold' component={'h5'} >
             Implemen: <Chip label={cabecera.DESCIMPLEMENTO} variant="outlined" size='small' color='success'/>
           </Typography> }
-        </Grid> 
+        </Grid>  */}
           
         { cabecera.IDDOCUMENTO=='PMA' &&
         <Grid item xs={12} >
           <Typography fontSize={12} textAlign={'left'} fontWeight='bold' component={'h5'} >
-            Proveedor: <Chip label={cabecera.PROVEEDOR} variant="outlined" size='small' color='success'/>
+            Proveedor: <Chip label={cabecera.PROVEEDOR.DESCRIPCION} variant="outlined" size='small' color='success'/>
           </Typography> 
         </Grid>}
         
         <Grid item xs={8}>  
           <Typography fontSize={12} textAlign={'left'} fontWeight='bold' component={'h5'} >
-            Operario: <Chip sx={{marginLeft:1}}label={cabecera.OPERARIO} variant="outlined" size='small' color='success'/>
+            Operario: <Chip sx={{marginLeft:1}}label={cabecera.OPERARIO.DESCRIPCION} variant="outlined" size='small' color='success'/>
           </Typography> 
         </Grid>
 

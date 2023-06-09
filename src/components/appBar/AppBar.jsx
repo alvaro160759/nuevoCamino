@@ -30,7 +30,7 @@ export const Appbar=(props)=> {
           }    
           setState(open);
         };
-        
+      
       return (
         <React.Fragment>
           <CssBaseline />
@@ -50,9 +50,9 @@ export const Appbar=(props)=> {
               {props.nombre} 
               </Typography>
                 <Button color="inherit" endIcon={<ExitToAppIcon />} onClick={props.salir} sx={{display:props.mostrarSalir}}>Salir</Button>
-                <Button variant='contained' color='warning' startIcon={<SendIcon/>} onClick={props.enviar} sx={{display:props.mostrarEnviar, borderRadius:4}}>Enviar</Button>
+                <Button variant='contained' color='warning' startIcon={<SendIcon/>} onClick={props.enviar} sx={{display:props.mostrarEnviar, borderRadius:4}} disabled={props.deshabilitar}>Enviar</Button>
                 <Button sx={{display:props.mostrarGuardar, borderRadius:4}} variant='contained' color={'warning'} 
-                  onClick={props.guardar} disabled={props.deshabilitar}
+                  onClick={props.guardar} 
                   startIcon={<SaveIcon />}>Guardar</Button>
               </Toolbar>
             </AppBar>

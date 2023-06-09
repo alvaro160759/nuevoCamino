@@ -4,6 +4,7 @@ import { get as getAreasService } from "../services/offline/areas";
 
 export default function useAreas() {
     const [ areas, setAreas ] = useState([]);
+    const [ area, setArea ] = useState({ID:"005",DESCRIPCION:"AREA DE CAMPO"});
     const getAreas = ( ) => {
         getAreasService()
             .then((response)=>{
@@ -16,6 +17,8 @@ export default function useAreas() {
 
     return {
         areas,
+        area,
+        setArea,
         getAreas
     }
 }
