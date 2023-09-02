@@ -1,6 +1,6 @@
-import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { useState } from 'react';
 import { IconButton, InputAdornment, TextField } from '@mui/material';
-import React, { useState } from 'react';
+import { MdVisibility as Visibility, MdVisibilityOff as VisibilityOff } from 'react-icons/md';
 
 export const PasswordField = (props)=>  {
   const [showPassword, setShowPassword] = useState(false);
@@ -15,15 +15,16 @@ export const PasswordField = (props)=>  {
 
   return (
     <TextField
-      color='success'
-      sx={{ width: 250}}       
-      margin="normal"      
+      color='success'     
+      margin="normal"
+      fullWidth
       variant="outlined"
       id={'txtPassword'}
       label={'Contraseña'}
       type={showPassword ? 'text' : 'password'}
       inputProps={{ minLength: 6 }}
       required
+      size='medium'
       onChange={props.onChange}
       InputProps={{
         endAdornment: (
@@ -32,7 +33,7 @@ export const PasswordField = (props)=>  {
               {showPassword ? <VisibilityOff /> : <Visibility />}
             </IconButton>
           </InputAdornment>
-        ),
+        )
       }}
     />
   );

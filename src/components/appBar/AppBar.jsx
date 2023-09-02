@@ -1,63 +1,171 @@
 import * as React from 'react';
-import { IconButton,AppBar,Toolbar,Typography,CssBaseline,useScrollTrigger, Button } from '@mui/material';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import MenuItem from '@mui/material/MenuItem';
+import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Navbar } from '../navbar/Navbar';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import SendIcon from '@mui/icons-material/Send';
-import SaveIcon from '@mui/icons-material/Save';
+import LogoutIcon from '@mui/icons-material/Logout';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+import MoreIcon from '@mui/icons-material/MoreVert';
+import { useState } from 'react';
+import { AppBar, Button} from '@mui/material';
+import { Sidebar } from '../navbar/Sidebar';
 
-export const Appbar=(props)=> {
+export default function MenuAppBar() {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] =useState(null);
+  const [open, setOpen] = useState(false);
 
-      const [state, setState] = React.useState(false);
-      function ElevationScroll(props) {
-        const { children, window } = props;
-        const trigger = useScrollTrigger({
-          disableHysteresis: true,
-          threshold: 0,
-          target: window ? window() : undefined,
-        });
-      
-        return React.cloneElement(children, {
-          elevation: trigger ? 4 : 0,
-        });
-      }
+  const isMenuOpen = Boolean(anchorEl);
+  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  const toggleDrawer =(open) =>(event) => {
+    if (event.type === 'keydown' &&((event).key === 'Tab' ||(event).key === 'Shift')) {
+      return;
+    }    
+    setOpen(open);
+};
+
+  const handleProfileMenuOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMobileMenuClose = () => {
+    setMobileMoreAnchorEl(null);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    handleMobileMenuClose();
+  };
+
+  const handleMobileMenuOpen = (event) => {
+    setMobileMoreAnchorEl(event.currentTarget);
+  };
+
+  const menuId = 'primary-search-account-menu';
+  const renderMenu = (
+    <Menu
+      anchorEl={anchorEl}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      id={menuId}
+      keepMounted
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      open={isMenuOpen}
+      onClose={handleMenuClose}
+    >
+      <MenuItem onClick={handleMenuClose}>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+            <AccountCircle />
+        </IconButton>
+        Mi Perfil
+      </MenuItem>
+      <MenuItem onClick={handleMenuClose}>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <LogoutIcon />
+        </IconButton>
+        Salir
+      </MenuItem>
+    </Menu>
+  );
+
+  const mobileMenuId = 'primary-search-account-menu-mobile';
+  const renderMobileMenu = (
+    <Menu
+      anchorEl={mobileMoreAnchorEl}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      id={mobileMenuId}
+      keepMounted
+      transformOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}
+      open={isMobileMenuOpen}
+      onClose={handleMobileMenuClose}
+    >
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <LogoutIcon />
+        </IconButton>
+        <p>Salir</p>
+      </MenuItem>
+    </Menu>
+  );
+
+  return (
+    <Box >
       
-    
-      const toggleDrawer =(open) =>(event) => {
-          if (event.type === 'keydown' &&((event).key === 'Tab' ||(event).key === 'Shift')) {
-            return;
-          }    
-          setState(open);
-        };
-      
-      return (
-        <React.Fragment>
-          <CssBaseline />
-          <ElevationScroll {...props}>
-            <AppBar sx={{ flexGrow: 1, display:props.header, background : '#2e7d32'}}>
-              <Toolbar>
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-                onClick={toggleDrawer(true)}>
-                <MenuIcon/>           
-              </IconButton>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              {props.nombre} 
-              </Typography>
-                <Button color="inherit" endIcon={<ExitToAppIcon />} onClick={props.salir} sx={{display:props.mostrarSalir}}>Salir</Button>
-                <Button variant='contained' color='warning' startIcon={<SendIcon/>} onClick={props.enviar} sx={{display:props.mostrarEnviar, borderRadius:4}} disabled={props.deshabilitar}>Enviar</Button>
-                <Button sx={{display:props.mostrarGuardar, borderRadius:4}} variant='contained' color={'warning'} 
-                  onClick={props.guardar} 
-                  startIcon={<SaveIcon />}>Guardar</Button>
-              </Toolbar>
-            </AppBar>
-          </ElevationScroll>
-          <Navbar state={state} close={toggleDrawer(false)} ></Navbar>
-        </React.Fragment>
-      );
+      <AppBar  sx={{ background:'black' ,zIndex: (theme) => theme.zIndex.drawer + 1 }} open={open}  >
+        <Toolbar >
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2 }}
+            onClick={toggleDrawer(!open)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="subtitle1"
+            noWrap
+            component="div"
+            fontWeight="bold"
+            sx={{ display: { xs: 'none', sm: 'block' } }}
+          >
+            EMPRESA DE TRANSPORTES NUEVO CAMINO
+          </Typography>
+          
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <Button
+              size="large"
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+              startIcon={<AccountCircle sx={{width:40,height:40}} />}
+            >
+              <Typography fontSize={12} fontWeight="bold">Alvaro Humberto Torres Mimbela</Typography>
+            </Button>
+          </Box>
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="show more"
+              aria-controls={mobileMenuId}
+              aria-haspopup="true"
+              onClick={handleMobileMenuOpen}
+              color="inherit"
+            >
+              <MoreIcon />
+            </IconButton>
+          </Box>
+        </Toolbar>
+      </AppBar>
+      {renderMobileMenu}
+      {renderMenu}
+      <Sidebar isOpen={open} close={toggleDrawer(false)}></Sidebar>
+    </Box>
+  );
 }

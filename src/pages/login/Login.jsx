@@ -1,182 +1,67 @@
+import { Box, Button, Snackbar, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
+import { PasswordField } from "../../components/passwordField/PasswordField";
+import { Alert } from "../../components/Alert/Alert";
+import useLogin from "../../hooks/useLogin";
 import { useLocation, useNavigate } from "react-router-dom";
-import { EMPRESAS } from "../../data/empresas";
-import { Select, MenuItem, Container, Typography, Box, Avatar, TextField, Button,  Alert, InputAdornment, IconButton  } from "@mui/material";
-import LoginIcon from '@mui/icons-material/Login';
-import LogoCayalti from '/src/assets/img/LogoCayalti.jpg';
-import LogoYarabamba from '/src/assets/img/Yarabamba_Logo.jpeg';
+import Container from "../../components/Container/container";
 
-import DialogSincronize from "../../components/dialog/DialogSincronize";
+function Login() { 
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const [usuario,setUsuario]=useState('');
+  const [password,setPassword]=useState(''); 
+  const { logIn, errorLogin, isLoggedIn, handleCloseError } = useLogin();
 
-import LoadingButton from '@mui/lab/LoadingButton';
-import useAuth from "../../hooks/useAuth";
-import useSincronize from "../../hooks/useSincronize";
-import SyncIcon from '@mui/icons-material/Sync';
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-import useAppUtility from "../../hooks/useAppUtility";
+  useEffect(() => {
+    if (isLoggedIn) {
+       navigate(from,  {replace: true});
+    }
+  }, [isLoggedIn])
 
-
-const nameApp = import.meta.env.VITE_APP_NAME;
-
-export default function Login(){
-
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [showPassword, setShowPassword] = useState(false);
-    const [presionar, setPresionar] = useState(false);
-    const navigate = useNavigate();
-    const location = useLocation();
-    const from = location.state?.from?.pathname || "/home";
-    const { empresa, asignarEmpresa, isLoggedIn, isLoginLoading, errorLogin, logIn } = useAuth();
-    const { isOpenDialog, isLoadingSincroAsk, registrosTotales, registrosActuales, sincronizeAsk } = useSincronize();
-    const {getAppVersion} =useAppUtility();
-
-    useEffect(() => {
-      if (isLoggedIn) {
-         navigate(from,  {replace: true});
-      }
-    }, [isLoggedIn])
-
-    const verContraseña = () => {
-      setShowPassword(!showPassword);
-      
-    };
-
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      logIn({
-        username:username.trim(), 
-        password:password.trim()
-      });
-      window.localStorage.setItem("empresa", empresa);
-      console.log(empresa)
-    };
-
-    const handleMouseDown = (e) => {
-      e.preventDefault();
-      
-    };
-
-    const sincronizar = (e) => {
-      e.preventDefault();
-      sincronizeAsk();
-    };
-
-    useEffect(() => {
-      
-    }, [])
-
-    return (  
-       <Container maxWidth="xs">
-          <Button variant="contained" size = "small" color="success" sx={{position: "absolute", top: '12px', right:'12px', fontWeight: "bold"}} onClick={sincronizar}>
-            <SyncIcon/>
-            SINCRONIZAR
+  return (
+    <Container
+      title="LOGIN"
+      description="Ingrese credenciales para ingresar"
+    >
+      <Box component="form" role="form">
+        <Box mb={2}>
+          <TextField 
+            type="email" 
+            size="medium" 
+            fullWidth 
+            label='usuario' 
+            color="info" 
+            onChange={event => setUsuario(event.target.value.toUpperCase())} 
+            />
+        </Box>
+        <Box mb={2}>
+          <PasswordField fullWidth onChange={(event) => setPassword(event.target.value)}/>
+        </Box>
+        <Box mt={4} mb={1}>
+          <Button sx={{background:"linear-gradient(310deg, #2dce89, #2dcecc)",fontWeight:'bold'}} size="medium" fullWidth variant="contained"  
+          onClick={(e) => {e.preventDefault(); logIn({usuario, password})}}
+          >
+            Ingresar
           </Button>
-          <Box
-            sx={{
-              marginTop: 3,
-              padding: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          > 
-            <Typography component="h1" variant="h5">
-              <strong> { nameApp }</strong>
-            </Typography>
-            
-            <Avatar sx={{ m: 1, width: 192, height : 192}} src={ empresa === '1' ? LogoCayalti : LogoYarabamba } />
+        </Box>
 
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-              <Select
-                  id="select-empresa"
-                  value={empresa}
-                  label="Empresa"
-                  name="select-empresa"
-                  size = "small"
-                  fullWidth
-                  onChange={(e)=>{ asignarEmpresa(e.target.value); }}
-                >
-                  {
-                    EMPRESAS.map((empresa)=>{
-                      return <MenuItem key={empresa.id} value={empresa.id}>{empresa.name}</MenuItem>
-                    })
-                  }
-              </Select>
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                value = {username}
-                id="username"
-                label="Usuario"
-                name="username"
-                autoComplete="username"
-                autoFocus
-                size="small"
-                color="success"
-                onFocus={()=>setPresionar(false)}
-                onChange = {(e)=>{                  
-                  setUsername(e.currentTarget.value);
-                }}
-              />
-              <TextField
-                margin="normal"
-                value = {password}
-                required
-                inputProps={
-                  {pattern:"[0-9]*",
-                  inputMode: "numeric",                               
-                }
-                }  
-                focused={presionar}              
-                error={password.length<8 && presionar==true?true:false}
-                helperText={password.length < 8 && presionar==true?"Clave debe tener 8 dígitos":""}
-                fullWidth               
-                label="Clave"                
-                type={showPassword ? 'number' : 'password'}
-                id="password"                                
-                size="small"
-                color="success" 
-                onFocus={()=>setPresionar(true)}
-                onChange = {(e)=>{                                   
-                  if (e.target.value.length >= 0 && e.target.value.length <= 8) {
-                    setPassword(e.target.value)        
-                  }
-                }}               
-
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton onClick={verContraseña} onMouseDown={handleMouseDown}  >
-                        {showPassword ? <VisibilityOff color="white" /> : <Visibility color="white" />}
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
-              />
-              {
-                (errorLogin !== "")
-                  ? <Alert variant="filled" severity="error">{errorLogin}</Alert>
-                  : <LoadingButton
-                    loading = {isLoginLoading}
-                    text = "INICIANDO..."
-                    fullWidth
-                    type="submit"
-                    loadingPosition="start"
-                    startIcon={<LoginIcon />}
-                    variant="contained"
-                    
-                    sx={{ mt: 3, mb: 2 , background:'#2e7d32'}}
-                  >
-                    INGRESAR
-                  </LoadingButton>
-              }
-
-              <div style={{fontSize:'small',textAlign:'center'}}>Version {getAppVersion()}</div>
-            </Box>
-          </Box>
-          <DialogSincronize isOpen={isOpenDialog} isLoadingServer={isLoadingSincroAsk} progress={(registrosActuales / registrosTotales) * 100 }/>
-       </Container> 
-    );
+        <Box >
+          <Snackbar
+          sx={{ paddingBottom: 5 }}
+          anchorOrigin={{vertical: "bottom",horizontal: "center"}}
+          open={errorLogin !== null && errorLogin !== ''} 
+          autoHideDuration={6000} 
+          onClose={handleCloseError}>
+          <Alert onClose={handleCloseError} severity="error" >
+            {errorLogin}
+          </Alert>
+          </Snackbar>
+        </Box>
+      </Box>
+    </Container>
+  );
 }
+
+export default Login;
